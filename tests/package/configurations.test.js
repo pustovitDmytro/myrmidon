@@ -1,8 +1,8 @@
 import { assert } from 'chai';
-import package from '../entry';
+import main from '../entry';
 
 suite('Configurations');
 
 test('Positive: Single Main export', function () {
-    assert.exists(package);
+    assert.exists(main);
 });
