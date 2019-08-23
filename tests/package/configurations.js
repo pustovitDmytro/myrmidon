@@ -1,8 +1,8 @@
 import { assert } from 'chai';
-import logger from '../entry';
-import { verifyStdout } from '../utils';
+import package from '../entry';
 
 suite('Configurations');
 
-test('Default configuration', function () {
+test('Positive: Single Main export', function () {
+    assert.exists(package);
 });
