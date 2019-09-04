@@ -1,10 +1,11 @@
 {
   "name": "myrmidon",
   "version": "0.0.1",
-  "description": "boilerplate for creating npm packages",
+  "description": "package myrmidon provides list of common utilties for comfortable work with js projects.",
   "main": "./lib",
   "scripts": {
     "build": "babel src --out-dir ./lib",
+    "build:jsdoc": "babel documentation/jsdoc --out-dir tmp/jsdoc-template && jsdoc -c .jsdocrc.json -t tmp/jsdoc-template && rm -rf tmp/jsdoc-template",
     "prepare": "npm run build",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "test:security": "npm audit",
@@ -46,6 +47,7 @@
     "chance": "^1.0.18",
     "conventional-changelog-eslint": "^3.0.1",
     "coveralls": "^3.0.3",
+    "documentation": "^12.1.1",
     "eslint": "^5.16.0",
     "eslint-config-webbylab": "^4.0.0",
     "eslint-plugin-fetch": "0.0.1",
@@ -54,10 +56,14 @@
     "eslint-plugin-no-require-lodash": "^1.1.0",
     "eslint-plugin-prefer-spread": "^1.0.3",
     "eslint-plugin-react": "^7.12.4",
+    "handlebars": "^4.1.2",
     "fs-extra": "^8.1.0",
-    "jsdoc": "^3.6.3",
+    "mdinclude": "^0.7.1",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
+    "remark": "^11.0.1",
+    "remark-preset-lint-recommended": "^3.0.3",
+    "remark-toc": "^6.0.0",
     "semantic-release": "^15.13.19",
     "uuid": "^3.3.2"
   }
