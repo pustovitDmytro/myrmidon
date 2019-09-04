@@ -1,4 +1,4 @@
-import * as helpers from 'helpers';
-export * from 'helpers';
+import * as helpers from './helpers';
 
+export * from './helpers';
 export default helpers;

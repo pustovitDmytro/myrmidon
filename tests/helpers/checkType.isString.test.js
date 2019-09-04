@@ -3,7 +3,7 @@ import { FunctionTester } from '../utils';
 
 const tester = new FunctionTester(isString);
 
-suite.only('CheckTypes: isString');
+suite('CheckTypes: isString');
 
 test('Positive: isString with string input', function () {
     tester.testOne('', true);
@@ -26,3 +26,8 @@ test('Negative: isString with empty input', function () {
     tester.testOne('', true);
     tester.testOne(false, false);
 });
+
+after(async function () {
+    // console.log('after', this);
+});
+
