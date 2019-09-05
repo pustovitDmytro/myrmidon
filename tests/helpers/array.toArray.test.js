@@ -5,10 +5,10 @@ const tester = new FunctionTester(toArray);
 
 suite('Arrays: toArray');
 
-test('Positive: empty value', function () {
-    tester.testOne(null, []);
-    tester.testOne(undefined, []);
-    tester.testOne([], []);
-    tester.testOne('', [ '' ]);
-    tester.testOne(0, [ 0 ]);
+test('Positive: empty value @examples', function () {
+    tester.test(null, []);
+    tester.test(undefined, []);
+    tester.test([], []);
+    tester.test('', [ '' ]);
+    tester.test(0, [ 0 ]);
 });

@@ -67,5 +67,8 @@ export function isValue(x) {
  * @returns {boolean} true if x is empty or false otherwise
  */
 export function isEmpty(x) {
-    return isValue(x) && x.constructor === Object && Object.keys(x).length === 0;
+    const isObjectEmpty = isObject(x) && Object.keys(x).length === 0;
+    const isArrayEmpty = isArray(x) && x.keys(x).length === 0;
+
+    return isObjectEmpty || isArrayEmpty;
 }
