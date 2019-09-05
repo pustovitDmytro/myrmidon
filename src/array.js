@@ -1,4 +1,4 @@
-import { isArray } from './checkType';
+import { isArray, isValue } from './checkType';
 
 /**
  * transforms any value to Array
@@ -6,7 +6,7 @@ import { isArray } from './checkType';
  * @returns {array} [] if no value passed, value if it is Array and [value] in other cases
  */
 export function toArray(value) {
-    if (!value) return [];
+    if (!isValue(value)) return [];
 
     return isArray(value) ? value : [ value ];
 }

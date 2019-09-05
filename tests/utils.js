@@ -2,12 +2,12 @@ import { assert } from 'chai';
 
 export class FunctionTester {
     constructor(func) {
-        this.function = func;
+        this.func = func;
     }
     testOne(input, output, message) {
-        const got = this.function(input);
+        const got = this.func(input);
 
-        assert.equal(got, output, message);
+        assert.deepEqual(got, output, message);
     }
     testMany(inputs, ...args) {
         return inputs.map(input => this.testOne(input, ...args));
