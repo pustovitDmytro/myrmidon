@@ -19,7 +19,7 @@ jobs:
       deploy:
         provider: script
         skip_cleanup: true
-        script: ./bin/deploy.sh
+        script: bash ./bin/deploy.sh
 notifications:
   email:
     recipients: dipustovit@gmail.com
