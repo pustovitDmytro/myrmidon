@@ -3,7 +3,6 @@ node_js: lts/*
 before_script:
   - "npm run build"
 after_success:
-  - "ls ./coverage/"
   - "npm run push:coveralls"
 jobs:
   include:
@@ -12,15 +11,15 @@ jobs:
     - stage: test
       script: "npm run test:coverage"
     - stage: test
+      script: "BUILD=1 npm run test:mocha"
+    - stage: test
       script: "npm run test:security"
     - stage: release
       node_js: lts/*
       deploy:
         provider: script
         skip_cleanup: true
-        script:
-          - "./bin/documentation.js readme"
-          - "npm run push:release"
+        script: ./bin/deploy.sh
 notifications:
   email:
     recipients: dipustovit@gmail.com
