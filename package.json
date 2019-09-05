@@ -5,16 +5,14 @@
   "main": "./lib",
   "scripts": {
     "build": "babel src --out-dir ./lib",
-    "build:jsdoc": "babel documentation/jsdoc --out-dir tmp/jsdoc-template && jsdoc -c .jsdocrc.json -t tmp/jsdoc-template && rm -rf tmp/jsdoc-template",
     "prepare": "npm run build",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "push:coveralls": "cat ./coverage/lcov.info | coveralls",
+    "push:release": "semantic-release",
     "test:security": "npm audit",
     "test:lint": "eslint src",
     "test:mocha": "mocha  --config .mocharc.json tests/**/*.js",
     "test:coverage": "MODE=test nyc mocha --config .mocharc.json tests/**/*.js",
-    "coverage-check": "MODE=test nyc check-coverage",
-    "test": "npm run test:lint && npm run test:security && npm run test:coverage",
-    "semantic-release": "semantic-release"
+    "test": "npm run test:lint && npm run test:security && npm run test:coverage"
   },
   "repository": {
     "type": "git",

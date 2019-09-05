@@ -1,3 +1,4 @@
+import path from 'path';
 import documentation from 'documentation';
 import mdinclude from 'mdinclude';
 import handleBars from 'handlebars';
@@ -8,23 +9,28 @@ const recommended = require('remark-preset-lint-recommended');
 const remark = require('remark');
 const toc = require('remark-toc');
 
-export default async function build() {
+export async function buildReadme({ out } = {}) {
     const rawData = await documentation.build([ 'src/index.js' ], {});
     const docs = rawData.map(dumpDoc);
     const functions = docs.filter(d => d.type === 'function');
     const readmeTemplateText = mdinclude.readFileSync('templates/documentation/readme.md'); // eslint-disable-line no-sync
     const readmeTemplate = handleBars.compile(readmeTemplateText);
     const readme =  readmeTemplate({ ...info, functions });
+    const outPath = path.resolve(out || 'README.md');
 
-    remark()
-        .use(toc)
-        .use(recommended)
-        .process(readme, async function (err, file) {
-            if (err) throw err;
-            await fs.writeFile('README.md', String(file));
-        });
+    return new Promise((res, rej) => {
+        remark()
+            .use(toc)
+            .use(recommended)
+            .process(readme, async function (err, file) {
+                if (err) rej(err);
+                await fs.writeFile(outPath, String(file));
+                console.log('done', outPath);
+                res();
+            });
+    });
 }
-build();
+
 function dumpDescription(d) {
     return d.children[0].children[0].value;
 }
