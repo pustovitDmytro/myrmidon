@@ -3,6 +3,7 @@ node_js: lts/*
 before_script:
   - "npm run build"
 after_success:
+  - "ls ./coverage/"
   - "npm run push:coveralls"
 jobs:
   include:
@@ -18,8 +19,8 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - ./bin/documentation.js readme
-          - npm run push:release
+          - "./bin/documentation.js readme"
+          - "npm run push:release"
 notifications:
   email:
     recipients: dipustovit@gmail.com
