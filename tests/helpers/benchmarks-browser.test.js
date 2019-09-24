@@ -3,16 +3,19 @@ import { assert } from 'chai';
 import { requireFile, sleep } from '../utils';
 
 const benchmarkPath = path.join(__dirname, '../../src/benchmark.js');
+const polyfillPath = path.join(__dirname, '../polyfills/performance.polyfill.js');
 const hrtime = process.hrtime;
+const performance = global.performance;
 
 let getBenchmark;
 
 let  startBenchmark;
 
-suite('Fallback benchmarks');
+suite('Performance benchmarks #browser');
 
 before(function () {
     process.hrtime = 0;
+    requireFile(polyfillPath);
     const fallback = requireFile(benchmarkPath);
 
     getBenchmark = fallback.getBenchmark;
@@ -38,5 +41,6 @@ test('Positive: measure time', async function () {
 });
 
 after(async function () {
+    global.performance = performance;
     process.hrtime = hrtime;
 });

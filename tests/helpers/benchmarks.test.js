@@ -3,8 +3,7 @@ import {
     getBenchmark,
     startBenchmark
 } from '../entry';
-
-const sleep = time => new Promise(res => setTimeout(res, time));
+import { sleep } from '../utils';
 
 suite('Benchmarks #nodejs');
 

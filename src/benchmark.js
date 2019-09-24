@@ -15,12 +15,10 @@ function processStartBenchmark() {
     return process.hrtime();
 }
 
-/* istanbul ignore next */
 function performanceStartBenchmark() {
     return performance.now();
 }
 
-/* istanbul ignore next */
 function performanceGetBenchmark(time) {
     const diff = performance.now() - time;
 
@@ -40,10 +38,20 @@ function fallbackGetBenchmark(time) {
 const useProcess = (typeof process !== 'undefined') && isFunction(process?.hrtime);
 const usePerformance = (typeof performance !== 'undefined') && isFunction(performance?.now);
 
+/**
+ * get result of benchmark counting
+ * @param {any} x identifier of count start (result of startBenchmark)
+ * @returns {string} execution time in ms
+ */
+
 export const getBenchmark = useProcess && processGetBenchmark
 || usePerformance && performanceGetBenchmark
 || fallbackGetBenchmark;
 
+/**
+ * starts benchmark counting
+ * @returns {any} identifier of count start
+ */
 export const startBenchmark = useProcess && processStartBenchmark
 || usePerformance && performanceStartBenchmark
 || fallbackStartBenchmark;
