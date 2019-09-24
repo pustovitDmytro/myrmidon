@@ -1,0 +1,6 @@
+site_name: Myrmidon
+docs_dir: docs
+nav:
+  - 'Home': 'index.md'
+  - 'Reference': 'reference.md'
+  - 'Contributing': 'CONTRIBUTING.md'

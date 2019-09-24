@@ -19,6 +19,7 @@ jobs:
         skip_cleanup: true
         script:
           - ./bin/documentation.js readme
+          - ./bin/documentation.js reference
           - npx semantic-release
 notifications:
   email:

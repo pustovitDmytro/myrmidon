@@ -1,12 +1,17 @@
-## {{doclet.name}}
+{{#functions}}
+## {{this.name}}
 
-{{doclet.description}}
+{{this.description}}
+
+[Source]({{@root.repository.url}}/blob/{{@root.commit}}/{{this.file}}#L{{this.position}})
 
 ### Parameters
-{{#doclet.params}}
+{{#this.params}}
     - `{{name}}` **any** {{description}}
-{{/doclet.params}}
+{{/this.params}}
 
-Returns **any** {{doclet.returns.description}}
+### Returns
 
-[Source](/{{doclet.fileName}}#line-{{doclet.line}})
+Returns **any** {{this.returns.description}}
+
+{{/functions}}

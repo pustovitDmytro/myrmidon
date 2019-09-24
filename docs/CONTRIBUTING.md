@@ -8,6 +8,7 @@ Commit message summaries must follow this basic format:
 ```
 
 The Tag is one of the following:
+
 * **Fix** - for a bug fix.
 * **Update** - for a backwards-compatible enhancement.
 * **Breaking** - for a backwards-incompatible enhancement.

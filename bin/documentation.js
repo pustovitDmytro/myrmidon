@@ -1,12 +1,13 @@
 #!./node_modules/.bin/babel-node
 
 import { docopt } from 'docopt';
-import { buildReadme } from '../tools/documentation';
+import { buildReadme, buildDocs } from '../tools/documentation';
 import { docoptRunner } from './utils';
 
 const doc =
 `Usage:
     documentation.js readme [--out=<out>]
+    documentation.js reference [--out=<out>]
     documentation.js -h | --help
 
 Options:
@@ -17,8 +18,11 @@ Options:
 
 docoptRunner(main, docopt(doc));
 
-async function main({ readme, ...opts }) {
+async function main({ readme, reference, ...opts }) {
     if (readme) {
         await buildReadme(opts);
+    }
+    if (reference) {
+        await buildDocs(opts);
     }
 }

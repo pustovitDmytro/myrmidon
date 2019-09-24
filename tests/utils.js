@@ -14,3 +14,13 @@ export class FunctionTester {
         return inputs.map(input => this.test(input, ...args));
     }
 }
+
+export function requireFile(module) {
+    delete require.cache[require.resolve(module)];
+
+    const result =  require(module);
+
+    delete require.cache[require.resolve(module)];
+
+    return result;
+}
