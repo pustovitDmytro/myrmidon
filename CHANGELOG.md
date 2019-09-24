@@ -1,3 +1,20 @@
+# [1.1.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.0.0...v1.1.0) (2019-09-24)
+
+
+### Chore
+
+* (deploy) LF in binaries ([5a2c423f1359d46f42cfe0a7fecf7f4cd40c5f43](https://github.com/pustovitDmytro/myrmidon/commit/5a2c423f1359d46f42cfe0a7fecf7f4cd40c5f43))
+* (docs) basic api reference ([1562d57d075a764fe486fa5f25c29db243b6b2f3](https://github.com/pustovitDmytro/myrmidon/commit/1562d57d075a764fe486fa5f25c29db243b6b2f3))
+* (git) conflict resolved ([b3300087cfe8852bcf0a8fcafe02819f86060c85](https://github.com/pustovitDmytro/myrmidon/commit/b3300087cfe8852bcf0a8fcafe02819f86060c85))
+
+### New
+
+* add benchmark helpers ([21b83361fd383c370ce1bfda6444e6613edb8d73](https://github.com/pustovitDmytro/myrmidon/commit/21b83361fd383c370ce1bfda6444e6613edb8d73))
+
+### Upgrade
+
+* (security) fixes npm vulnerabilities ([d6896b77325b8c54ba7f5d494c51b1182196e1c7](https://github.com/pustovitDmytro/myrmidon/commit/d6896b77325b8c54ba7f5d494c51b1182196e1c7))
+
 # 1.0.0 (2019-09-05)
 
 
