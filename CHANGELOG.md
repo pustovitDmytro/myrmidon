@@ -1,3 +1,24 @@
+# [1.2.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.1.0...v1.2.0) (2020-05-16)
+
+
+### Chore
+
+* (build) fixes travis deploy bin ([004ecad](https://github.com/pustovitDmytro/myrmidon/commit/004ecad19128777f8e06dbe85bfd2a5aba9af3be))
+* sync package-lock ([42aed65](https://github.com/pustovitDmytro/myrmidon/commit/42aed65b7f2a21b704b9adc81cd74551bd604d9b))
+* update dev build process ([d8a92d0](https://github.com/pustovitDmytro/myrmidon/commit/d8a92d09baca65ab7cef66295aa565ae95b93503))
+
+### Docs
+
+* update documentation due to sections ([53c910d](https://github.com/pustovitDmytro/myrmidon/commit/53c910d35195a8c4f9b0e3be0153ea4bc8d592c2))
+
+### New
+
+* adds new helpers ([f0ff363](https://github.com/pustovitDmytro/myrmidon/commit/f0ff363ab0e168c1ca0c4ab1857f2c0e31d5e2bb))
+
+### Upgrade
+
+* semantic-release dependency upgrated ([a75fe85](https://github.com/pustovitDmytro/myrmidon/commit/a75fe8566826f0c9e33da7b10f0c32e774770786))
+
 # [1.1.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.0.0...v1.1.0) (2019-09-24)
 
 

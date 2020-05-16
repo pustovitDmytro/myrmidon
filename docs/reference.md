@@ -13,7 +13,8 @@ helps to indicate type of any value
 function:
 determines whether the value is string
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L1)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L3)
 
 **Parameters**
 
@@ -28,7 +29,8 @@ Returns **boolean** true if x is string, false otherwise
 function:
 determines whether the value is class
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L10)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L12)
 
 **Parameters**
 
@@ -43,7 +45,8 @@ Returns **boolean** true if x is class, false otherwise
 function:
 determines whether the value is function
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L19)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L21)
 
 **Parameters**
 
@@ -58,7 +61,8 @@ Returns **boolean** true if x is function, false otherwise
 function:
 determines whether the value is an object
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L28)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L30)
 
 **Parameters**
 
@@ -73,7 +77,8 @@ Returns **boolean** true if x is an object, false otherwise
 function:
 determines whether the value is array
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L37)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L39)
 
 **Parameters**
 
@@ -88,7 +93,8 @@ Returns **boolean** true if x is array, false otherwise
 function:
 determines whether the value is promise
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L46)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L48)
 
 **Parameters**
 
@@ -103,7 +109,8 @@ Returns **boolean** true if x is promise, false otherwise
 function:
 determines whether the value is set
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L55)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L57)
 
 **Parameters**
 
@@ -118,7 +125,8 @@ Returns **boolean** false if x is null or undefined, true otherwise
 function:
 determines whether the value is Number
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L64)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L66)
 
 **Parameters**
 
@@ -133,7 +141,8 @@ Returns **boolean** true if x is number, false otherwise
 function:
 determines whether the value is Boolean
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L73)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L75)
 
 **Parameters**
 
@@ -148,7 +157,8 @@ Returns **boolean** true if x is boolean, false otherwise
 function:
 determines whether the value is Stream
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L82)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L84)
 
 **Parameters**
 
@@ -163,7 +173,8 @@ Returns **boolean** true if x is Stream, false otherwise
 function:
 determines whether the value is function getter
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/checkType.js#L92)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/checkType.js#L94)
 
 **Parameters**
 
@@ -189,7 +200,8 @@ helps to work with js arrays
 function:
 transforms any value to Array
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/array.js#L3)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/array.js#L3)
 
 **Parameters**
 
@@ -204,7 +216,8 @@ Returns **array** \[] if no value passed, value if it is Array and
 function:
 generates filter function, that leaves only unique items
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/array.js#L14)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/array.js#L14)
 
 **Parameters**
 
@@ -219,35 +232,40 @@ Returns **function** filter function, that leaves only unique items
 constant:
 filter function, that leaves only unique items with same id property
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/array.js#L29)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/array.js#L29)
 
 ## uniqueIdenticFilter
 
 constant:
 filter function, that leaves only identicly unique items (same by ===)
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/array.js#L36)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/array.js#L36)
 
 ## existanceFilter
 
 constant:
 filter function, that leaves only exited values
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/array.js#L43)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/array.js#L43)
 
 ## passFilter
 
 constant:
 filter function, that leaves all items
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/array.js#L50)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/array.js#L50)
 
 ## flatten
 
 function:
 flattens array
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/array.js#L57)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/array.js#L57)
 
 **Parameters**
 
@@ -263,7 +281,8 @@ Returns **array** flattened array
 function:
 checks are all items of array unique
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/array.js#L68)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/array.js#L68)
 
 **Parameters**
 
@@ -280,7 +299,8 @@ Returns **array** flattened array
 function:
 get last element of an array
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/array.js#L90)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/array.js#L90)
 
 **Parameters**
 
@@ -304,7 +324,8 @@ Returns **any** last array element
 function:
 cleans object from undefined fields recursievly
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/object.js#L3)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/object.js#L3)
 
 **Parameters**
 
@@ -319,7 +340,8 @@ Returns **Object** object without undefined fields
 function:
 create deep clone of object
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/object.js#L17)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/object.js#L17)
 
 **Parameters**
 
@@ -334,7 +356,8 @@ Returns **Object** deep copy
 function:
 determines whether the object or array is empty
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/object.js#L28)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/object.js#L28)
 
 **Parameters**
 
@@ -359,7 +382,8 @@ helps to benchmark execution time
 constant:
 get result of benchmark counting
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/benchmark.js#L41)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/benchmark.js#L41)
 
 **Returns**
 
@@ -370,7 +394,8 @@ Returns **string** execution time in ms
 constant:
 starts benchmark counting
 
-[Source](/blob/004ecad19128777f8e06dbe85bfd2a5aba9af3be/src/benchmark.js#L51)
+[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
+/src/benchmark.js#L51)
 
 **Returns**
 
