@@ -59,7 +59,7 @@
     "remark": "^11.0.1",
     "remark-preset-lint-recommended": "^3.0.3",
     "remark-toc": "^6.0.0",
-    "semantic-release": "^15.13.19",
+    "semantic-release": "^17.0.7",
     "swag": "^0.7.0",
     "uuid": "^3.3.2"
   }
