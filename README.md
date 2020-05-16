@@ -1,4 +1,6 @@
-# 
+# myrmidon
+
+package myrmidon provides list of common utilties for comfortable work with js projects.
 
 [![Version][badge-vers]][npm]
 [![Dependencies][badge-deps]][npm]
@@ -117,6 +119,6 @@ The Tag is one of the following:
 
 The message summary should be a one-sentence description of the change. The issue number should be mentioned at the end.
 
-[npm]: https://www.npmjs.com/package/
+[npm]: https://www.npmjs.com/package/myrmidon
 
-[github]: https://github.com/pustovitDmytro/
+[github]: https://github.com/pustovitDmytro/myrmidon
