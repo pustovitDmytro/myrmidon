@@ -1,4 +1,4 @@
-# checkType
+## checkType
 
 helps to indicate type of any value
 
@@ -8,13 +8,12 @@ helps to indicate type of any value
     import * as helpers from 'myrmidon/checkType'
 ```
 
-## isString
+### isString
 
 function:
 determines whether the value is string
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L3)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L3)
 
 **Parameters**
 
@@ -24,13 +23,12 @@ determines whether the value is string
 
 Returns **boolean** true if x is string, false otherwise
 
-## isClass
+### isClass
 
 function:
 determines whether the value is class
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L12)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L12)
 
 **Parameters**
 
@@ -40,13 +38,12 @@ determines whether the value is class
 
 Returns **boolean** true if x is class, false otherwise
 
-## isFunction
+### isFunction
 
 function:
 determines whether the value is function
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L21)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L21)
 
 **Parameters**
 
@@ -56,13 +53,12 @@ determines whether the value is function
 
 Returns **boolean** true if x is function, false otherwise
 
-## isObject
+### isObject
 
 function:
 determines whether the value is an object
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L30)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L30)
 
 **Parameters**
 
@@ -72,13 +68,12 @@ determines whether the value is an object
 
 Returns **boolean** true if x is an object, false otherwise
 
-## isArray
+### isArray
 
 function:
 determines whether the value is array
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L39)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L39)
 
 **Parameters**
 
@@ -88,13 +83,12 @@ determines whether the value is array
 
 Returns **boolean** true if x is array, false otherwise
 
-## isPromise
+### isPromise
 
 function:
 determines whether the value is promise
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L48)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L48)
 
 **Parameters**
 
@@ -104,13 +98,12 @@ determines whether the value is promise
 
 Returns **boolean** true if x is promise, false otherwise
 
-## isValue
+### isValue
 
 function:
 determines whether the value is set
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L57)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L57)
 
 **Parameters**
 
@@ -120,13 +113,12 @@ determines whether the value is set
 
 Returns **boolean** false if x is null or undefined, true otherwise
 
-## isNumber
+### isNumber
 
 function:
 determines whether the value is Number
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L66)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L66)
 
 **Parameters**
 
@@ -136,13 +128,12 @@ determines whether the value is Number
 
 Returns **boolean** true if x is number, false otherwise
 
-## isBoolean
+### isBoolean
 
 function:
 determines whether the value is Boolean
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L75)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L75)
 
 **Parameters**
 
@@ -152,13 +143,12 @@ determines whether the value is Boolean
 
 Returns **boolean** true if x is boolean, false otherwise
 
-## isStream
+### isStream
 
 function:
 determines whether the value is Stream
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L84)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L84)
 
 **Parameters**
 
@@ -168,13 +158,12 @@ determines whether the value is Stream
 
 Returns **boolean** true if x is Stream, false otherwise
 
-## isGetter
+### isGetter
 
 function:
 determines whether the value is function getter
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/checkType.js#L94)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/checkType.js#L94)
 
 **Parameters**
 
@@ -185,7 +174,7 @@ determines whether the value is function getter
 
 Returns **boolean** true if x is Getter, false otherwise
 
-# array
+## array
 
 helps to work with js arrays
 
@@ -195,13 +184,12 @@ helps to work with js arrays
     import * as helpers from 'myrmidon/array'
 ```
 
-## toArray
+### toArray
 
 function:
 transforms any value to Array
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/array.js#L3)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/array.js#L3)
 
 **Parameters**
 
@@ -211,13 +199,12 @@ transforms any value to Array
 
 Returns **array** \[] if no value passed, value if it is Array and 
 
-## uniqueFilter
+### uniqueFilter
 
 function:
 generates filter function, that leaves only unique items
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/array.js#L14)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/array.js#L14)
 
 **Parameters**
 
@@ -227,45 +214,40 @@ generates filter function, that leaves only unique items
 
 Returns **function** filter function, that leaves only unique items
 
-## uniqueIdFilter
+### uniqueIdFilter
 
 constant:
 filter function, that leaves only unique items with same id property
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/array.js#L29)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/array.js#L29)
 
-## uniqueIdenticFilter
+### uniqueIdenticFilter
 
 constant:
 filter function, that leaves only identicly unique items (same by ===)
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/array.js#L36)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/array.js#L36)
 
-## existanceFilter
+### existanceFilter
 
 constant:
 filter function, that leaves only exited values
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/array.js#L43)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/array.js#L43)
 
-## passFilter
+### passFilter
 
 constant:
 filter function, that leaves all items
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/array.js#L50)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/array.js#L50)
 
-## flatten
+### flatten
 
 function:
 flattens array
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/array.js#L57)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/array.js#L57)
 
 **Parameters**
 
@@ -276,13 +258,12 @@ flattens array
 
 Returns **array** flattened array
 
-## isUnique
+### isUnique
 
 function:
 checks are all items of array unique
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/array.js#L68)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/array.js#L68)
 
 **Parameters**
 
@@ -294,13 +275,12 @@ checks are all items of array unique
 
 Returns **array** flattened array
 
-## last
+### last
 
 function:
 get last element of an array
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/array.js#L90)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/array.js#L90)
 
 **Parameters**
 
@@ -311,7 +291,7 @@ get last element of an array
 
 Returns **any** last array element
 
-# object
+## object
 
 **direct import**:
 
@@ -319,13 +299,12 @@ Returns **any** last array element
     import * as helpers from 'myrmidon/object'
 ```
 
-## cleanUndefined
+### cleanUndefined
 
 function:
 cleans object from undefined fields recursievly
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/object.js#L3)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/object.js#L3)
 
 **Parameters**
 
@@ -335,13 +314,12 @@ cleans object from undefined fields recursievly
 
 Returns **Object** object without undefined fields
 
-## clone
+### clone
 
 function:
 create deep clone of object
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/object.js#L17)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/object.js#L17)
 
 **Parameters**
 
@@ -351,13 +329,12 @@ create deep clone of object
 
 Returns **Object** deep copy
 
-## isEmpty
+### isEmpty
 
 function:
 determines whether the object or array is empty
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/object.js#L28)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/object.js#L28)
 
 **Parameters**
 
@@ -367,7 +344,7 @@ determines whether the object or array is empty
 
 Returns **boolean** true if x is empty or false otherwise
 
-# benchmark
+## benchmark
 
 helps to benchmark execution time
 
@@ -377,25 +354,23 @@ helps to benchmark execution time
     import * as helpers from 'myrmidon/benchmark'
 ```
 
-## getBenchmark
+### getBenchmark
 
 constant:
 get result of benchmark counting
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/benchmark.js#L41)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/benchmark.js#L41)
 
 **Returns**
 
 Returns **string** execution time in ms
 
-## startBenchmark
+### startBenchmark
 
 constant:
 starts benchmark counting
 
-[Source]\(/blob/a75fe8566826f0c9e33da7b10f0c32e774770786
-/src/benchmark.js#L51)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob//src/benchmark.js#L51)
 
 **Returns**
 
