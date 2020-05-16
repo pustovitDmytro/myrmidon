@@ -20,6 +20,9 @@ jobs:
         provider: script
         skip_cleanup: true
         script: ./bin/deploy.sh
+  allow_failures:
+    - stage: test
+      script: "npm run test:security"
 notifications:
   email:
     recipients: dipustovit@gmail.com

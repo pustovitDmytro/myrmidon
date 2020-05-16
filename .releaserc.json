@@ -2,7 +2,23 @@
     "branch": "master",
     "ci": false,
     "plugins": [
-        "@semantic-release/commit-analyzer",
+        [
+            "@semantic-release/commit-analyzer",
+            {
+                "preset": "eslint",
+                "releaseRules": [
+                    { "tag": "Fix", "release": "patch" },
+                    { "tag": "Update", "release": "minor" },
+                    { "tag": "New", "release": "minor" },
+                    { "tag": "Breaking", "release": "major" },
+                    { "tag": "Docs", "release": "patch" },
+                    { "tag": "Upgrade", "release": "patch" }
+                ],
+                "parserOpts": {
+                    "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+                }
+            }
+        ],
         "@semantic-release/release-notes-generator",
         [
             "@semantic-release/changelog", {
