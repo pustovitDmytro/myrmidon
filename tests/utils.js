@@ -4,14 +4,21 @@ export class FunctionTester {
     constructor(func) {
         this.func = func;
     }
-    test(input, output, message) {
-        const got = this.func(input);
-        const errMessage = message || `${input} => ${output}`;
+    test(...args) {
+        const [ output, ...revinput ] = args.reverse();
+        const input = revinput.reverse();
+        const got = this.func(...input);
+        const errMessage = `${input.join(',')} => ${output}`;
 
         assert.deepEqual(got, output, errMessage);
     }
-    testMany(inputs, ...args) {
-        return inputs.map(input => this.test(input, ...args));
+}
+
+export function SnippetTester(func, expected) {
+    const result = func();
+
+    if (expected) {
+        assert.deepEqual(result, expected);
     }
 }
 

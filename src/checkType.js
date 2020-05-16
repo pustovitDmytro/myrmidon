@@ -1,3 +1,5 @@
+import { getPropertyDescriptor } from './common';
+
 /**
  * determines whether the value is string
  * @param {any} x primitive for examination
@@ -62,13 +64,41 @@ export function isValue(x) {
 }
 
 /**
- * determines whether the object or array is empty
+ * determines whether the value is Number
  * @param {any} x primitive for examination
- * @returns {boolean} true if x is empty or false otherwise
+ * @returns {boolean} true if x is number, false otherwise
  */
-export function isEmpty(x) {
-    const isObjectEmpty = isObject(x) && Object.keys(x).length === 0;
-    const isArrayEmpty = isArray(x) && x.keys(x).length === 0;
+export function isNumber(x) {
+    return isValue(x) && Object.prototype.toString.call(x) === '[object Number]' && !isNaN(x);
+}
 
-    return isObjectEmpty || isArrayEmpty;
+/**
+ * determines whether the value is Boolean
+ * @param {any} x primitive for examination
+ * @returns {boolean} true if x is boolean, false otherwise
+ */
+export function isBoolean(x) {
+    return isValue(x) && Object.prototype.toString.call(x) === '[object Boolean]';
+}
+
+/**
+ * determines whether the value is Stream
+ * @param {any} x primitive for examination
+ * @returns {boolean} true if x is Stream, false otherwise
+ * @see {@link https://nodejs.org/api/stream.html} Node documentation for details
+ */
+export function isStream(x) {
+    return isValue(x) && isFunction(x.pipe);
+}
+
+/**
+ * determines whether the value is function getter
+ * @param {any} x target class for examination
+ * @param {string} name name of property to check is it getter in x
+ * @returns {boolean} true if x is Getter, false otherwise
+ */
+export function isGetter(x, name) {
+    if (!isValue(x) || !isValue(x[name])) return false;
+
+    return !!getPropertyDescriptor(x, name).get;
 }
