@@ -1,6 +1,4 @@
-# myrmidon
-
-package myrmidon provides list of common utilties for comfortable work with js projects.
+# 
 
 [![Version][badge-vers]][npm]
 [![Dependencies][badge-deps]][npm]
@@ -29,7 +27,10 @@ package myrmidon provides list of common utilties for comfortable work with js p
 
 -   [Usage](#usage)
 
-    -   [Functions:](#functions)
+    -   [checkType](#checktype)
+    -   [array](#array)
+    -   [object](#object)
+    -   [benchmark](#benchmark)
 
 -   [Contribute](#contribute)
 
@@ -50,7 +51,11 @@ To install the library run following command
 
 ## Usage
 
-### Functions:
+Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
+
+### checkType
+
+helps to indicate type of any value
 
 -   **isString** - determines whether the value is string
 -   **isClass** - determines whether the value is class
@@ -59,8 +64,37 @@ To install the library run following command
 -   **isArray** - determines whether the value is array
 -   **isPromise** - determines whether the value is promise
 -   **isValue** - determines whether the value is set
--   **isEmpty** - determines whether the object or array is empty
+-   **isNumber** - determines whether the value is Number
+-   **isBoolean** - determines whether the value is Boolean
+-   **isStream** - determines whether the value is Stream
+-   **isGetter** - determines whether the value is function getter
+
+### array
+
+helps to work with js arrays
+
 -   **toArray** - transforms any value to Array
+-   **uniqueFilter** - generates filter function, that leaves only unique items
+-   **uniqueIdFilter** - filter function, that leaves only unique items with same id property
+-   **uniqueIdenticFilter** - filter function, that leaves only identicly unique items (same by ===)
+-   **existanceFilter** - filter function, that leaves only exited values
+-   **passFilter** - filter function, that leaves all items
+-   **flatten** - flattens array
+-   **isUnique** - checks are all items of array unique
+-   **last** - get last element of an array
+
+### object
+
+-   **cleanUndefined** - cleans object from undefined fields recursievly
+-   **clone** - create deep clone of object
+-   **isEmpty** - determines whether the object or array is empty
+
+### benchmark
+
+helps to benchmark execution time
+
+-   **getBenchmark** - get result of benchmark counting
+-   **startBenchmark** - starts benchmark counting
 
 ## Contribute
 
@@ -83,6 +117,6 @@ The Tag is one of the following:
 
 The message summary should be a one-sentence description of the change. The issue number should be mentioned at the end.
 
-[npm]: https://www.npmjs.com/package/myrmidon
+[npm]: https://www.npmjs.com/package/
 
-[github]: https://github.com/pustovitDmytro/myrmidon
+[github]: https://github.com/pustovitDmytro/

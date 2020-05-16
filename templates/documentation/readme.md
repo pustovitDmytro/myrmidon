@@ -1,5 +1,5 @@
-# {{name}}
-{{description}}
+# {{info.name}}
+{{info.description}}
 <!-- #include badges.md -->
 
 ## Table of Contents
@@ -11,5 +11,5 @@
 <!-- #include usage.md -->
 <!-- #include ../../docs/CONTRIBUTING.md -->
 
-[npm]: https://www.npmjs.com/package/{{name}}
-[github]: https://github.com/pustovitDmytro/{{name}}
+[npm]: https://www.npmjs.com/package/{{info.name}}
+[github]: https://github.com/pustovitDmytro/{{info.name}}

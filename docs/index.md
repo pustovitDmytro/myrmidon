@@ -1,6 +1,4 @@
-# myrmidon
-
-package myrmidon provides list of common utilties for comfortable work with js projects.
+# 
 
 [![Version][badge-vers]][npm]
 [![Dependencies][badge-deps]][npm]
@@ -41,6 +39,6 @@ To install the library run following command
   npm i --save myrmidon
 ```
 
-[npm]: https://www.npmjs.com/package/myrmidon
+[npm]: https://www.npmjs.com/package/
 
-[github]: https://github.com/pustovitDmytro/myrmidon
+[github]: https://github.com/pustovitDmytro/

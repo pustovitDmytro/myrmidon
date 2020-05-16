@@ -3,26 +3,46 @@ import documentation from 'documentation';
 import mdinclude from 'mdinclude';
 import handleBars from 'handlebars';
 import fs from 'fs-extra';
+import swag from 'swag';
+
+import recommended from 'remark-preset-lint-recommended';
+import remark from 'remark';
+import toc from 'remark-toc';
+import { groupBy } from '../src/helpers';
 import info from '../package';
 
-const recommended = require('remark-preset-lint-recommended');
-const remark = require('remark');
-const toc = require('remark-toc');
+swag.registerHelpers(handleBars);
+const SECTIONS = {
+    checkType : 'helps to indicate type of any value',
+    array     : 'helps to work with js arrays',
+    benchmark : 'helps to benchmark execution time'
+};
 
 export async function buildReadme({ out } = {}) {
     const rawData = await documentation.build([ 'src/index.js' ], {});
     const docs = rawData.map(dumpDoc);
-    const functions = docs.filter(d => d.type === 'function');
+    const sections = Object.entries(groupBy(docs, 'file'))
+        .map(([ key, value ]) => {
+            const fileName = path.basename(key, path.extname(key));
+            const description = SECTIONS[fileName];
+
+            return {
+                file   : key,
+                id     : fileName,
+                description,
+                values : value
+            };
+        });
     const readmeTemplateText = mdinclude.readFileSync('templates/documentation/readme.md'); // eslint-disable-line no-sync
     const readmeTemplate = handleBars.compile(readmeTemplateText);
-    const readme =  readmeTemplate({ ...info, functions });
+    const readme =  readmeTemplate({ info, sections  });
     const outPath = path.resolve(out || 'README.md');
 
     return new Promise((res, rej) => {
         remark()
             .use(toc)
             .use(recommended)
-            .process(readme, async function (err, file) {
+            .process(readme, async (err, file) => {
                 if (err) rej(err);
                 await fs.writeFile(outPath, String(file));
                 console.log('done buildReadme', outPath);
@@ -30,6 +50,7 @@ export async function buildReadme({ out } = {}) {
             });
     });
 }
+
 const getGitCommit = async () => {
     const gitId = await fs.readFile('.git/HEAD', 'utf8');
 
@@ -52,13 +73,25 @@ export async function buildDocs() {
 export async function build(entry, out) {
     const rawData = await documentation.build([ 'src/index.js' ], {});
     const docs = rawData.map(dumpDoc);
-    const functions = docs.filter(d => d.type === 'function');
+
+    const sections = Object.entries(groupBy(docs, 'file'))
+        .map(([ key, value ]) => {
+            const fileName = path.basename(key, path.extname(key));
+            const description = SECTIONS[fileName];
+
+            return {
+                file   : key,
+                id     : fileName,
+                description,
+                values : value
+            };
+        });
     const readmeTemplateText = mdinclude.readFileSync(entry); // eslint-disable-line no-sync
     const readmeTemplate = handleBars.compile(readmeTemplateText);
     const commit = await getGitCommit();
     const readme =  readmeTemplate({
-        ...info,
-        functions,
+        info,
+        sections,
         commit
     });
     const outPath = path.resolve(out);
@@ -67,7 +100,7 @@ export async function build(entry, out) {
         remark()
             .use(toc)
             .use(recommended)
-            .process(readme, async function (err, file) {
+            .process(readme, async (err, file) => {
                 if (err) rej(err);
                 await fs.writeFile(outPath, String(file));
                 console.log('done build', outPath);
@@ -81,6 +114,8 @@ function dumpDescription(d) {
 }
 
 function dumpParam(p) {
+    if (!p.type) return null;
+
     return {
         name        : p.name,
         type        : p.type.name,
@@ -96,7 +131,7 @@ function dumpDoc(d) {
         description : dumpDescription(d.description),
 
         params  : d.params.map(dumpParam),
-        returns : dumpParam(d.returns[0]),
+        returns : d.returns[0] && dumpParam(d.returns[0]),
 
         file     : path.relative(process.cwd(), d.context.file),
         position : d.loc.start.line

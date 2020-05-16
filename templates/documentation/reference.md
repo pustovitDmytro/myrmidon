@@ -1,17 +1,40 @@
-{{#functions}}
+{{#sections}}
+# {{this.id}}
+
+{{this.description}}
+
+**direct import**:
+
+```javascript
+    import * as helpers from 'myrmidon/{{this.id}}'
+```
+
+{{#this.values}}
 ## {{this.name}}
 
+{{this.type}}:
 {{this.description}}
 
 [Source]({{@root.repository.url}}/blob/{{@root.commit}}/{{this.file}}#L{{this.position}})
 
-### Parameters
+{{#is this.type 'function'}}
+
+**Parameters**
+
 {{#this.params}}
-    - `{{name}}` **any** {{description}}
+    - `{{name}}` **{{type}}** {{description}}
 {{/this.params}}
 
-### Returns
+{{/is}}
 
-Returns **any** {{this.returns.description}}
+{{#if this.returns}}
+**Returns**
 
-{{/functions}}
+Returns **{{this.returns.type}}** {{this.returns.description}}
+{{/if}}
+{{/this.values}}
+
+{{/sections}}
+
+
+
