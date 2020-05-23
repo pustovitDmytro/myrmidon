@@ -15,7 +15,7 @@
 {{this.type}}:
 {{this.description}}
 
-[Source]({{@root.info.repository.url}}/blob/{{@root.info.commit}}/{{this.file}}#L{{this.position}})
+[Source]({{@root.info.repository.url}}/blob/{{@root.commit}}/{{this.file}}#L{{this.position}})
 
 {{#is this.type 'function'}}
 
