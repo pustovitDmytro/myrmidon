@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/pustovitDmytro/myrmidon/issues"
   },
-  "homepage": "https://github.com/pustovitDmytro/myrmidon#readme",
+  "homepage": "https://myrmidonjs.readthedocs.io",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
