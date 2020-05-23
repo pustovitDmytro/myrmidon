@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.2.0...v1.2.1) (2020-05-16)
+
+
+### Docs
+
+* update documentation ([f363019](https://github.com/pustovitDmytro/myrmidon/commit/f3630199155c3af3252f3e851c9b8de2f3bf3cfb))
+
 # [1.2.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.1.0...v1.2.0) (2020-05-16)
 
 
