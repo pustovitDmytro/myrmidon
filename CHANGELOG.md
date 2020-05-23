@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.0...v1.3.1) (2020-05-23)
+
+
+### Docs
+
+* fix links from Readme to reference ([407cce1](https://github.com/pustovitDmytro/myrmidon/commit/407cce1cb9d534a8bca1278e038579a671e1e26a))
+
 # [1.3.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.2.1...v1.3.0) (2020-05-23)
 
 

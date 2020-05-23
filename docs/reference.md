@@ -13,7 +13,7 @@ helps to indicate type of any value
 function:
 determines whether the value is string
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L3)
 
 **Parameters**
@@ -29,7 +29,7 @@ Returns **boolean** true if x is string, false otherwise
 function:
 determines whether the value is class
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L12)
 
 **Parameters**
@@ -45,7 +45,7 @@ Returns **boolean** true if x is class, false otherwise
 function:
 determines whether the value is function
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L21)
 
 **Parameters**
@@ -61,7 +61,7 @@ Returns **boolean** true if x is function, false otherwise
 function:
 determines whether the value is an object
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L30)
 
 **Parameters**
@@ -77,7 +77,7 @@ Returns **boolean** true if x is an object, false otherwise
 function:
 determines whether the value is array
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L39)
 
 **Parameters**
@@ -93,7 +93,7 @@ Returns **boolean** true if x is array, false otherwise
 function:
 determines whether the value is promise
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L48)
 
 **Parameters**
@@ -109,7 +109,7 @@ Returns **boolean** true if x is promise, false otherwise
 function:
 determines whether the value is set
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L57)
 
 **Parameters**
@@ -125,7 +125,7 @@ Returns **boolean** false if x is null or undefined, true otherwise
 function:
 determines whether the value is Number
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L66)
 
 **Parameters**
@@ -141,7 +141,7 @@ Returns **boolean** true if x is number, false otherwise
 function:
 determines whether the value is Boolean
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L75)
 
 **Parameters**
@@ -157,7 +157,7 @@ Returns **boolean** true if x is boolean, false otherwise
 function:
 determines whether the value is Stream
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L84)
 
 **Parameters**
@@ -173,7 +173,7 @@ Returns **boolean** true if x is Stream, false otherwise
 function:
 determines whether the value is function getter
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/checkType.js#L94)
 
 **Parameters**
@@ -200,7 +200,7 @@ helps to work with js arrays
 function:
 transforms any value to Array
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/array.js#L3)
 
 **Parameters**
@@ -216,7 +216,7 @@ Returns **array** \[] if no value passed, value if it is Array and
 function:
 generates filter function, that leaves only unique items
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/array.js#L14)
 
 **Parameters**
@@ -232,7 +232,7 @@ Returns **function** filter function, that leaves only unique items
 constant:
 filter function, that leaves only unique items with same id property
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/array.js#L29)
 
 ### uniqueIdenticFilter
@@ -240,7 +240,7 @@ filter function, that leaves only unique items with same id property
 constant:
 filter function, that leaves only identicly unique items (same by ===)
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/array.js#L36)
 
 ### existanceFilter
@@ -248,7 +248,7 @@ filter function, that leaves only identicly unique items (same by ===)
 constant:
 filter function, that leaves only exited values
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/array.js#L43)
 
 ### passFilter
@@ -256,7 +256,7 @@ filter function, that leaves only exited values
 constant:
 filter function, that leaves all items
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/array.js#L50)
 
 ### flatten
@@ -264,7 +264,7 @@ filter function, that leaves all items
 function:
 flattens array
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/array.js#L57)
 
 **Parameters**
@@ -281,7 +281,7 @@ Returns **array** flattened array
 function:
 checks are all items of array unique
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/array.js#L68)
 
 **Parameters**
@@ -299,7 +299,7 @@ Returns **array** flattened array
 function:
 get last element of an array
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/array.js#L90)
 
 **Parameters**
@@ -324,7 +324,7 @@ Returns **any** last array element
 function:
 cleans object from undefined fields recursievly
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/object.js#L3)
 
 **Parameters**
@@ -340,7 +340,7 @@ Returns **Object** object without undefined fields
 function:
 create deep clone of object
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/object.js#L17)
 
 **Parameters**
@@ -356,7 +356,7 @@ Returns **Object** deep copy
 function:
 determines whether the object or array is empty
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/object.js#L28)
 
 **Parameters**
@@ -382,7 +382,7 @@ helps to benchmark execution time
 constant:
 get result of benchmark counting
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/benchmark.js#L41)
 
 **Returns**
@@ -394,7 +394,7 @@ Returns **string** execution time in ms
 constant:
 starts benchmark counting
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/benchmark.js#L51)
 
 **Returns**
@@ -414,7 +414,7 @@ Returns **any** identifier of count start
 function:
 Retrying function calls on errors
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/custom.js#L21)
 
 **Parameters**
@@ -431,7 +431,7 @@ Returns **any** result of retrier function call
 function:
 Get nested property of object
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/custom.js#L54)
 
 **Parameters**
@@ -449,7 +449,7 @@ Returns **any** deep object property, or null if nothing found
 function:
 Fills string template with specified data
 
-[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/1d7670d4b04c326a1121bce6112c5faafed51981>
+[Source]\(<https://github.com/pustovitDmytro/myrmidon/blob/407cce1cb9d534a8bca1278e038579a671e1e26a>
 /src/custom.js#L72)
 
 **Parameters**
