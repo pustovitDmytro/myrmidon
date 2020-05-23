@@ -24,7 +24,7 @@ test('Positive: min measurable time', () => {
     const benchmark = getBenchmark(time);
 
     assert.isString(benchmark);
-    assert.isAtMost(+benchmark, 1);
+    assert.isAtMost(+benchmark, 2);
 });
 
 test('Positive: measure time', async () => {

@@ -22,6 +22,22 @@ export function SnippetTester(func, expected) {
     }
 }
 
+export async function SnippetTesterAsync(func, expected) {
+    try {
+        const result = await func();
+
+        if (expected) {
+            assert.deepEqual(result, expected);
+        }
+    } catch (error) {
+        if (error.name !== 'AssertionError' && expected && expected instanceof Error) {
+            assert.equal(error.message, expected.message);
+        } else {
+            throw error;
+        }
+    }
+}
+
 export function requireFile(module) {
     delete require.cache[require.resolve(module)];
 
