@@ -20,9 +20,9 @@ docoptRunner(main, docopt(doc));
 
 async function main({ readme, reference, ...opts }) {
     if (readme) {
-        await buildReadme(opts);
+        await buildReadme(opts.out);
     }
     if (reference) {
-        await buildDocs(opts);
+        await buildDocs(opts.out);
     }
 }

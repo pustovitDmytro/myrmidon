@@ -18,39 +18,6 @@ const SECTIONS = {
     benchmark : 'helps to benchmark execution time'
 };
 
-export async function buildReadme({ out } = {}) {
-    const rawData = await documentation.build([ 'src/index.js' ], {});
-    const docs = rawData.map(dumpDoc);
-    const sections = Object.entries(groupBy(docs, 'file'))
-        .map(([ key, value ]) => {
-            const fileName = path.basename(key, path.extname(key));
-            const description = SECTIONS[fileName];
-
-            return {
-                file   : key,
-                id     : fileName,
-                description,
-                values : value
-            };
-        });
-    const readmeTemplateText = mdinclude.readFileSync('templates/documentation/readme.md'); // eslint-disable-line no-sync
-    const readmeTemplate = handleBars.compile(readmeTemplateText);
-    const readme =  readmeTemplate({ info, sections  });
-    const outPath = path.resolve(out || 'README.md');
-
-    return new Promise((res, rej) => {
-        remark()
-            .use(toc)
-            .use(recommended)
-            .process(readme, async (err, file) => {
-                if (err) rej(err);
-                await fs.writeFile(outPath, String(file));
-                console.log('done buildReadme', outPath);
-                res();
-            });
-    });
-}
-
 const getGitCommit = async () => {
     const gitId = await fs.readFile('.git/HEAD', 'utf8');
 
@@ -63,10 +30,18 @@ const getGitCommit = async () => {
     return content.trim();
 };
 
-export async function buildDocs() {
+export async function buildDocs(out) {
+    const folder = out || 'docs';
+
     return Promise.all([
-        await build('templates/documentation/reference.md', 'docs/reference.md'),
-        await build('templates/documentation/docs.md', 'docs/index.md')
+        await build('templates/documentation/reference.md', path.join(folder, 'reference.md')),
+        await build('templates/documentation/docs.md', path.join(folder, 'index.md'))
+    ]);
+}
+
+export async function buildReadme(out) {
+    return Promise.all([
+        await build('templates/documentation/readme.md', out ? out : 'README.md')
     ]);
 }
 
@@ -95,6 +70,8 @@ export async function build(entry, out) {
         commit
     });
     const outPath = path.resolve(out);
+
+    await fs.ensureDir(path.dirname(outPath));
 
     return new Promise((res, rej) => {
         remark()
