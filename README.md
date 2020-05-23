@@ -33,6 +33,7 @@ package myrmidon provides list of common utilties for comfortable work with js p
     -   [array](#array)
     -   [object](#object)
     -   [benchmark](#benchmark)
+    -   [custom](#custom)
 
 -   [Contribute](#contribute)
 
@@ -59,44 +60,50 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 
 helps to indicate type of any value
 
--   **isString** - determines whether the value is string
--   **isClass** - determines whether the value is class
--   **isFunction** - determines whether the value is function
--   **isObject** - determines whether the value is an object
--   **isArray** - determines whether the value is array
--   **isPromise** - determines whether the value is promise
--   **isValue** - determines whether the value is set
--   **isNumber** - determines whether the value is Number
--   **isBoolean** - determines whether the value is Boolean
--   **isStream** - determines whether the value is Stream
--   **isGetter** - determines whether the value is function getter
+-   [**isString**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isString) - determines whether the value is string
+-   [**isClass**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isClass) - determines whether the value is class
+-   [**isFunction**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isFunction) - determines whether the value is function
+-   [**isObject**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isObject) - determines whether the value is an object
+-   [**isArray**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isArray) - determines whether the value is array
+-   [**isPromise**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isPromise) - determines whether the value is promise
+-   [**isValue**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isValue) - determines whether the value is set
+-   [**isNumber**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isNumber) - determines whether the value is Number
+-   [**isBoolean**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isBoolean) - determines whether the value is Boolean
+-   [**isStream**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isStream) - determines whether the value is Stream
+-   [**isGetter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isGetter) - determines whether the value is function getter
 
 ### array
 
 helps to work with js arrays
 
--   **toArray** - transforms any value to Array
--   **uniqueFilter** - generates filter function, that leaves only unique items
--   **uniqueIdFilter** - filter function, that leaves only unique items with same id property
--   **uniqueIdenticFilter** - filter function, that leaves only identicly unique items (same by ===)
--   **existanceFilter** - filter function, that leaves only exited values
--   **passFilter** - filter function, that leaves all items
--   **flatten** - flattens array
--   **isUnique** - checks are all items of array unique
--   **last** - get last element of an array
+-   [**toArray**](https://myrmidonjs.readthedocs.io/en/latest/reference/#toArray) - transforms any value to Array
+-   [**uniqueFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueFilter) - generates filter function, that leaves only unique items
+-   [**uniqueIdFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueIdFilter) - filter function, that leaves only unique items with same id property
+-   [**uniqueIdenticFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueIdenticFilter) - filter function, that leaves only identicly unique items (same by ===)
+-   [**existanceFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#existanceFilter) - filter function, that leaves only exited values
+-   [**passFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#passFilter) - filter function, that leaves all items
+-   [**flatten**](https://myrmidonjs.readthedocs.io/en/latest/reference/#flatten) - flattens array
+-   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isUnique) - checks are all items of array unique
+-   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
 
 ### object
 
--   **cleanUndefined** - cleans object from undefined fields recursievly
--   **clone** - create deep clone of object
--   **isEmpty** - determines whether the object or array is empty
+-   [**cleanUndefined**](https://myrmidonjs.readthedocs.io/en/latest/reference/#cleanUndefined) - cleans object from undefined fields recursievly
+-   [**clone**](https://myrmidonjs.readthedocs.io/en/latest/reference/#clone) - create deep clone of object
+-   [**isEmpty**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isEmpty) - determines whether the object or array is empty
 
 ### benchmark
 
 helps to benchmark execution time
 
--   **getBenchmark** - get result of benchmark counting
--   **startBenchmark** - starts benchmark counting
+-   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getBenchmark) - get result of benchmark counting
+-   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startBenchmark) - starts benchmark counting
+
+### custom
+
+-   [**retry**](https://myrmidonjs.readthedocs.io/en/latest/reference/#retry) - Retrying function calls on errors
+-   [**getProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getProp) - Get nested property of object
+-   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
 
 ## Contribute
 

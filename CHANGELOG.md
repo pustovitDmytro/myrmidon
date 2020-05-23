@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.2.1...v1.3.0) (2020-05-23)
+
+
+### Docs
+
+* adds documentation for custom helpers ([a016a81](https://github.com/pustovitDmytro/myrmidon/commit/a016a81148285a0419eedad93045ff285effae7d))
+* adds links to documentation ([1d7670d](https://github.com/pustovitDmytro/myrmidon/commit/1d7670d4b04c326a1121bce6112c5faafed51981))
+* fixes src links in reference ([47f27d0](https://github.com/pustovitDmytro/myrmidon/commit/47f27d090bbd28a815edb576728ff15d1f73149e))
+
+### New
+
+* adds custom helpers: retry, getProp, fill ([ba0c9de](https://github.com/pustovitDmytro/myrmidon/commit/ba0c9de4f0cc04bd64bf1c8ac7938e7506f61afc))
+* adds random module ([bbc52f0](https://github.com/pustovitDmytro/myrmidon/commit/bbc52f0d7b10d1473d2de5a0ece9281b67ca2af0))
+
 ## [1.2.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.2.0...v1.2.1) (2020-05-16)
 
 
