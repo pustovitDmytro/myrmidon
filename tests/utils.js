@@ -1,4 +1,3 @@
-import path from 'path';
 import { assert } from 'chai';
 /* eslint-disable prefer-arrow-callback */
 import { createNamespace } from 'cls-hooked';
