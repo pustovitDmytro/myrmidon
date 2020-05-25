@@ -17,6 +17,10 @@
 
 [Source]({{@root.info.repository.url}}/blob/{{@root.commit}}/{{this.file}}#L{{this.position}})
 
+{{#if this.testFile}}
+[Tests]({{@root.info.repository.url}}/blob/{{@root.commit}}/{{this.testFile}}
+{{/if}}
+
 {{#is this.type 'function'}}
 
 **Parameters**
@@ -32,9 +36,19 @@
 
 Returns **{{this.returns.type}}** {{this.returns.description}}
 {{/if}}
+
+{{#any this.examples}}
+**Examples**
+{{#this.examples}}
+{{text}} *({{type}})*
+```javascript
+{{this.code}}
+```
+{{/this.examples}}
+{{/any}}
+
 {{/this.values}}
 
 {{/sections}}
-
 
 

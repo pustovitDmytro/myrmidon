@@ -5,13 +5,13 @@ const tester = new FunctionTester(isNumber);
 
 suite('CheckTypes: isNumber');
 
-test('Positive: isNumber with number input @examples', () => {
+test('Positive: isNumber with number input @example', () => {
     tester.test(1, true);
     tester.test(-5, true);
     tester.test(0, true);
 });
 
-test('Negative: isNumber with no-number input @examples', () => {
+test('Negative: isNumber with no-number input @example', () => {
     tester.test('14', false);
     tester.test('', false);
     tester.test(NaN, false);

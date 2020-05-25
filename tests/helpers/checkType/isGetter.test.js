@@ -16,11 +16,11 @@ class A {
 class X extends A {}
 const x = new X();
 
-test('Positive: isGetter @examples', () => {
+test('Positive: isGetter @example', () => {
     tester.test(x, 'c', true);
 });
 
-test('Negative: isGetter @examples', () => {
+test('Negative: isGetter @example', () => {
     tester.test(1, null, false);
 
     tester.test(x, 'a', false);

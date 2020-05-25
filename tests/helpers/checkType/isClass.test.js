@@ -5,17 +5,17 @@ const tester = new FunctionTester(isClass);
 
 suite('CheckTypes: isClass');
 
-test('Positive: isClass with class input @examples', () => {
+test('Positive: isClass with class input @example', () => {
     tester.test(class A {}, true);
 });
 
-test('Negative: isClass with no-class input @examples', () => {
+test('Negative: isClass with no-class input @example', () => {
     tester.test(13, false);
     tester.test(true, false);
     tester.test(new Set(), false);
 });
 
-test('Negative: isClass with empty input @examples', () => {
+test('Negative: isClass with empty input @example', () => {
     tester.test(null, false);
     tester.test(undefined, false);
     tester.test(0, false);

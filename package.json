@@ -11,6 +11,7 @@
     "test:security": "npm audit",
     "test:lint": "eslint src tests tools bin",
     "test:mocha": "mocha  --config .mocharc.json 'tests/**/*.test.js'",
+    "save-examples": "SAVE_EXAMPLES=tmp/examples.json mocha  --config .mocharc.json 'tests/**/*.test.js' --grep '@example'",
     "test:coverage": "MODE=test nyc mocha --config .mocharc.json 'tests/**/*.test.js'",
     "test": "npm run test:lint && npm run test:security || npm run test:coverage"
   },
@@ -44,6 +45,7 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "chai": "^4.2.0",
     "chance": "^1.0.18",
+    "cls-hooked": "^4.2.2",
     "conventional-changelog-eslint": "^3.0.1",
     "coveralls": "^3.0.3",
     "docopt": "^0.6.2",

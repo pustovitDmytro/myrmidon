@@ -3,7 +3,7 @@ import { retry } from 'tests/entry';
 
 suite('custom: retry');
 
-test('Positive: retry function calls @snippet', async () => {
+test('Positive: retry function calls @example', async () => {
     await SnippetTesterAsync(() => {
         let i = 0;
 
@@ -18,7 +18,7 @@ test('Positive: retry function calls @snippet', async () => {
 });
 
 
-test('Positive: retry async function with exponential backoff @snippet', async () => {
+test('Positive: retry async function with exponential backoff @example', async () => {
     let i = 0;
 
     async function failing() {
@@ -37,7 +37,7 @@ test('Positive: retry async function with exponential backoff @snippet', async (
 });
 
 
-test('Negative: abort retrying with abort function @snippet', async () => {
+test('Negative: abort retrying with abort function @example', async () => {
     let i = 0;
 
     async function failing() {

@@ -5,13 +5,13 @@ const tester = new FunctionTester(isBoolean);
 
 suite('CheckTypes: isBoolean');
 
-test('Positive: isBoolean with boolean input @examples', () => {
+test('Positive: isBoolean with boolean input @example', () => {
     tester.test(true, true);
     tester.test(false, true);
     tester.test(new Boolean(true), true);
 });
 
-test('Negative: isBoolean with no-boolean input @examples', () => {
+test('Negative: isBoolean with no-boolean input @example', () => {
     tester.test('14', false);
     tester.test('', false);
     tester.test(NaN, false);

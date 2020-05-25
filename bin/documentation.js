@@ -13,16 +13,12 @@ const doc =
 Options:
    -h --help    Documentation generator.
    readme       Generate readme
-   --out=<out>  Specify path for output file
+   --out=<out>  Specify path for output folder
 `;
 
 docoptRunner(main, docopt(doc));
 
 async function main({ readme, reference, ...opts }) {
-    if (readme) {
-        await buildReadme(opts.out);
-    }
-    if (reference) {
-        await buildDocs(opts.out);
-    }
+    if (readme) await buildReadme(opts.out);
+    if (reference) await buildDocs(opts.out);
 }

@@ -4,12 +4,18 @@ import mdinclude from 'mdinclude';
 import handleBars from 'handlebars';
 import fs from 'fs-extra';
 import swag from 'swag';
-
+import { CLIEngine } from 'eslint';
 import recommended from 'remark-preset-lint-recommended';
 import remark from 'remark';
 import toc from 'remark-toc';
-import { groupBy } from '../src/helpers';
+import { groupBy, uniqueIdenticFilter } from '../src/helpers';
 import info from '../package';
+
+const eslint = new CLIEngine({
+    fix : true
+});
+
+const examplesPath = path.join(process.cwd(), 'tmp', 'examples.json');
 
 swag.registerHelpers(handleBars);
 const SECTIONS = {
@@ -30,6 +36,31 @@ const getGitCommit = async () => {
     return content.trim();
 };
 
+async function prepareExamples() {
+    const examples = require(examplesPath);
+    const template = getTemplate('templates/documentation/examples.handlebars');
+
+    return examples
+        .map(dumpExample)
+        .map(data => {
+            const raw = template({ ...data, info });
+            const code =  eslint.executeOnText(raw).results[0].output;
+
+            return { ...data, code };
+        });
+}
+
+async function getFiles(dir) {
+    const subdirs = await fs.readdir(dir);
+    const files = await Promise.all(subdirs.map(async (subdir) => {
+        const res = path.resolve(dir, subdir);
+
+        return (await fs.stat(res)).isDirectory() ? getFiles(res) : res;
+    }));
+
+    return files.reduce((a, f) => a.concat(f), []);
+}
+
 export async function buildDocs(out) {
     const folder = out || 'docs';
 
@@ -45,12 +76,21 @@ export async function buildReadme(out) {
     ]);
 }
 
+function getTemplate(entry) {
+    const readmeTemplateText = mdinclude.readFileSync(entry); // eslint-disable-line no-sync
+
+    return handleBars.compile(readmeTemplateText, { noEscape: true });
+}
+
 export async function build(entry, out) {
     const rawData = await documentation.build([ 'src/index.js' ], {});
+    const cases = await prepareExamples();
+    const tests = await getFiles('tests');
+    const relativeTestFiles = tests.map(f => path.relative(process.cwd(), f));
     const docs = rawData.map(dumpDoc);
 
     const sections = Object.entries(groupBy(docs, 'file'))
-        .map(([ key, value ]) => {
+        .map(([ key, val ]) => {
             const fileName = path.basename(key, path.extname(key));
             const description = SECTIONS[fileName];
 
@@ -58,11 +98,21 @@ export async function build(entry, out) {
                 file   : key,
                 id     : fileName,
                 description,
-                values : value
+                values : val.map(v => {
+                    const examples = cases
+                        .filter(c => c.helpers.includes(v.name));
+                    const testFile = relativeTestFiles
+                        .find(f => f === path.join('tests', 'helpers', fileName, `${v.name}.test.js`));
+
+                    return {
+                        ...v,
+                        testFile,
+                        examples
+                    };
+                })
             };
         });
-    const readmeTemplateText = mdinclude.readFileSync(entry); // eslint-disable-line no-sync
-    const readmeTemplate = handleBars.compile(readmeTemplateText);
+    const readmeTemplate = getTemplate(entry);
     const commit = await getGitCommit();
     const readme =  readmeTemplate({
         info,
@@ -112,5 +162,20 @@ function dumpDoc(d) {
 
         file     : path.relative(process.cwd(), d.context.file),
         position : d.loc.start.line
+    };
+}
+
+function dumpExample(useCase) {
+    const [ caseType, caseText ] = useCase.test.split(':');
+    const helperNames = useCase.examples.map(example =>
+        example.type === 'FunctionTester' && example.function
+    ).filter(uniqueIdenticFilter);
+
+    return {
+        helpers  : helperNames,
+        type     : caseType.toLowerCase(),
+        text     : caseText.replace(/@\w+/g, ''),
+        category : caseText.suite,
+        examples : useCase.examples
     };
 }

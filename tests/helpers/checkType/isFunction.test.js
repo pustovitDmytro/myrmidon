@@ -5,18 +5,18 @@ const tester = new FunctionTester(isFunction);
 
 suite('CheckTypes: isFunction');
 
-test('Positive: isFunction with function input @examples', () => {
+test('Positive: isFunction with function input @example', () => {
     tester.test(() => {}, true);
     tester.test(async () => {}, true);
 });
 
-test('Negative: isFunction with no-function input @examples', () => {
+test('Negative: isFunction with no-function input @example', () => {
     tester.test(13, false);
     tester.test(true, false);
     tester.test(new Set(), false);
 });
 
-test('Negative: isFunction with empty input @examples', () => {
+test('Negative: isFunction with empty input @example', () => {
     tester.test(null, false);
     tester.test(undefined, false);
     tester.test(0, false);
