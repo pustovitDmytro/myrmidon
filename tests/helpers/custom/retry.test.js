@@ -1,10 +1,9 @@
 import { SnippetTesterAsync } from 'tests/utils';
-import { retry } from 'tests/entry';
 
 suite('custom: retry');
 
 test('Positive: retry function calls @example', async () => {
-    await SnippetTesterAsync(() => {
+    await SnippetTesterAsync(({ retry }) => {
         let i = 0;
 
         function failing() {
@@ -27,7 +26,7 @@ test('Positive: retry async function with exponential backoff @example', async (
         return i;
     }
 
-    await SnippetTesterAsync(() => {
+    await SnippetTesterAsync(({ retry }) => {
         return retry(async () => {
             const result = await failing();
 
@@ -46,7 +45,7 @@ test('Negative: abort retrying with abort function @example', async () => {
         return i;
     }
 
-    await SnippetTesterAsync(async () => {
+    await SnippetTesterAsync(async ({ retry }) => {
         await retry(async (abort) => {
             await failing().catch(error => {
                 if (error.message.match('2 < 3')) abort(error);

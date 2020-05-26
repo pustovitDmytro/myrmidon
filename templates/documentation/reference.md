@@ -18,7 +18,7 @@
 [Source]({{@root.info.repository.url}}/blob/{{@root.commit}}/{{this.file}}#L{{this.position}})
 
 {{#if this.testFile}}
-[Tests]({{@root.info.repository.url}}/blob/{{@root.commit}}/{{this.testFile}}
+[Tests]({{@root.info.repository.url}}/blob/{{@root.commit}}/{{this.testFile}})
 {{/if}}
 
 {{#is this.type 'function'}}
@@ -40,7 +40,7 @@ Returns **{{this.returns.type}}** {{this.returns.description}}
 {{#any this.examples}}
 **Examples**
 {{#this.examples}}
-{{text}} *({{type}})*
+{{text}} *\({{type}}\)*
 ```javascript
 {{this.code}}
 ```

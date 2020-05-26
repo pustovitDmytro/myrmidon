@@ -1,10 +1,9 @@
 import { SnippetTesterAsync } from 'tests/utils';
-import { uniqueIdFilter } from 'tests/entry';
 
 suite('Arrays: uniqueIdFilter');
 
 test('Positive: uniqueIdFilter for array of users @example', async () => {
-    await SnippetTesterAsync(() => {
+    await SnippetTesterAsync(({ uniqueIdFilter }) => {
         const users = [
             { id: 1, name: 'Maud Kim' },
             { id: 2, name: 'Bettie Henderson' },

@@ -1,5 +1,10 @@
 import { {{join helpers ' , '}} } from '{{info.name}}';
 
 {{#examples}}
+    {{#is this.type 'FunctionTester'}}
     {{this.function}}({{this.input}}); // {{this.output}}
+    {{/is}}
+    {{#is this.type 'SnippetTester'}}
+    {{this.input}}; // {{this.output}}
+    {{/is}}
 {{/examples}}

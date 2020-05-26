@@ -1,8 +1,11 @@
+import { inspect } from 'util';
 import { assert } from 'chai';
 /* eslint-disable prefer-arrow-callback */
 import { createNamespace } from 'cls-hooked';
 import uuid from 'uuid';
 import fs from 'fs-extra';
+import { parseScript } from 'esprima';
+import * as myrmidon from 'tests/entry';
 import { saveExamles } from './constants';
 
 const context = createNamespace('test');
@@ -65,7 +68,7 @@ export class FunctionTester {
             EXAMPLES.push({
                 type     : 'FunctionTester',
                 function : this.func.name,
-                output,
+                output   : inspect(output),
                 input    : match[1].trim(),
                 test     : context.get('current').id
             });
@@ -75,14 +78,34 @@ export class FunctionTester {
 
 export async function SnippetTesterAsync(func, expected) {
     try {
-        const result = await func();
+        const result = await func(myrmidon);
 
         if (expected) {
             assert.deepEqual(result, expected);
         }
+        if (saveExamles) {
+            const ast = parseScript(func.toString());
+            const testerFunc = ast.body.find(s => s.type === 'ExpressionStatement');
+            const isMyrmydonPassed = testerFunc && testerFunc.expression.params[0].type === 'ObjectPattern';
+            const helpers = isMyrmydonPassed
+                ? testerFunc.expression
+                    .params[0].properties.map(p => p.key.name)
+                : [];
+            const body = func.toString().replace(/\({[\s\S]+}\)\s=>\s{/, '() => {');
+            const needAsync = body.includes('await');
+
+            EXAMPLES.push({
+                type      : 'SnippetTester',
+                functions : helpers,
+                output    : inspect(result),
+                input     : needAsync ? `async ${body}` : body,
+                test      : context.get('current').id
+            });
+        }
     } catch (error) {
         if (error.name !== 'AssertionError' && expected && expected instanceof Error) {
             assert.equal(error.message, expected.message);
+            // TODO: save examples
         } else {
             throw error;
         }
@@ -100,3 +123,4 @@ export function requireFile(module) {
 }
 
 export const sleep = time => new Promise(res => setTimeout(res, time));
+

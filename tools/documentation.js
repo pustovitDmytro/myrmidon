@@ -8,7 +8,7 @@ import { CLIEngine } from 'eslint';
 import recommended from 'remark-preset-lint-recommended';
 import remark from 'remark';
 import toc from 'remark-toc';
-import { groupBy, uniqueIdenticFilter } from '../src/helpers';
+import { groupBy, uniqueIdenticFilter, flatten } from '../src/helpers';
 import info from '../package';
 
 const eslint = new CLIEngine({
@@ -30,7 +30,7 @@ const getGitCommit = async () => {
     if (gitId.indexOf(':') === -1) {
         return gitId;
     }
-    const refPath = `.git/${  gitId.substring(5).trim()}`;
+    const refPath = `.git/${gitId.substring(5).trim()}`;
     const content = await fs.readFile(refPath, 'utf8');
 
     return content.trim();
@@ -41,7 +41,7 @@ async function prepareExamples() {
     const template = getTemplate('templates/documentation/examples.handlebars');
 
     return examples
-        .map(dumpExample)
+        .map(dumpTest)
         .map(data => {
             const raw = template({ ...data, info });
             const code =  eslint.executeOnText(raw).results[0].output;
@@ -165,14 +165,16 @@ function dumpDoc(d) {
     };
 }
 
-function dumpExample(useCase) {
+function dumpTest(useCase) {
     const [ caseType, caseText ] = useCase.test.split(':');
     const helperNames = useCase.examples.map(example =>
         example.type === 'FunctionTester' && example.function
-    ).filter(uniqueIdenticFilter);
+        || example.type === 'SnippetTester' && example.functions
+    );
+    const helpers = flatten(helperNames).filter(uniqueIdenticFilter);
 
     return {
-        helpers  : helperNames,
+        helpers,
         type     : caseType.toLowerCase(),
         text     : caseText.replace(/@\w+/g, ''),
         category : caseText.suite,
