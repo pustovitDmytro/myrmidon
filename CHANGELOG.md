@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.3...v1.3.4) (2020-05-28)
+
+
+### Docs
+
+* impoves examples for array helpers ([17b8961](https://github.com/pustovitDmytro/myrmidon/commit/17b89610582bb332af3fb71b786deb32b929eb87))
+
 ## [1.3.3](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.2...v1.3.3) (2020-05-28)
 
 
