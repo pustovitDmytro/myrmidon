@@ -28,7 +28,7 @@ const getGitCommit = async () => {
     const gitId = await fs.readFile('.git/HEAD', 'utf8');
 
     if (gitId.indexOf(':') === -1) {
-        return gitId;
+        return gitId.trim();
     }
     const refPath = `.git/${gitId.substring(5).trim()}`;
     const content = await fs.readFile(refPath, 'utf8');
