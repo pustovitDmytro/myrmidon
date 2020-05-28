@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.5...v1.4.0) (2020-05-28)
+
+
+### Update
+
+* decrease package size ([fa684dc](https://github.com/pustovitDmytro/myrmidon/commit/fa684dc338e559be21314b783be3d3edb08f43b9))
+
 ## [1.3.5](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.4...v1.3.5) (2020-05-28)
 
 
