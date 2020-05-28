@@ -1,3 +1,15 @@
+## [1.3.2](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.1...v1.3.2) (2020-05-26)
+
+
+### Chore
+
+* adds examples to reference ([a7d8816](https://github.com/pustovitDmytro/myrmidon/commit/a7d88168d5806e3fc8d1d2105fa245b71cbafcb2))
+* fixes lint ([6eda9ca](https://github.com/pustovitDmytro/myrmidon/commit/6eda9caf58389a18249f6d0129bba267144cbc66))
+
+### Docs
+
+* adds snippets to reference ([f0f7357](https://github.com/pustovitDmytro/myrmidon/commit/f0f7357ca10700c3f1744e9077188e7b355bbb37))
+
 ## [1.3.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.0...v1.3.1) (2020-05-23)
 
 
