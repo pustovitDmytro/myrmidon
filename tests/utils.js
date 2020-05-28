@@ -50,6 +50,29 @@ if (saveExamles) {
     });
 }
 
+function searchFor(text, regexp) {
+    const results = [];
+
+    let match;
+
+    do {
+        match = regexp.exec(text);
+        if (match) {
+            const [ full, ...captures ] = match;
+            const { index, input } = match;
+
+            results.push({
+                full,
+                captures,
+                index,
+                input
+            });
+        }
+    } while (match);
+
+    return results;
+}
+
 export class FunctionTester {
     constructor(func) {
         this.func = func;
@@ -63,13 +86,15 @@ export class FunctionTester {
         assert.deepEqual(got, output, errMessage);
         if (saveExamles) {
             const argsRegexp = /\.test\(([\s\S]+?),[^,]+\);/gm;
-            const match = argsRegexp.exec(context.get('current').body);
+            const testBody = context.get('current').body;
+            const exapleIndex = EXAMPLES.filter(e => e.test === context.get('current').id).length;
+            const match = searchFor(testBody, argsRegexp)[exapleIndex];
 
             EXAMPLES.push({
                 type     : 'FunctionTester',
                 function : this.func.name,
                 output   : inspect(output),
-                input    : match[1].trim(),
+                input    : match.captures[0].trim(),
                 test     : context.get('current').id
             });
         }
