@@ -114,6 +114,8 @@ export async function build(entry, out) {
         });
     const readmeTemplate = getTemplate(entry);
     const commit = await getGitCommit();
+
+    console.log('commit: ', `|${commit}|`);
     const readme =  readmeTemplate({
         info,
         sections,
