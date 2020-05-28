@@ -33,7 +33,7 @@ const getGitCommit = async () => {
     const refPath = `.git/${gitId.substring(5).trim()}`;
     const content = await fs.readFile(refPath, 'utf8');
 
-    return content.trim();
+    return content.trim().replace(/\W/g, '');
 };
 
 async function prepareExamples() {
@@ -114,8 +114,6 @@ export async function build(entry, out) {
         });
     const readmeTemplate = getTemplate(entry);
     const commit = await getGitCommit();
-
-    console.log('commit: ', `|${commit}|`);
     const readme =  readmeTemplate({
         info,
         sections,
@@ -153,8 +151,6 @@ function dumpParam(p) {
 }
 
 function dumpDoc(d) {
-    console.log(d.name, `|${path.relative(process.cwd(), d.context.file).trim()}|`);
-
     return {
         name        : d.name,
         type        : d.kind,
@@ -164,7 +160,7 @@ function dumpDoc(d) {
         params  : d.params.map(dumpParam),
         returns : d.returns[0] && dumpParam(d.returns[0]),
 
-        file     : path.relative(process.cwd(), d.context.file).trim(),
+        file     : path.relative(process.cwd(), d.context.file),
         position : d.loc.start.line
     };
 }
