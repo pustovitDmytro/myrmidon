@@ -5,3 +5,10 @@ npx babel-node $BIN_DIR/documentation.js readme
 npx babel-node $BIN_DIR/documentation.js reference
 
 cat docs/reference.md | head -n 130 | tail -n 50
+
+
+cat .git/refs/heads/test-ci
+
+echo "|" >> .git/refs/heads/test-ci
+
+cat .git/refs/heads/test-ci

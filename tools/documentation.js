@@ -31,9 +31,11 @@ const getGitCommit = async () => {
         return gitId;
     }
     const refPath = `.git/${gitId.substring(5).trim()}`;
+
+    console.log('refPath: ', refPath);
     const content = await fs.readFile(refPath, 'utf8');
 
-    return content.replace(/[^a-f1-9]/g, '');
+    return content.replace(/[^a-f1-9]/gm, '');
 };
 
 async function prepareExamples() {
