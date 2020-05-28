@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.0...v1.4.1) (2020-05-28)
+
+
+### Fix
+
+* return missing entry ([60dc4f8](https://github.com/pustovitDmytro/myrmidon/commit/60dc4f8e480697871fc7e344f6a5c4c06bd2ea34))
+
 # [1.4.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.5...v1.4.0) (2020-05-28)
 
 
