@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.2...v1.3.3) (2020-05-28)
+
+
+### Docs
+
+* removes duplicates in examples ([c91e246](https://github.com/pustovitDmytro/myrmidon/commit/c91e246484b80c90a23b669b0b551b80d88dc1f1))
+
 ## [1.3.2](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.1...v1.3.2) (2020-05-26)
 
 
