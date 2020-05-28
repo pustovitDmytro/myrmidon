@@ -1,7 +1,8 @@
-src
-tests
-.travis.yml
-.eslintrc
-.eslintignore 
-.babelrc
-tmp
+.*
+*
+!lib
+!README.md
+!package.json
+!package-lock.json
+!LICENSE.md
+!CHANGELOG.md
