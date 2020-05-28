@@ -50,29 +50,6 @@ if (saveExamles) {
     });
 }
 
-function searchFor(text, regexp) {
-    const results = [];
-
-    let match;
-
-    do {
-        match = regexp.exec(text);
-        if (match) {
-            const [ full, ...captures ] = match;
-            const { index, input } = match;
-
-            results.push({
-                full,
-                captures,
-                index,
-                input
-            });
-        }
-    } while (match);
-
-    return results;
-}
-
 export class FunctionTester {
     constructor(func) {
         this.func = func;
@@ -85,16 +62,23 @@ export class FunctionTester {
 
         assert.deepEqual(got, output, errMessage);
         if (saveExamles) {
-            const argsRegexp = /\.test\(([\s\S]+?),[^,]+\);/gm;
-            const testBody = context.get('current').body;
             const exapleIndex = EXAMPLES.filter(e => e.test === context.get('current').id).length;
-            const match = searchFor(testBody, argsRegexp)[exapleIndex];
+            const ast = parseScript(context.get('current').body);
+            const rootAst = ast.body.find(a => a.type === 'ExpressionStatement');
+
+            const testFuncAst = rootAst.expression.body;
+            const exampleSnippet = testFuncAst.body[exapleIndex];
+            const exampleArguments = exampleSnippet.expression.arguments;
+            const inputArguments = exampleArguments.slice(0, -1);
+            const escodegen = require('escodegen');
+            const rawInputArguments = inputArguments
+                .map(literal => escodegen.generate(literal, { format: { compact: true } }));
 
             EXAMPLES.push({
                 type     : 'FunctionTester',
                 function : this.func.name,
                 output   : inspect(output),
-                input    : match.captures[0].trim(),
+                input    : rawInputArguments,
                 test     : context.get('current').id
             });
         }

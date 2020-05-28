@@ -34,7 +34,7 @@ test('Positive: measure time', async () => {
     const benchmark = getBenchmark(time);
 
     assert.isString(benchmark);
-    assert.isAtLeast(+benchmark, 20);
+    assert.isAtLeast(+benchmark, 19);
 });
 
 after(async () => {

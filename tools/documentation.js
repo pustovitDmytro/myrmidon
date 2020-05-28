@@ -86,7 +86,7 @@ export async function build(entry, out) {
     const rawData = await documentation.build([ 'src/index.js' ], {});
     const cases = await prepareExamples();
     const tests = await getFiles('tests');
-    const relativeTestFiles = tests.map(f => path.relative(process.cwd(), f));
+    const relativeTestFiles = tests.map(f => path.relative(process.cwd(), f).trim());
     const docs = rawData.map(dumpDoc);
 
     const sections = Object.entries(groupBy(docs, 'file'))
@@ -160,7 +160,7 @@ function dumpDoc(d) {
         params  : d.params.map(dumpParam),
         returns : d.returns[0] && dumpParam(d.returns[0]),
 
-        file     : path.relative(process.cwd(), d.context.file),
+        file     : path.relative(process.cwd(), d.context.file).trim(),
         position : d.loc.start.line
     };
 }
