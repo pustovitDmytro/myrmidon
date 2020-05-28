@@ -79,6 +79,8 @@ export async function buildReadme(out) {
 function getTemplate(entry) {
     const readmeTemplateText = mdinclude.readFileSync(entry); // eslint-disable-line no-sync
 
+    console.log('readmeTemplateText: ', readmeTemplateText);
+
     return handleBars.compile(readmeTemplateText, { noEscape: true });
 }
 
@@ -114,6 +116,8 @@ export async function build(entry, out) {
         });
     const readmeTemplate = getTemplate(entry);
     const commit = await getGitCommit();
+
+    console.log('commit: ', commit);
     const readme =  readmeTemplate({
         info,
         sections,
@@ -151,6 +155,8 @@ function dumpParam(p) {
 }
 
 function dumpDoc(d) {
+    console.log(d.name, path.relative(process.cwd(), d.context.file).trim());
+
     return {
         name        : d.name,
         type        : d.kind,
