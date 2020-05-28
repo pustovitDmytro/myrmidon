@@ -88,7 +88,7 @@ export async function build(entry, out) {
     const rawData = await documentation.build([ 'src/index.js' ], {});
     const cases = await prepareExamples();
     const tests = await getFiles('tests');
-    const relativeTestFiles = tests.map(f => path.relative(process.cwd(), f).trim());
+    const relativeTestFiles = tests.map(f => path.relative(process.cwd(), f));
     const docs = rawData.map(dumpDoc);
 
     const sections = Object.entries(groupBy(docs, 'file'))
