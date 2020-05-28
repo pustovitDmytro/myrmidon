@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.4...v1.3.5) (2020-05-28)
+
+
+### Docs
+
+* fix restricted symbol in commit hash ([610234e](https://github.com/pustovitDmytro/myrmidon/commit/610234efb3ae0d086749fe55c9852b3b79506358))
+
 ## [1.3.4](https://github.com/pustovitDmytro/myrmidon/compare/v1.3.3...v1.3.4) (2020-05-28)
 
 
