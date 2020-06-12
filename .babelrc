@@ -3,6 +3,7 @@
       [
         "@babel/preset-env",
         {
+          "useBuiltIns": "entry",
           "targets": {
             "node": "6",
             "browsers": "last 5 versions, > 5%"
@@ -11,6 +12,11 @@
       ]
     ],
     "plugins": [
+      ["@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ],
       [
         "@babel/plugin-proposal-decorators",
         {
