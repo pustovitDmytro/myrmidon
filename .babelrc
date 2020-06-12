@@ -4,7 +4,8 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": "current"
+            "node": "6",
+            "browsers": "last 5 versions, > 5%"
           }
         }
       ]
@@ -35,5 +36,5 @@
     "ignore": [
       "node_modules"
     ]
-  }
+}
   
