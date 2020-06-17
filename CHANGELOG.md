@@ -1,3 +1,24 @@
+## [1.4.3](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.2...v1.4.3) (2020-06-17)
+
+
+### Build
+
+* support 5 latest browsers ([4339326](https://github.com/pustovitDmytro/myrmidon/commit/4339326df36e7799f8ba5a5460772d1f9f4de82f))
+
+### Chore
+
+* adds package test to travis ([6019d22](https://github.com/pustovitDmytro/myrmidon/commit/6019d22dd92afe2148365044551fa22ba4092187))
+* clear cache before package-test ([a5f245e](https://github.com/pustovitDmytro/myrmidon/commit/a5f245e1083371882b8f64fd6fd4bca04e209c5d))
+* Ignore decorators for coverage ([f721cd2](https://github.com/pustovitDmytro/myrmidon/commit/f721cd2dc6d2995f209df89d4094fd1e52d1b582))
+
+### Fix
+
+* isClass with babel browsers preset ([475e0e3](https://github.com/pustovitDmytro/myrmidon/commit/475e0e3f85b37255e65294c4924286432fed0801))
+
+### WC
+
+* transform-runtime issue ([e80ecda](https://github.com/pustovitDmytro/myrmidon/commit/e80ecda1f4e99fec84bcf01339933256538171bc))
+
 ## [1.4.2](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.1...v1.4.2) (2020-05-28)
 
 
