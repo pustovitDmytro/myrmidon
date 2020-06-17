@@ -13,6 +13,7 @@ test('Negative: isClass with no-class input @example', () => {
     tester.test(13, false);
     tester.test(true, false);
     tester.test(new Set(), false);
+    tester.test(() => {}, false);
 });
 
 test('Negative: isClass with empty input @example', () => {

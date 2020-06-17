@@ -15,7 +15,7 @@ export function isString(x) {
  * @returns {boolean} true if x is class, false otherwise
  */
 export function isClass(x) {
-    return isValue(x) && typeof x === 'function' && /^\s*class\s+/.test(x.toString());
+    return isValue(x) && typeof x === 'function' && /class/i.test(x.toString());
 }
 
 /**
