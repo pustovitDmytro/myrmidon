@@ -11,7 +11,9 @@ jobs:
     - stage: test
       script: "npm run test:coverage"
     - stage: test
-      script: "BUILD=1 npm run test:mocha"
+      script: "npm run test:build"
+    - stage: test
+      script: "npm run test:package"
     - stage: test
       script: "npm run test:security"
     - stage: release
