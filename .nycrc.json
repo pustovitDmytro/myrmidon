@@ -2,7 +2,9 @@
     "include": [
         "src"
     ],
-    "exclude": [],
+    "exclude": [
+        "src/decorators.js"
+    ],
     "reporter": [
         "html",
         "lcovonly"
