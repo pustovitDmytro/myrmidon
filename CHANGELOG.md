@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.1...v1.4.2) (2020-05-28)
+
+
+### Fix
+
+* remove lock file from package ([6c852e6](https://github.com/pustovitDmytro/myrmidon/commit/6c852e62e085251a98bc60a1d9704e7606949511))
+
 ## [1.4.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.0...v1.4.1) (2020-05-28)
 
 
