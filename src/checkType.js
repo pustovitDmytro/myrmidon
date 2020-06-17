@@ -102,3 +102,12 @@ export function isGetter(x, name) {
 
     return !!getPropertyDescriptor(x, name).get;
 }
+
+/**
+ * determines whether the value is regualr expression
+ * @param {any} x primitive for examination
+ * @returns {boolean} true if x is regualr expression, false otherwise
+ */
+export function isRegexp(x) {
+    return isValue(x) && Object.prototype.toString.call(x) === '[object RegExp]';
+}

@@ -1,4 +1,4 @@
-import { isNumber, isObject, isFunction } from './checkType';
+import { isNumber, isObject, isFunction, isRegexp } from './checkType';
 import { random } from './random';
 
 const abortedKey = Symbol('myrmidon_retry_aborted');
@@ -96,4 +96,38 @@ export function fill(template, data, { delimiters = [ '{', '}' ], regExp } = {})
     }
 
     return filled;
+}
+
+/**
+ * Search all occurrences of pattern in text
+ * @param {string} text where to search
+ * @param {regExp} [pattern] search pattern. If pattern is a non-RegExp object, it is implicitly converted to a RegExp by using new RegExp(pattern)
+ * @returns {array} occurrences
+ */
+export function searchFor(text, pattern) {
+    const currentFlags = isRegexp(pattern) ? pattern.flags : '';
+    const regexp = new RegExp(
+        isRegexp(pattern) ? pattern.source : pattern,
+        currentFlags.includes('g') ? currentFlags : `${currentFlags}g`
+    );
+    const results = [];
+
+    let match;
+
+    do {
+        match = regexp.exec(text);
+        if (match) {
+            const [ full, ...captures ] = match;
+            const { index, input } = match;
+
+            results.push({
+                full,
+                captures,
+                index,
+                input
+            });
+        }
+    } while (match);
+
+    return results;
 }

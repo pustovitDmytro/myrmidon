@@ -18,26 +18,3 @@ export function getEscapedRegExp(value) {
 
     return escaped;
 }
-
-export function searchFor(text, regexp) {
-    const results = [];
-
-    let match;
-
-    do {
-        match = regexp.exec(text);
-        if (match) {
-            const [ full, ...captures ] = match;
-            const { index, input } = match;
-
-            results.push({
-                full,
-                captures,
-                index,
-                input
-            });
-        }
-    } while (match);
-
-    return results;
-}
