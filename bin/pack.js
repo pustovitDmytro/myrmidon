@@ -26,6 +26,9 @@ async function main({ out }) {
     if (!res.includes(tmpFileName)) throw new Error('FILE NAME MISSMATCH');
     const tmpFilePath = path.resolve(tmpFileName);
 
+    await fs.ensureDir(outFolder);
+    await fs.remove(path.join(outFolder, 'package'));
+
     execSync(`tar -xvzf ${tmpFileName} -C ${outFolder}`);
     console.log('written to: ', outFolder);
 
