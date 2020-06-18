@@ -60,12 +60,13 @@ export class FunctionTester {
         const got = this.func(...input);
         const errMessage = `${input.join(',')} => ${output}`;
 
-        assert.deepEqual(got, output, errMessage);
+        if (output) {
+            assert.deepEqual(got, output, errMessage);
+        }
         if (saveExamles) {
             const exapleIndex = EXAMPLES.filter(e => e.test === context.get('current').id).length;
             const ast = parseScript(context.get('current').body);
             const rootAst = ast.body.find(a => a.type === 'ExpressionStatement');
-
             const testFuncAst = rootAst.expression.body;
             const exampleSnippet = testFuncAst.body[exapleIndex];
             const exampleArguments = exampleSnippet.expression.arguments;

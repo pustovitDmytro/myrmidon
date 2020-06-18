@@ -3,7 +3,7 @@ import { FunctionTester } from '../../utils';
 
 const tester = new FunctionTester(isEmpty);
 
-suite('CheckTypes: isEmpty');
+suite('object: isEmpty');
 
 test('Positive: isEmpty with empty input @example', () => {
     // tester.test([], true);
