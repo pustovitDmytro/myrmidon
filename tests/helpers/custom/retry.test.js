@@ -1,4 +1,6 @@
+import { assert } from 'chai';
 import { SnippetTesterAsync } from 'tests/utils';
+import { retry as helper, pause } from '../../entry';
 
 suite('custom: retry');
 
@@ -53,4 +55,16 @@ test('Negative: abort retrying with abort function @example', async () => {
             });
         }, { retry: 5, timeout: 5 });
     }, new Error('2 < 3'));
+});
+
+test('Positive: stop retry if succed', async () => {
+    let i = 0;
+
+    function succed() {
+        if (++i === 1) return 'OK';
+        assert.fail('Should not be run more than once');
+    }
+
+    await helper(() => succed(), { retry: 5, timeout: 1 });
+    await pause(100);
 });
