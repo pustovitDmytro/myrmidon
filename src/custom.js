@@ -18,6 +18,12 @@ function calculateTimeout(opts, attempt = 0) {
     }
 }
 
+function defaultOnRetry(err, iter, { retries, next }) {
+    if (err[abortedKey]) throw err;
+    if (iter === retries) throw err;
+    next();
+}
+
 /**
  * Retrying function calls on errors
  * @param {function} retrier function (sync or async) that will be retried
@@ -27,13 +33,7 @@ function calculateTimeout(opts, attempt = 0) {
  * @param {(number|object|function)} [settings.timeout=100] timeout configuration. If number specifies time in ms, if object - specifies Exponential Backoff with properties min, max, factor, randomize
  * @returns {any} result of retrier function call
  */
-export function retry(retrier, { onRetry, retries = 10, timeout = 100 } = {}) {
-    function onError(err, iter, rej) {
-        if (onRetry) onRetry(err, iter, abortedKey);
-        if (err[abortedKey]) rej(err);
-        if (iter === retries) throw err;
-    }
-
+export function retry(retrier, { onRetry = defaultOnRetry, retries = 10, timeout = 100 } = {}) {
     return new Promise((res, rej) => {
         function attempt(iter) {
             try {
@@ -41,13 +41,32 @@ export function retry(retrier, { onRetry, retries = 10, timeout = 100 } = {}) {
 
                 Promise.resolve(val)
                     .then(res)
-                    .catch((err) => onError(err, iter, rej));
+                    .catch((err) => onError(err, iter));
             } catch (err) {
-                onError(err, iter, rej);
+                onError(err, iter);
             }
-            setTimeout(() => attempt(iter + 1), calculateTimeout(timeout, iter + 1));
         }
-        attempt(0);
+
+        function nextAttempt(iter) {
+            setTimeout(
+                () => attempt(iter + 1),
+                calculateTimeout(timeout, iter + 1)
+            );
+        }
+
+        function onError(err, iter) {
+            try {
+                onRetry(err, iter, {
+                    retries,
+                    abort,
+                    next : () => nextAttempt(iter)
+                });
+            } catch (error) {
+                rej(error);
+            }
+        }
+
+        attempt(0, { res, rej });
     });
 }
 
