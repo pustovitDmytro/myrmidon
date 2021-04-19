@@ -14,6 +14,10 @@ handleBars.registerHelper('join', (items = [], sep) => {
     return items.join(sep);
 });
 
+handleBars.registerHelper('lowercase', str => {
+    return str.toLowerCase();
+});
+
 // eslint-disable-next-line func-names
 handleBars.registerHelper('is', function (value, test, options) {
     if (value && value === test) {
@@ -92,7 +96,7 @@ export async function buildDocs(out) {
 
 export async function buildReadme(out) {
     return Promise.all([
-        await build('templates/documentation/readme.md', out ? out : 'README.md')
+        await build('templates/documentation/readme.md', out ? path.join(out, 'README.md') : 'README.md')
     ]);
 }
 
@@ -143,7 +147,7 @@ export async function build(entry, out) {
 
     await fs.ensureDir(path.dirname(outPath));
 
-    return new Promise((res, rej) => {
+    await new Promise((res, rej) => {
         remark()
             .use(toc)
             .use(recommended)

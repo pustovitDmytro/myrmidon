@@ -19,6 +19,12 @@ Options:
 docoptRunner(main, docopt(doc));
 
 async function main({ readme, reference, ...opts }) {
-    if (readme) await buildReadme(opts.out);
-    if (reference) await buildDocs(opts.out);
+    try {
+        if (readme) await buildReadme(opts.out);
+        if (reference) await buildDocs(opts.out);
+        process.exit(0);
+    } catch (error) {
+        console.error(error);
+        process.exit(1);
+    }
 }
