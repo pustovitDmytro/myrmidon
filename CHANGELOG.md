@@ -1,3 +1,46 @@
+## [1.4.5](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.4...v1.4.5) (2021-04-19)
+
+
+### Chore
+
+* adds commitlint ([38ded63](https://github.com/pustovitDmytro/myrmidon/commit/38ded63eb2a1a8e71b9a437d8b784a88dac47543))
+* adds danger to validate pr ([7fb7040](https://github.com/pustovitDmytro/myrmidon/commit/7fb7040e3b4daa8fc1b419aa88e08118fb43497d))
+* adds dangerfile to npm ignore ([8842c70](https://github.com/pustovitDmytro/myrmidon/commit/8842c70cad5ba463b996988d8928c58dbea1fa2f))
+* adds empty line to pr comment ([36d8a09](https://github.com/pustovitDmytro/myrmidon/commit/36d8a0977895e3236213a5c1091fd4c0af3107b4))
+* adds jscpd to ignore ([8520cea](https://github.com/pustovitDmytro/myrmidon/commit/8520ceadd2d75a90e44f94c6351ebdafc4ef9944))
+* adds lock file lint ([f5a4679](https://github.com/pustovitDmytro/myrmidon/commit/f5a467979d6cbb3fa21797fe063deb99c2e6e6d0))
+* adds target branch to semantic release ([c4fb3f1](https://github.com/pustovitDmytro/myrmidon/commit/c4fb3f1b9ec25425f49b3fd0a17cf68f64429fb4))
+* adds technical dept check ([e16a8e2](https://github.com/pustovitDmytro/myrmidon/commit/e16a8e2880d894ed0ca6f6125b7be61a90a15768))
+* adds tests for packing process ([9b9602d](https://github.com/pustovitDmytro/myrmidon/commit/9b9602d2d5e9d869a6555437355325c703ccfb5b))
+* change extention of test files to .test.js ([d84ac03](https://github.com/pustovitDmytro/myrmidon/commit/d84ac0310ce9f503c9ec05be742f73e2764a1651))
+* change tgz label ([5e0e512](https://github.com/pustovitDmytro/myrmidon/commit/5e0e51223c0069915e559de8a55a18696254f8fd))
+* corrected extglob matching ([72a2201](https://github.com/pustovitDmytro/myrmidon/commit/72a22018f8e9875de4194821361602cc432a32b1))
+* corrected pack pattern ([273497a](https://github.com/pustovitDmytro/myrmidon/commit/273497a050e075200512db9033ee2fe9d973a5f4))
+* disable build for coverage check ([0b6e984](https://github.com/pustovitDmytro/myrmidon/commit/0b6e9847587f281e0b350bb4f9b6d0d498b4ac82))
+* fixes debt typo in travis job ([f9fd463](https://github.com/pustovitDmytro/myrmidon/commit/f9fd4631aa300e16128a4d7107d45f9317f70c9b))
+* fixes package process ([364e26b](https://github.com/pustovitDmytro/myrmidon/commit/364e26b379e6cd94b89776aa0a41abd10a5dc43a))
+* fixes readme generation ([353b401](https://github.com/pustovitDmytro/myrmidon/commit/353b401f5c70a4449afea2c3f175cdd47ed082ba))
+* fixes semantic-release command on deploy ([b28710a](https://github.com/pustovitDmytro/myrmidon/commit/b28710a7b6e5f333ebe99d6eabde7463023ac92d))
+* pull boilerplate ([ef36926](https://github.com/pustovitDmytro/myrmidon/commit/ef36926ea6859c8c7e1737761adc136ca26cdf8d))
+* update semantic release rules ([a075dab](https://github.com/pustovitDmytro/myrmidon/commit/a075dabcdd82773ce2d2170e03a3a847f6551c02))
+* update travis badge ([e159104](https://github.com/pustovitDmytro/myrmidon/commit/e1591042eba97c4b87c923a3a84053eca1e2da4d))
+* use native tarball generation ([eeefda5](https://github.com/pustovitDmytro/myrmidon/commit/eeefda5daa30eedd1af621c4a0c0efa32f0c9645))
+
+### Docs
+
+* prettify modified_files as markdown list in pr ([6397f60](https://github.com/pustovitDmytro/myrmidon/commit/6397f60597573cab04278c8b597b13cdb452773a))
+* prettify modified_files list in pr ([ecce71a](https://github.com/pustovitDmytro/myrmidon/commit/ecce71a2494382206f983c8370cdd9affbc341a7))
+
+### Fix
+
+* adds missing modules ([fc14911](https://github.com/pustovitDmytro/myrmidon/commit/fc1491119302e2f22ba6bc497d69812dcdd21493))
+* cleanUndefined on circullar structure ([948da5e](https://github.com/pustovitDmytro/myrmidon/commit/948da5ee1bef93e4e80533d35ac896d72d108e28))
+* fixes typo ([4f8ced4](https://github.com/pustovitDmytro/myrmidon/commit/4f8ced4f6a9ba7559b68c94d0bcfcf30faa57e45))
+
+### Upgrade
+
+* updated mocha and node ([7a69c59](https://github.com/pustovitDmytro/myrmidon/commit/7a69c590a31e165fc4da4a1c891811405a354a0c))
+
 ## [1.4.4](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.3...v1.4.4) (2020-10-30)
 
 

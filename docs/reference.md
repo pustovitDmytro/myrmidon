@@ -13,9 +13,9 @@ helps to indicate type of any value
 function:
 determines whether the value is string
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L3)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L3)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/checkType/isString.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/checkType/isString.test.js)
 
 **Parameters**
 
@@ -32,10 +32,15 @@ Returns **boolean** true if x is string, false otherwise
 import { isString } from 'myrmidon';
 
 isString(''); // true
+
 isString('abcd'); // true
+
 isString('34'); // true
+
 isString(new String(19)); // true
+
 isString('multiline \n text with \ttabs'); // true
+
 
 ```
 
@@ -45,8 +50,11 @@ isString('multiline \n text with \ttabs'); // true
 import { isString } from 'myrmidon';
 
 isString(13); // false
+
 isString(true); // false
+
 isString(new Set()); // false
+
 
 ```
 
@@ -56,10 +64,15 @@ isString(new Set()); // false
 import { isString } from 'myrmidon';
 
 isString(null); // false
+
 isString(undefined); // false
+
 isString(0); // false
+
 isString(''); // true
+
 isString(false); // false
+
 
 ```
 
@@ -68,9 +81,9 @@ isString(false); // false
 function:
 determines whether the value is class
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L12)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L12)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/checkType/isClass.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/checkType/isClass.test.js)
 
 **Parameters**
 
@@ -88,6 +101,7 @@ import { isClass } from 'myrmidon';
 
 isClass(class A {}); // true
 
+
 ```
 
  isClass with no-class input  _(negative)_
@@ -96,8 +110,13 @@ isClass(class A {}); // true
 import { isClass } from 'myrmidon';
 
 isClass(13); // false
+
 isClass(true); // false
+
 isClass(new Set()); // false
+
+isClass(() => {}); // false
+
 
 ```
 
@@ -107,9 +126,13 @@ isClass(new Set()); // false
 import { isClass } from 'myrmidon';
 
 isClass(null); // false
+
 isClass(undefined); // false
+
 isClass(0); // false
+
 isClass(false); // false
+
 
 ```
 
@@ -118,9 +141,9 @@ isClass(false); // false
 function:
 determines whether the value is function
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L21)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L21)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/checkType/isFunction.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/checkType/isFunction.test.js)
 
 **Parameters**
 
@@ -137,7 +160,9 @@ Returns **boolean** true if x is function, false otherwise
 import { isFunction } from 'myrmidon';
 
 isFunction(() => {}); // true
+
 isFunction(async () => {}); // true
+
 
 ```
 
@@ -147,8 +172,11 @@ isFunction(async () => {}); // true
 import { isFunction } from 'myrmidon';
 
 isFunction(13); // false
+
 isFunction(true); // false
+
 isFunction(new Set()); // false
+
 
 ```
 
@@ -158,10 +186,15 @@ isFunction(new Set()); // false
 import { isFunction } from 'myrmidon';
 
 isFunction(null); // false
+
 isFunction(undefined); // false
+
 isFunction(0); // false
+
 isFunction(''); // false
+
 isFunction(false); // false
+
 
 ```
 
@@ -170,9 +203,9 @@ isFunction(false); // false
 function:
 determines whether the value is an object
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L30)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L30)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/checkType/isObject.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/checkType/isObject.test.js)
 
 **Parameters**
 
@@ -189,7 +222,9 @@ Returns **boolean** true if x is an object, false otherwise
 import { isObject } from 'myrmidon';
 
 isObject({}); // true
+
 isObject(new Object()); // true
+
 
 ```
 
@@ -199,8 +234,11 @@ isObject(new Object()); // true
 import { isObject } from 'myrmidon';
 
 isObject(13); // false
+
 isObject(true); // false
+
 isObject(new Set()); // false
+
 
 ```
 
@@ -210,10 +248,15 @@ isObject(new Set()); // false
 import { isObject } from 'myrmidon';
 
 isObject(null); // false
+
 isObject(undefined); // false
+
 isObject(0); // false
+
 isObject(''); // false
+
 isObject(false); // false
+
 
 ```
 
@@ -222,7 +265,7 @@ isObject(false); // false
 function:
 determines whether the value is array
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L39)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L39)
 
 **Parameters**
 
@@ -237,9 +280,9 @@ Returns **boolean** true if x is array, false otherwise
 function:
 determines whether the value is promise
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L48)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L48)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/checkType/isPromise.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/checkType/isPromise.test.js)
 
 **Parameters**
 
@@ -257,6 +300,7 @@ import { isPromise } from 'myrmidon';
 
 isPromise(new Promise(() => {})); // true
 
+
 ```
 
  isPromise with no-promise input  _(negative)_
@@ -265,8 +309,11 @@ isPromise(new Promise(() => {})); // true
 import { isPromise } from 'myrmidon';
 
 isPromise(13); // false
+
 isPromise(true); // false
+
 isPromise(new Set()); // false
+
 
 ```
 
@@ -276,10 +323,15 @@ isPromise(new Set()); // false
 import { isPromise } from 'myrmidon';
 
 isPromise(null); // false
+
 isPromise(undefined); // false
+
 isPromise(0); // false
+
 isPromise(''); // false
+
 isPromise(false); // false
+
 
 ```
 
@@ -288,7 +340,7 @@ isPromise(false); // false
 function:
 determines whether the value is set
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L57)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L57)
 
 **Parameters**
 
@@ -303,9 +355,9 @@ Returns **boolean** false if x is null or undefined, true otherwise
 function:
 determines whether the value is Number
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L66)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L66)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/checkType/isNumber.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/checkType/isNumber.test.js)
 
 **Parameters**
 
@@ -322,8 +374,11 @@ Returns **boolean** true if x is number, false otherwise
 import { isNumber } from 'myrmidon';
 
 isNumber(1); // true
+
 isNumber(-5); // true
+
 isNumber(0); // true
+
 
 ```
 
@@ -333,10 +388,15 @@ isNumber(0); // true
 import { isNumber } from 'myrmidon';
 
 isNumber('14'); // false
+
 isNumber(''); // false
+
 isNumber(NaN); // false
+
 isNumber(null); // false
+
 isNumber(undefined); // false
+
 
 ```
 
@@ -345,9 +405,9 @@ isNumber(undefined); // false
 function:
 determines whether the value is Boolean
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L75)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L75)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/checkType/isBoolean.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/checkType/isBoolean.test.js)
 
 **Parameters**
 
@@ -364,8 +424,11 @@ Returns **boolean** true if x is boolean, false otherwise
 import { isBoolean } from 'myrmidon';
 
 isBoolean(true); // true
+
 isBoolean(false); // true
+
 isBoolean(new Boolean(true)); // true
+
 
 ```
 
@@ -375,10 +438,15 @@ isBoolean(new Boolean(true)); // true
 import { isBoolean } from 'myrmidon';
 
 isBoolean('14'); // false
+
 isBoolean(''); // false
+
 isBoolean(NaN); // false
+
 isBoolean(null); // false
+
 isBoolean(undefined); // false
+
 
 ```
 
@@ -387,9 +455,9 @@ isBoolean(undefined); // false
 function:
 determines whether the value is Stream
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L84)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L84)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/checkType/isStream.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/checkType/isStream.test.js)
 
 **Parameters**
 
@@ -405,8 +473,10 @@ Returns **boolean** true if x is Stream, false otherwise
 ```javascript
 import { isStream } from 'myrmidon';
 
-isStream(_fs.default.createReadStream(_path.default.join(directory, 'input.txt'))); // true
-isStream(_fs.default.createWriteStream(_path.default.join(directory, 'out.txt'))); // true
+isStream(fs.createReadStream(path.join(directory, 'input.txt'))); // true
+
+isStream(fs.createWriteStream(path.join(directory, 'out.txt'))); // true
+
 
 ```
 
@@ -416,10 +486,15 @@ isStream(_fs.default.createWriteStream(_path.default.join(directory, 'out.txt'))
 import { isStream } from 'myrmidon';
 
 isStream(14); // false
+
 isStream('sdsdsd'); // false
+
 isStream(() => {}); // false
+
 isStream(class A {}); // false
+
 isStream(undefined); // false
+
 
 ```
 
@@ -428,9 +503,9 @@ isStream(undefined); // false
 function:
 determines whether the value is function getter
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/checkType.js#L94)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L94)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/checkType/isGetter.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/checkType/isGetter.test.js)
 
 **Parameters**
 
@@ -449,6 +524,7 @@ import { isGetter } from 'myrmidon';
 
 isGetter(x, 'c'); // true
 
+
 ```
 
  isGetter  _(negative)_
@@ -457,12 +533,32 @@ isGetter(x, 'c'); // true
 import { isGetter } from 'myrmidon';
 
 isGetter(1, null); // false
+
 isGetter(x, 'a'); // false
+
 isGetter(x, 'constructor'); // false
+
 isGetter(x, 'd'); // false
+
 isGetter(x, 'b'); // false
 
+
 ```
+
+### isRegexp
+
+function:
+determines whether the value is regualr expression
+
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/checkType.js#L106)
+
+**Parameters**
+
+    - `x` **any** primitive for examination
+
+**Returns**
+
+Returns **boolean** true if x is regualr expression, false otherwise
 
 ## array
 
@@ -479,9 +575,9 @@ helps to work with js arrays
 function:
 transforms any value to Array
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/array.js#L3)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/array.js#L3)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/array/toArray.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/array/toArray.test.js)
 
 **Parameters**
 
@@ -498,10 +594,15 @@ Returns **array** \[] if no value passed, value if it is Array and
 import { toArray } from 'myrmidon';
 
 toArray(null); // []
+
 toArray(undefined); // []
+
 toArray([]); // []
+
 toArray(''); // [ '' ]
+
 toArray(0); // [ 0 ]
+
 
 ```
 
@@ -510,9 +611,9 @@ toArray(0); // [ 0 ]
 function:
 generates filter function, that leaves only unique items
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/array.js#L14)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/array.js#L14)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/array/uniqueFilter.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/array/uniqueFilter.test.js)
 
 **Parameters**
 
@@ -531,9 +632,9 @@ import { uniqueFilter } from 'myrmidon';
 () => {
     const leaveUnique = uniqueFilter((a, b) => a === b);
 
-
     return [ 1, 2, 3, 3, 2, 5 ].filter(leaveUnique);
 }; // [ 1, 2, 3, 5 ]
+
 
 ```
 
@@ -542,14 +643,22 @@ import { uniqueFilter } from 'myrmidon';
 constant:
 filter function, that leaves only unique items with same id property
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/array.js#L29)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/array.js#L29)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/array/uniqueIdFilter.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/array/uniqueIdFilter.test.js)
 
 **Examples**
  uniqueIdFilter for array of users  _(positive)_
 
 ```javascript
+import { uniqueIdFilter } from 'myrmidon';
+
+() => {
+    const users = [ { id: 1, name: 'Maud Kim' }, { id: 2, name: 'Bettie Henderson' }, { id: 3, name: 'Estella Snyder' }, { id: 1, name: 'Maud Kim' } ];
+
+    return users.filter(uniqueIdFilter);
+}; // [ { id: 1, name: 'Maud Kim' }, { id: 2, name: 'Bettie Henderson' }, { id: 3, name: 'Estella Snyder' } ]
+
 
 ```
 
@@ -558,14 +667,28 @@ filter function, that leaves only unique items with same id property
 constant:
 filter function, that leaves only identicly unique items (same by ===)
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/array.js#L36)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/array.js#L36)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/array/uniqueIdenticFilter.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/array/uniqueIdenticFilter.test.js)
 
 **Examples**
  uniqueIdenticFilter for array of numbers  _(positive)_
 
 ```javascript
+import { uniqueIdenticFilter } from 'myrmidon';
+
+() => {
+    const items = [ 1, 2, '4', 3, 2, 1, 4, '2', 3, 5 ];
+
+    return items.filter(uniqueIdenticFilter);
+}; // [ 1, 2, '4', 3, 4, '2', 5 ]
+
+() => {
+    const items = [ 6, 7 ];
+
+    return items.filter(uniqueIdenticFilter);
+}; // [ 6, 7 ]
+
 
 ```
 
@@ -574,9 +697,9 @@ filter function, that leaves only identicly unique items (same by ===)
 constant:
 filter function, that leaves only exited values
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/array.js#L43)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/array.js#L43)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/array/existanceFilter.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/array/existanceFilter.test.js)
 
 **Examples**
  existanceFilter  _(positive)_
@@ -587,9 +710,9 @@ import { existanceFilter } from 'myrmidon';
 () => {
     const items = [ 1, 2, null, 0, undefined, 3, 5 ];
 
-
     return items.filter(existanceFilter);
 }; // [ 1, 2, 0, 3, 5 ]
+
 
 ```
 
@@ -598,9 +721,9 @@ import { existanceFilter } from 'myrmidon';
 constant:
 filter function, that leaves all items
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/array.js#L50)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/array.js#L50)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/array/passFilter.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/array/passFilter.test.js)
 
 **Examples**
  passFilter  _(positive)_
@@ -611,9 +734,9 @@ import { passFilter } from 'myrmidon';
 () => {
     const items = [ 1, 2, null, 0, undefined, 3, 5 ];
 
-
     return items.filter(passFilter);
 }; // [ 1, 2, null, 0, undefined, 3, 5 ]
+
 
 ```
 
@@ -622,9 +745,9 @@ import { passFilter } from 'myrmidon';
 function:
 flattens array
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/array.js#L57)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/array.js#L57)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/array/flatten.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/array/flatten.test.js)
 
 **Parameters**
 
@@ -643,6 +766,7 @@ import { flatten } from 'myrmidon';
 
 flatten([ 1, 2, [ 'a', 'b', [ 'c' ] ], 0 ]); // [ 1, 2, 'a', 'b', 'c', 0 ]
 
+
 ```
 
 ### isUnique
@@ -650,9 +774,9 @@ flatten([ 1, 2, [ 'a', 'b', [ 'c' ] ], 0 ]); // [ 1, 2, 'a', 'b', 'c', 0 ]
 function:
 checks are all items of array unique
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/array.js#L68)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/array.js#L68)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/array/isUnique.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/array/isUnique.test.js)
 
 **Parameters**
 
@@ -671,8 +795,11 @@ Returns **array** flattened array
 import { isUnique } from 'myrmidon';
 
 isUnique([ 1, 2, 3, 4, 5 ]); // true
+
 isUnique([ 1, 2, null, null, 3, 4, 5 ], { ignoreEmpty: true }); // true
+
 isUnique([ { id: 1 }, { id: 2 }, null, { id: 5 } ], { ignoreEmpty: true, field: 'id' }); // true
+
 
 ```
 
@@ -683,6 +810,7 @@ import { isUnique } from 'myrmidon';
 
 isUnique([ 1, 2, 3, 2, 4, 5 ]); // false
 
+
 ```
 
 ### last
@@ -690,9 +818,9 @@ isUnique([ 1, 2, 3, 2, 4, 5 ]); // false
 function:
 get last element of an array
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/array.js#L90)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/array.js#L90)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/array/last.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/array/last.test.js)
 
 **Parameters**
 
@@ -711,6 +839,7 @@ import { last } from 'myrmidon';
 
 last([ 1, 2, 3, 4, 5 ]); // 5
 
+
 ```
 
 ## object
@@ -726,22 +855,38 @@ last([ 1, 2, 3, 4, 5 ]); // 5
 function:
 cleans object from undefined fields recursievly
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/object.js#L3)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/object.js#L3)
+
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/object/cleanUndefined.test.js)
 
 **Parameters**
 
     - `obj` **Object** primitive for examination
+    - `$1` **Object** 
 
 **Returns**
 
 Returns **Object** object without undefined fields
+
+**Examples**
+ cleanUndefined  _(positive)_
+
+```javascript
+import { cleanUndefined } from 'myrmidon';
+
+cleanUndefined({ x: { a: null, b: undefined }, c: 0 }); // { x: { a: null }, c: 0 }
+
+
+```
 
 ### clone
 
 function:
 create deep clone of object
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/object.js#L17)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/object.js#L21)
+
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/object/clone.test.js)
 
 **Parameters**
 
@@ -751,14 +896,25 @@ create deep clone of object
 
 Returns **Object** deep copy
 
+**Examples**
+ deep clone  _(positive)_
+
+```javascript
+import { clone } from 'myrmidon';
+
+clone({ a: 1, b: { c: 'text' } }); // { a: 1, b: { c: 'text' } }
+
+
+```
+
 ### isEmpty
 
 function:
 determines whether the object or array is empty
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/object.js#L28)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/object.js#L32)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/object/isEmpty.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/object/isEmpty.test.js)
 
 **Parameters**
 
@@ -776,6 +932,7 @@ import { isEmpty } from 'myrmidon';
 
 isEmpty({}); // true
 
+
 ```
 
  isEmpty with no-array input  _(negative)_
@@ -784,9 +941,13 @@ isEmpty({}); // true
 import { isEmpty } from 'myrmidon';
 
 isEmpty(13); // false
+
 isEmpty(true); // false
+
 isEmpty([ 0 ]); // false
+
 isEmpty({ length: 0 }); // false
+
 
 ```
 
@@ -796,10 +957,15 @@ isEmpty({ length: 0 }); // false
 import { isEmpty } from 'myrmidon';
 
 isEmpty(null); // false
+
 isEmpty(undefined); // false
+
 isEmpty(0); // false
+
 isEmpty(''); // false
+
 isEmpty(false); // false
+
 
 ```
 
@@ -818,7 +984,7 @@ helps to benchmark execution time
 constant:
 get result of benchmark counting
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/benchmark.js#L41)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/benchmark.js#L41)
 
 **Returns**
 
@@ -829,7 +995,7 @@ Returns **string** execution time in ms
 constant:
 starts benchmark counting
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/benchmark.js#L51)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/benchmark.js#L51)
 
 **Returns**
 
@@ -848,9 +1014,9 @@ Returns **any** identifier of count start
 function:
 Retrying function calls on errors
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/custom.js#L21)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/custom.js#L27)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/custom/retry.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/custom/retry.test.js)
 
 **Parameters**
 
@@ -876,10 +1042,9 @@ import { retry } from 'myrmidon';
         return i;
     }
 
-    return retry(() => failing(), {
-        retry : 5
-    });
+    return retry(() => failing(), { retry: 5 });
 }; // 3
+
 
 ```
 
@@ -892,16 +1057,10 @@ async () => {
     return retry(async () => {
         const result = await failing();
 
-
         return result;
-    }, {
-        retry   : 5,
-        timeout : {
-            min : 1,
-            max : 100
-        }
-    });
+    }, { retry: 5, timeout: { min: 1, max: 100 } });
 }; // 3
+
 
 ```
 
@@ -910,7 +1069,7 @@ async () => {
 function:
 Get nested property of object
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/custom.js#L54)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/custom.js#L73)
 
 **Parameters**
 
@@ -927,9 +1086,9 @@ Returns **any** deep object property, or null if nothing found
 function:
 Fills string template with specified data
 
-[Source](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/src/custom.js#L72)
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/custom.js#L91)
 
-[Tests](https://github.com/pustovitDmytro/myrmidon/blob/6c852e62e085251a98bc60a1d9704e7606949511/tests/helpers/custom/fill.test.js)
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/custom/fill.test.js)
 
 **Parameters**
 
@@ -948,5 +1107,41 @@ Returns **string** filled template
 import { fill } from 'myrmidon';
 
 fill('Hello {user.firstName} {user.lastName} {user.avatar.url}', { user: { firstName: 'Jason', lastName: 'Gregory' } }); // 'Hello Jason Gregory '
+
+
+```
+
+### searchFor
+
+function:
+Search all occurrences of pattern in text
+
+[Source](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/src/custom.js#L120)
+
+[Tests](https://github.com/pustovitDmytro/myrmidon/blob/b28710a7b6e5f333ebe99d6eabde7463023ac92d/tests/helpers/custom/searchFor.test.js)
+
+**Parameters**
+
+    - `text` **string** where to search
+    - `pattern` **** search pattern. If pattern is a non-RegExp object, it is implicitly converted to a RegExp by using new RegExp(pattern)
+
+**Returns**
+
+Returns **array** occurrences
+
+**Examples**
+ search string for matches  _(positive)_
+
+```javascript
+
+```
+
+ no occurrences found  _(negative)_
+
+```javascript
+import { searchFor } from 'myrmidon';
+
+searchFor('southern bell drink fresh list', /truth/g); // []
+
 
 ```
