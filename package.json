@@ -61,7 +61,7 @@
     "fs-extra": "^8.1.0",
     "handlebars": "^4.3.1",
     "mdinclude": "^0.7.1",
-    "mocha": "^6.1.4",
+    "mocha": "^8.3.0",
     "nyc": "^14.1.1",
     "remark": "^11.0.1",
     "remark-preset-lint-recommended": "^3.0.3",

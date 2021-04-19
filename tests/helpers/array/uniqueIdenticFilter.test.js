@@ -8,4 +8,10 @@ test('Positive: uniqueIdenticFilter for array of numbers @example', async () => 
 
         return items.filter(uniqueIdenticFilter);
     }, [ 1, 2, '4', 3, 4, '2', 5 ]);
+
+    await SnippetTesterAsync(({ uniqueIdenticFilter }) => {
+        const items = [ 6, 7 ];
+
+        return items.filter(uniqueIdenticFilter);
+    }, [ 6, 7 ]);
 });
