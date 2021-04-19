@@ -1,3 +1,21 @@
+## [1.4.4](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.3...v1.4.4) (2020-10-30)
+
+
+### Chore
+
+* adds cleanUndefined test ([b4328d6](https://github.com/pustovitDmytro/myrmidon/commit/b4328d6ea1ead1a25df99e1f431f9dd5061eff52))
+* adds clone test ([0359cbe](https://github.com/pustovitDmytro/myrmidon/commit/0359cbe7cf41c4973c86ac72e432a2196a375426))
+* adds getEscapedRegExp test ([0fb32f1](https://github.com/pustovitDmytro/myrmidon/commit/0fb32f16c9982c45e1c4ee8b11f454c5eb7a00ca))
+* adds pause test ([fa65453](https://github.com/pustovitDmytro/myrmidon/commit/fa65453e9e66bb0ec94038e1cabd6a8da5d649ae))
+* adds searchFor tests and docs ([7090466](https://github.com/pustovitDmytro/myrmidon/commit/70904661e17b69915fb7c25ffe47d82c59d8b73f))
+* adds test for random int generation ([3cb4e18](https://github.com/pustovitDmytro/myrmidon/commit/3cb4e1857286962bd4175c231b0025bc6b84e976))
+* fixes benchmarks tests ([5bcee76](https://github.com/pustovitDmytro/myrmidon/commit/5bcee765ac2342ff12071586478e1f972560b566))
+* improves coverage ([e8fb434](https://github.com/pustovitDmytro/myrmidon/commit/e8fb434a8188032ea9d61ee0f0fd5220afac93f8))
+
+### Fix
+
+* remove next run on successful retry (fixes #1) ([0098749](https://github.com/pustovitDmytro/myrmidon/commit/0098749795e30953025b3a58a9e762fcded71822)), closes [#1](https://github.com/pustovitDmytro/myrmidon/issues/1)
+
 ## [1.4.3](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.2...v1.4.3) (2020-06-17)
 
 
