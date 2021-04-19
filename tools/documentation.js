@@ -3,7 +3,6 @@ import documentation from 'documentation';
 import mdinclude from 'mdinclude';
 import handleBars from 'handlebars';
 import fs from 'fs-extra';
-import swag from 'swag';
 import { CLIEngine } from 'eslint';
 import recommended from 'remark-preset-lint-recommended';
 import remark from 'remark';
@@ -11,13 +10,34 @@ import toc from 'remark-toc';
 import { groupBy, uniqueIdenticFilter, flatten } from '../src/helpers';
 import info from '../package';
 
+handleBars.registerHelper('join', (items = [], sep) => {
+    return items.join(sep);
+});
+
+// eslint-disable-next-line func-names
+handleBars.registerHelper('is', function (value, test, options) {
+    if (value && value === test) {
+        return options.fn(this);
+    }
+
+    return options.inverse(this);
+});
+
+// eslint-disable-next-line func-names
+handleBars.registerHelper('any', function (array, options) {
+    if (array && array.length > 0) {
+        return options.fn(this);
+    }
+
+    return options.inverse(this);
+});
+
 const eslint = new CLIEngine({
     fix : true
 });
 
 const examplesPath = path.join(process.cwd(), 'tmp', 'examples.json');
 
-swag.registerHelpers(handleBars);
 const SECTIONS = {
     checkType : 'helps to indicate type of any value',
     array     : 'helps to work with js arrays',
@@ -137,7 +157,7 @@ export async function build(entry, out) {
 }
 
 function dumpDescription(d) {
-    return d.children[0].children[0].value;
+    return d ? d.children[0].children[0].value : '';
 }
 
 function dumpParam(p) {

@@ -5,10 +5,14 @@ import { isObject, isArray } from './checkType';
  * @param {Object} obj primitive for examination
  * @returns {Object} object without undefined fields
  */
-export function cleanUndefined(obj) {
+export function cleanUndefined(obj, { cache = new Set() } = {}) {
+    cache.add(obj);
     Object.keys(obj).forEach(key => {
-        if (obj[key] && typeof obj[key] === 'object') cleanUndefined(obj[key]);
-        else if (obj[key] === undefined) delete obj[key]; // eslint-disable-line no-param-reassign
+        if (obj[key] === undefined) delete obj[key]; // eslint-disable-line no-param-reassign
+        if (isObject(obj[key])) {
+            if (cache.has(obj[key])) return;
+            cleanUndefined(obj[key], { cache });
+        }
     });
 
     return obj;

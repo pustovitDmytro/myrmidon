@@ -4,7 +4,8 @@ import { assert } from 'chai';
 import { createNamespace } from 'cls-hooked';
 import uuid from 'uuid';
 import fs from 'fs-extra';
-import { parseScript } from 'esprima';
+import { parseModule } from 'esprima';
+import escodegen from 'escodegen';
 import * as myrmidon from 'tests/entry';
 import { saveExamles } from './constants';
 
@@ -12,9 +13,34 @@ const context = createNamespace('test');
 const EXAMPLES = [];
 const PRINT_CASES = [];
 
+async function loadFromFile(testFilePath, title) {
+    const testFileContent = await fs.readFile(testFilePath);
+    const rootAst = parseModule(testFileContent.toString());
+    const currentExpression = rootAst.body.find(item => {
+        if (item.type !== 'ExpressionStatement') return;
+        const callerName = item.expression.callee.name || item.expression.callee.object?.name;
+
+        if (callerName !== 'test') return;
+
+        return item.expression.arguments.some(arg => arg.value === title);
+    });
+
+    return currentExpression.expression.arguments[1];
+}
+
+function loadFromBody(fn, title, err) {
+    const titleAlias = title.replace(/\W+/g, '_');
+
+    console.error(titleAlias, err);
+
+    return parseModule(fn.toString().replace('function ()', `function ${titleAlias}()`)).body[0];
+}
+
 if (saveExamles) {
-    beforeEach(function setClsFromContext() {
+    beforeEach(async function setClsFromContext() {
         const old = this.currentTest.fn;
+        const ast = await loadFromFile(this.currentTest.file, this.currentTest.title)
+            .catch((err) => loadFromBody(old, this.currentTest.title, err));
 
         this.currentTest._TRACE_ID = uuid.v4();
         this.currentTest.fn = function clsWrapper() {
@@ -23,7 +49,7 @@ if (saveExamles) {
                     context.set('current', {
                         test  : this.test.title,
                         suite : this.test.parent.title,
-                        body  : this.test.body,
+                        body  : ast,
                         id    : this.test._TRACE_ID
                     });
 
@@ -65,13 +91,12 @@ export class FunctionTester {
         }
         if (saveExamles) {
             const exapleIndex = EXAMPLES.filter(e => e.test === context.get('current').id).length;
-            const ast = parseScript(context.get('current').body);
-            const rootAst = ast.body.find(a => a.type === 'ExpressionStatement');
-            const testFuncAst = rootAst.expression.body;
-            const exampleSnippet = testFuncAst.body[exapleIndex];
-            const exampleArguments = exampleSnippet.expression.arguments;
+
+            const ast = context.get('current').body;
+            const statements = ast.body.body.filter(a => a.type === 'ExpressionStatement' && a.expression.callee.property.name === 'test');
+            const snippet = statements[exapleIndex];
+            const exampleArguments = snippet.expression.arguments;
             const inputArguments = exampleArguments.slice(0, -1);
-            const escodegen = require('escodegen');
             const rawInputArguments = inputArguments
                 .map(literal => escodegen.generate(literal, { format: { compact: true } }));
 
@@ -86,6 +111,13 @@ export class FunctionTester {
     }
 }
 
+const inspectOpts = {
+    breakLength    : Infinity,
+    depth          : 4,
+    maxArrayLength : 10,
+    compact        : true
+};
+
 export async function SnippetTesterAsync(func, expected) {
     try {
         const result = await func(myrmidon);
@@ -94,21 +126,26 @@ export async function SnippetTesterAsync(func, expected) {
             assert.deepEqual(result, expected);
         }
         if (saveExamles) {
-            const ast = parseScript(func.toString());
-            const testerFunc = ast.body.find(s => s.type === 'ExpressionStatement');
-            const isMyrmydonPassed = testerFunc && testerFunc.expression.params[0].type === 'ObjectPattern';
-            const helpers = isMyrmydonPassed
-                ? testerFunc.expression
-                    .params[0].properties.map(p => p.key.name)
-                : [];
-            const body = func.toString().replace(/\({[\s\S]+}\)\s=>\s{/, '() => {');
-            const needAsync = body.includes('await');
+            const ast = context.get('current').body;
+            const exapleIndex = EXAMPLES.filter(e => e.test === context.get('current').id).length;
+            const statements = ast.body.body.filter(a => a.type === 'ExpressionStatement');
+            const testerFunc = statements[exapleIndex];
+            const snippetInput = testerFunc.expression.argument.arguments[0].params;
+            const helpers = snippetInput[0].properties.map(p => p.key.name);
+
+            const inline = escodegen.generate(
+                testerFunc.expression.argument.arguments[0].body,
+                { format: { compact: true } }
+            );
+            const needAsync = inline.includes('await');
+            const prefix = needAsync ? 'async' : '';
+            const body = `${prefix} () =>${inline}`;
 
             EXAMPLES.push({
                 type      : 'SnippetTester',
                 functions : helpers,
-                output    : inspect(result),
-                input     : needAsync ? `async ${body}` : body,
+                output    : inspect(result, inspectOpts),
+                input     : body,
                 test      : context.get('current').id
             });
         }

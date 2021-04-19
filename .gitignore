@@ -8,3 +8,5 @@ logs/*
 *.log
 site/*
 .coveralls.yml
+*.tgz
+./reports/jscpd/*
