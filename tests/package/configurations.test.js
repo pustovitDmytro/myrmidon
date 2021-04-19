@@ -1,8 +1,8 @@
 import { assert } from 'chai';
-import main from '../entry';
+import entry from '../entry';
 
 suite('Configurations');
 
-test('Positive: Single Main export', () => {
-    assert.exists(main);
+test('Default configuration', () => {
+    assert.exists(entry);
 });
