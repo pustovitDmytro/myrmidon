@@ -8,6 +8,6 @@ const tester = new FunctionTester(getEscapedRegExp);
 test('Positive: escape \\s @example', () => {
     tester.test(
         'moving citizen /s',
-        'moving citizen \/s',
+        'moving citizen \/s'
     );
 });

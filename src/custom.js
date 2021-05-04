@@ -8,13 +8,17 @@ function abort(error = new Error('Unknown Retry Abortion')) {
     throw error;
 }
 
+const uniformMean = 0.5;
+const uniformSTD = 2;
+const defaultFacor = 2;
+
 function calculateTimeout(opts, attempt = 0) {
     if (isNumber(opts)) return opts;
     if (isFunction(opts)) return opts(attempt);
     if (isObject(opts)) {
-        const rand = opts.randomize ? random.uniform(0.5, 2) : 1;
+        const rand = opts.randomize ? random.uniform(uniformMean, uniformSTD) : 1;
 
-        return Math.min(rand * opts.min * Math.pow(opts.factor || 2, attempt), opts.max);
+        return Math.min(rand * opts.min * (opts.factor || defaultFacor) ** attempt, opts.max);
     }
 }
 
@@ -39,6 +43,7 @@ export function retry(retrier, { onRetry = defaultOnRetry, retries = 10, timeout
             try {
                 const val = retrier(abort, iter);
 
+                // eslint-disable-next-line more/no-then
                 Promise.resolve(val)
                     .then(res)
                     .catch((err) => onError(err, iter));
@@ -97,7 +102,9 @@ export function getProp(obj, path, { delimeter = '.' } = {}) {
  * @param {regExp} [settings.regExp] regexp to parse template (replaces full match with groups)
  * @returns {string} filled template
  */
+// TODO: add security disclaimer
 export function fill(template, data, { delimiters = [ '{', '}' ], regExp } = {}) {
+    // eslint-disable-next-line security/detect-non-literal-regexp
     const regexp = regExp || new RegExp(`${delimiters[0]}(.+?)${delimiters[1]}`, 'g');
 
     let result;
@@ -123,8 +130,10 @@ export function fill(template, data, { delimiters = [ '{', '}' ], regExp } = {})
  * @param {regExp} [pattern] search pattern. If pattern is a non-RegExp object, it is implicitly converted to a RegExp by using new RegExp(pattern)
  * @returns {array} occurrences
  */
+// TODO: add security disclaimer
 export function searchFor(text, pattern) {
     const currentFlags = isRegexp(pattern) ? pattern.flags : '';
+    // eslint-disable-next-line security/detect-non-literal-regexp
     const regexp = new RegExp(
         isRegexp(pattern) ? pattern.source : pattern,
         currentFlags.includes('g') ? currentFlags : `${currentFlags}g`

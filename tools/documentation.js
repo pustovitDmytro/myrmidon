@@ -10,7 +10,7 @@ import toc from 'remark-toc';
 import { groupBy, uniqueIdenticFilter, flatten } from '../src/helpers';
 import info from '../package';
 
-handleBars.registerHelper('join', (items = [], sep) => {
+handleBars.registerHelper('join', (items = [], sep = ' ') => {
     return items.join(sep);
 });
 
@@ -18,7 +18,6 @@ handleBars.registerHelper('lowercase', str => {
     return str.toLowerCase();
 });
 
-// eslint-disable-next-line func-names
 handleBars.registerHelper('is', function (value, test, options) {
     if (value && value === test) {
         return options.fn(this);
@@ -27,7 +26,6 @@ handleBars.registerHelper('is', function (value, test, options) {
     return options.inverse(this);
 });
 
-// eslint-disable-next-line func-names
 handleBars.registerHelper('any', function (array, options) {
     if (array && array.length > 0) {
         return options.fn(this);
@@ -47,21 +45,22 @@ const SECTIONS = {
     array     : 'helps to work with js arrays',
     benchmark : 'helps to benchmark execution time'
 };
-
+const gitHeadPrefixLen = 5;
 const getGitCommit = async () => {
     const gitId = await fs.readFile('.git/HEAD', 'utf8');
 
     if (gitId.indexOf(':') === -1) {
         return gitId.trim();
     }
-    const refPath = `.git/${gitId.substring(5).trim()}`;
+
+    const refPath = `.git/${gitId.substring(gitHeadPrefixLen).trim()}`;
     const content = await fs.readFile(refPath, 'utf8');
 
     return content.trim();
 };
 
 async function prepareExamples() {
-    const examples = require(examplesPath);
+    const examples = await fs.readJSON(examplesPath);
     const template = getTemplate('templates/documentation/examples.handlebars');
 
     return examples
@@ -193,8 +192,7 @@ function dumpTest(useCase) {
     const [ caseType, caseText ] = useCase.test.split(':');
     const helperNames = useCase.examples.map(example =>
         example.type === 'FunctionTester' && example.function
-        || example.type === 'SnippetTester' && example.functions
-    );
+        || example.type === 'SnippetTester' && example.functions);
     const helpers = flatten(helperNames).filter(uniqueIdenticFilter);
 
     return {

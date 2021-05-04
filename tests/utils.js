@@ -1,12 +1,11 @@
 import { inspect } from 'util';
 import { assert } from 'chai';
-/* eslint-disable prefer-arrow-callback */
 import { createNamespace } from 'cls-hooked';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import fs from 'fs-extra';
 import { parseModule } from 'esprima';
 import escodegen from 'escodegen';
-import * as myrmidon from 'tests/entry';
+import myrmidon from 'tests/entry';
 import { saveExamles } from './constants';
 
 const context = createNamespace('test');
@@ -17,10 +16,10 @@ async function loadFromFile(testFilePath, title) {
     const testFileContent = await fs.readFile(testFilePath);
     const rootAst = parseModule(testFileContent.toString());
     const currentExpression = rootAst.body.find(item => {
-        if (item.type !== 'ExpressionStatement') return;
+        if (item.type !== 'ExpressionStatement') return false;
         const callerName = item.expression.callee.name || item.expression.callee.object?.name;
 
-        if (callerName !== 'test') return;
+        if (callerName !== 'test') return false;
 
         return item.expression.arguments.some(arg => arg.value === title);
     });
@@ -42,7 +41,7 @@ if (saveExamles) {
         const ast = await loadFromFile(this.currentTest.file, this.currentTest.title)
             .catch((err) => loadFromBody(old, this.currentTest.title, err));
 
-        this.currentTest._TRACE_ID = uuid.v4();
+        this.currentTest._TRACE_ID = uuid();
         this.currentTest.fn = function clsWrapper() {
             return new Promise((res, rej) => {
                 context.run(() => {
@@ -53,9 +52,8 @@ if (saveExamles) {
                         id    : this.test._TRACE_ID
                     });
 
-                    Promise.resolve(old.apply(this, arguments))
-                        .then(res)
-                        .catch(rej);
+                    // eslint-disable-next-line more/no-then
+                    Promise.resolve(old.apply(this, arguments)).then(res).catch(rej);
                 });
             });
         };
@@ -80,6 +78,7 @@ export class FunctionTester {
     constructor(func) {
         this.func = func;
     }
+
     test(...args) {
         const [ output, ...revinput ] = args.reverse();
         const input = revinput.reverse();
@@ -89,6 +88,7 @@ export class FunctionTester {
         if (output) {
             assert.deepEqual(got, output, errMessage);
         }
+
         if (saveExamles) {
             const exapleIndex = EXAMPLES.filter(e => e.test === context.get('current').id).length;
 
@@ -125,6 +125,7 @@ export async function SnippetTesterAsync(func, expected) {
         if (expected) {
             assert.deepEqual(result, expected);
         }
+
         if (saveExamles) {
             const ast = context.get('current').body;
             const exapleIndex = EXAMPLES.filter(e => e.test === context.get('current').id).length;
@@ -162,6 +163,7 @@ export async function SnippetTesterAsync(func, expected) {
 export function requireFile(module) {
     delete require.cache[require.resolve(module)];
 
+    // eslint-disable-next-line security/detect-non-literal-require
     const result =  require(module);
 
     delete require.cache[require.resolve(module)];

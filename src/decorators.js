@@ -96,7 +96,7 @@ export function decorate(target, methods) {
                             methodName,
                             descriptor,
                             config
-                        },
+                        }
                     )
                 );
             }
@@ -119,6 +119,7 @@ function functionDecorator(method, { methodName, config }) {
             const promise = method?.apply(this, params);
 
             if (isPromise(promise)) {
+                // eslint-disable-next-line more/no-then
                 return promise
                     .then(result => config.onSuccess({ result, ...data }))
                     .catch(error => config.onError({ error, ...data }));
