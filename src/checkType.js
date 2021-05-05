@@ -98,9 +98,9 @@ export function isStream(x) {
  * @returns {boolean} true if x is Getter, false otherwise
  */
 export function isGetter(x, name) {
-    if (!isValue(x) || !isValue(x[name])) return false;
+    if (!isValue(x)) return false;
 
-    return !!getPropertyDescriptor(x, name).get;
+    return !!getPropertyDescriptor(x, name)?.get;
 }
 
 /**

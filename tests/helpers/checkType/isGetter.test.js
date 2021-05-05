@@ -32,6 +32,16 @@ test('Negative: isGetter @example', () => {
     tester.test(x, 'b', false);
 });
 
+test('Negative: forbidden properties', () => {
+    tester.test(x, 'caller', false);
+    tester.test(x, 'callee', false);
+    tester.test(x, 'arguments', false);
+    tester.test({}, 'arguments', false);
+    tester.test(function () {}, 'arguments', false);
+    tester.test(x, 'constructor', false);
+    tester.test(x, 'prototype', false);
+});
+
 after(async () => {
     // console.log('after', this);
 });
