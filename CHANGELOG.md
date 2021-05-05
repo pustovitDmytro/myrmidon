@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.0...v1.5.1) (2021-05-05)
+
+
+### Fix
+
+* fixes arguments function call in strict mode ([9236489](https://github.com/pustovitDmytro/myrmidon/commit/923648905daf6e0db2317271020319df9fe21b7b))
+
 # [1.5.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.4.5...v1.5.0) (2021-05-04)
 
 
