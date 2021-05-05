@@ -67,7 +67,7 @@
     "escodegen": "^1.14.1",
     "eslint": "^7.0.0",
     "eslint-config-incredible": "^1.6.0",
-    "eslint-config-webbylab": "^4.0.0",
+    "eslint-config-webbylab": "^5.0.0",
     "eslint-import-resolver-babel-module": "^5.1.2",
     "eslint-plugin-censor": "^1.2.0",
     "eslint-plugin-fetch": "0.0.1",
