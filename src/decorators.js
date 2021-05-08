@@ -1,4 +1,5 @@
 /* istanbul ignore file */
+// TODO: test
 import { isPromise, isFunction, isGetter } from './checkType';
 
 const deepFunctions = x =>
@@ -119,7 +120,6 @@ function functionDecorator(method, { methodName, config }) {
             const promise = method?.apply(this, params);
 
             if (isPromise(promise)) {
-                // eslint-disable-next-line more/no-then
                 return promise
                     .then(result => config.onSuccess({ result, ...data }))
                     .catch(error => config.onError({ error, ...data }));

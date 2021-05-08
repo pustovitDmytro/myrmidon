@@ -40,7 +40,8 @@
         [
             "@semantic-release/github", {
                 "assets": [
-                    { "path": "*.tgz", "label": "npm tarball" }
+                    { "path": "*.tgz", "label": "npm tarball" },
+                    { "path": [ "docs/**", "README.md", "CHANGELOG.md" ], "label": "Documentation" }
                 ]
             }
         ],

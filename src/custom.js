@@ -43,7 +43,6 @@ export function retry(retrier, { onRetry = defaultOnRetry, retries = 10, timeout
             try {
                 const val = retrier(abort, iter);
 
-                // eslint-disable-next-line more/no-then
                 Promise.resolve(val)
                     .then(res)
                     .catch((err) => onError(err, iter));

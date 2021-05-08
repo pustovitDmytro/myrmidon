@@ -52,7 +52,6 @@ if (saveExamles) {
                         id    : this.test._TRACE_ID
                     });
 
-                    // eslint-disable-next-line more/no-then
                     Promise.resolve(old.apply(this, arguments)).then(res).catch(rej);
                 });
             });

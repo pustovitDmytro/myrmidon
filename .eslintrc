@@ -20,13 +20,6 @@
     },
     "overrides" : [
         {
-            "files" : [ "tests/*.js", "*.test.js" ],
-            "rules" : {
-                "import/named" : 0,
-                "import/default": 0
-            }
-        },
-        {
             "files" : [ "tests/helpers/checkType/*.test.js" ],
             "rules" : {
                 "no-new-wrappers" : 0
