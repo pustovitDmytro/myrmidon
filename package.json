@@ -64,7 +64,7 @@
     "danger": "^10.6.4",
     "docopt": "^0.6.2",
     "documentation": "^13.0.0",
-    "escodegen": "^1.14.1",
+    "escodegen": "^2.0.0",
     "eslint": "^7.0.0",
     "eslint-config-incredible": "^1.9.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
