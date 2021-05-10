@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { isStream } from 'tests/entry';
-import { FunctionTester } from '../../utils';
+import { FunctionTester, testsRootFolder } from '../../Test';
 
-const directory = path.join(__dirname, '../../mock/files/');
+const directory = path.join(testsRootFolder, 'mock/files/');
 const tester = new FunctionTester(isStream);
 
 suite('CheckTypes: isStream');

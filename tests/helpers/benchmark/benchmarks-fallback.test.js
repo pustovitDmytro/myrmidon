@@ -1,8 +1,8 @@
-import path from 'path';
+// import path from 'path';
 import { assert } from 'chai';
-import { requireFile, sleep } from '../../utils';
+import { load, sleep } from '../../Test';
 
-const benchmarkPath = path.join(__dirname, '../../../src/benchmark.js');
+const benchmarkPath = 'benchmark.js';
 const hrtime = process.hrtime;
 
 let getBenchmark;
@@ -13,7 +13,7 @@ suite('Fallback benchmarks');
 
 before(() => {
     process.hrtime = 0;
-    const fallback = requireFile(benchmarkPath);
+    const fallback = load(benchmarkPath);
 
     getBenchmark = fallback.getBenchmark;
     startBenchmark = fallback.startBenchmark;

@@ -1,9 +1,9 @@
 import path from 'path';
 import { assert } from 'chai';
-import { requireFile, sleep } from '../../utils';
+import { load, sleep, testsRootFolder } from '../../Test';
 
-const benchmarkPath = path.join(__dirname, '../../../src/benchmark.js');
-const polyfillPath = path.join(__dirname, '../../polyfills/performance.polyfill.js');
+const benchmarkPath = 'benchmark.js';
+const polyfillPath = path.join(testsRootFolder, 'polyfills/performance.polyfill.js');
 const hrtime = process.hrtime;
 const performance = global.performance;
 
@@ -15,8 +15,8 @@ suite('Performance benchmarks #browser');
 
 before(() => {
     process.hrtime = 0;
-    requireFile(polyfillPath);
-    const fallback = requireFile(benchmarkPath);
+    load(polyfillPath);
+    const fallback = load(benchmarkPath);
 
     getBenchmark = fallback.getBenchmark;
     startBenchmark = fallback.startBenchmark;

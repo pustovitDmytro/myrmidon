@@ -159,16 +159,6 @@ export async function SnippetTesterAsync(func, expected) {
     }
 }
 
-export function requireFile(module) {
-    delete require.cache[require.resolve(module)];
-
-    // eslint-disable-next-line security/detect-non-literal-require
-    const result =  require(module);
-
-    delete require.cache[require.resolve(module)];
-
-    return result;
-}
 
 export const sleep = time => new Promise(res => setTimeout(res, time));
 
