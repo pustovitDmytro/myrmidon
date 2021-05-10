@@ -1,3 +1,31 @@
+## [1.5.2](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.1...v1.5.2) (2021-05-10)
+
+
+### Chore
+
+* (tests) moves load to factory ([4acb941](https://github.com/pustovitDmytro/myrmidon/commit/4acb94181777f22e8fda16ea43b6a1cad3986629))
+* additional quotes in glob pattern ([f6d15cf](https://github.com/pustovitDmytro/myrmidon/commit/f6d15cf2b6fc966f1b3a8b175b6bcf0144a80def))
+* fixes prevent require handler ([7923f0e](https://github.com/pustovitDmytro/myrmidon/commit/7923f0ed71ba537d7c50064a99e2e9af318fcb60))
+* fixes spellcheck in bugreport ([7d754b6](https://github.com/pustovitDmytro/myrmidon/commit/7d754b605ed7fed3ea1a9c7d0d951a09806a1c37))
+* not fail package if no tmp exists ([5693813](https://github.com/pustovitDmytro/myrmidon/commit/569381326c9b688c492aa29c825a61901419d1de))
+* prevent package:test from using devdependencies ([dc896f3](https://github.com/pustovitDmytro/myrmidon/commit/dc896f39fd79e6cb73c8cc458213c00f5f5a703d))
+* set myself as default assignee in pr ([0dcd0ce](https://github.com/pustovitDmytro/myrmidon/commit/0dcd0ce95b50a1e8a2fef91307f7fd8964314f68))
+* tests/entry.js module resolving ([c840f8b](https://github.com/pustovitDmytro/myrmidon/commit/c840f8b479234b7944b2d2708344ae24df231464))
+* Update dependency @rollup/plugin-commonjs to v19 ([bf29948](https://github.com/pustovitDmytro/myrmidon/commit/bf2994851b033e64744e381f5f566ca9eed0aef5))
+* Update dependency @rollup/plugin-node-resolve to v13 ([265fd82](https://github.com/pustovitDmytro/myrmidon/commit/265fd82a61b0f2ee81bcb445f93e34f05bb4540b))
+* Update dependency escodegen to v2 ([25ed337](https://github.com/pustovitDmytro/myrmidon/commit/25ed337eb476f80998b15e08c93d606a70460a0f))
+* update eslint ([4aac03c](https://github.com/pustovitDmytro/myrmidon/commit/4aac03c8db5f28d1d41838fc70e614df93e034d6))
+* update lock file ([4ffb878](https://github.com/pustovitDmytro/myrmidon/commit/4ffb878e544a8cbe68fa7b3c5908b8ccdf9e394f))
+* Update remark monorepo ([7394626](https://github.com/pustovitDmytro/myrmidon/commit/7394626582c34148e6ef78130458a659657f9c48))
+
+### Docs
+
+* fixes misspelling in package conf ([9b2242f](https://github.com/pustovitDmytro/myrmidon/commit/9b2242fb49bef6167ab9aa30deabb01157fae6f7))
+
+### Fix
+
+* removes babel helpers from bundle ([dc8c3e7](https://github.com/pustovitDmytro/myrmidon/commit/dc8c3e7c9f36b52e3b610810f293f41999b9bd1c))
+
 ## [1.5.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.0...v1.5.1) (2021-05-05)
 
 
