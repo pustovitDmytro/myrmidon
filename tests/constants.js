@@ -8,8 +8,12 @@ const entry = process.env.ENTRY && path.resolve(process.env.ENTRY)
 const tmpFolder = path.join(__dirname, '../tmp/tests');
 const saveExamles = process.env.SAVE_EXAMPLES && path.join(__dirname, '..', process.env.SAVE_EXAMPLES);
 
+
+const testsRootFolder = __dirname;
+
 export {
     tmpFolder,
     saveExamles,
-    entry
+    entry,
+    testsRootFolder
 };

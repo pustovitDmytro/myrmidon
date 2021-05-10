@@ -1,4 +1,5 @@
 import { inspect } from 'util';
+import path from 'path';
 import { assert } from 'chai';
 import { createNamespace } from 'cls-hooked';
 import { v4 as uuid } from 'uuid';
@@ -6,7 +7,8 @@ import fs from 'fs-extra';
 import { parseModule } from 'esprima';
 import escodegen from 'escodegen';
 import myrmidon from 'tests/entry';
-import { saveExamles } from './constants';
+import { saveExamles, entry } from './constants';
+
 
 const context = createNamespace('test');
 const EXAMPLES = [];
@@ -162,3 +164,18 @@ export async function SnippetTesterAsync(func, expected) {
 
 export const sleep = time => new Promise(res => setTimeout(res, time));
 
+export function load(relPath) {
+    const absPath = path.resolve(entry, relPath);
+
+    delete require.cache[require.resolve(absPath)];
+    // eslint-disable-next-line security/detect-non-literal-require
+    const result =  require(absPath);
+
+    delete require.cache[require.resolve(absPath)];
+
+    return result;
+}
+
+export function resolve(relPath) {
+    return require.resolve(path.join(entry, relPath));
+}
