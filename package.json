@@ -65,7 +65,7 @@
     "documentation": "^13.0.0",
     "escodegen": "^2.0.0",
     "eslint": "^7.0.0",
-    "eslint-config-incredible": "^1.9.0",
+    "eslint-config-incredible": "^2.0.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
     "eslint-plugin-censor": "^1.4.0",
     "eslint-plugin-import": "^2.22.1",
