@@ -29,6 +29,9 @@
   "bugs": {
     "url": "https://github.com/pustovitDmytro/myrmidon/issues"
   },
+  "engines": {
+    "node": ">=10"
+  },
   "homepage": "https://myrmidonjs.readthedocs.io",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -65,11 +68,20 @@
     "documentation": "^13.0.0",
     "escodegen": "^2.0.0",
     "eslint": "^7.0.0",
-    "eslint-config-incredible": "^1.9.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
     "eslint-plugin-censor": "^1.4.0",
+    "eslint-config-incredible": "^2.0.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-markdown": "^2.2.0",
+    "eslint-plugin-mocha": "^9.0.0",
+    "eslint-plugin-no-secrets": "^0.8.9",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-regexp": "^0.11.0",
+    "eslint-plugin-scanjs-rules": "^0.2.1",
     "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.7.0",
+    "eslint-plugin-unicorn": "^32.0.1",
     "esprima": "^4.0.1",
     "fs-extra": "^10.0.0",
     "handlebars": "^4.3.1",

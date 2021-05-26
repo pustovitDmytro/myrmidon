@@ -44,6 +44,8 @@ To use library you need to have [node](https://nodejs.org) and [npm](https://www
 -   node `6.0+`
 -   npm `3.0+`
 
+
+Package is [continuously tested][appveyor-url] on darwin, linux, win32 platforms. All active and maintenance [LTS](https://nodejs.org/en/about/releases/) node releases are supported.
 ## Installation
 
 To install the library, run the following command
@@ -109,24 +111,7 @@ helps to benchmark execution time
 
 ## Contribute
 
-Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions.
-
-Commit message summaries must follow this basic format:
-```
-  Tag: Message (fixes #1234)
-```
-
-The Tag is one of the following:
-* **Fix** - for a bug fix.
-* **Update** - for a backwards-compatible enhancement.
-* **Breaking** - for a backwards-incompatible enhancement.
-* **Docs** - changes to documentation only.
-* **Build** - changes to build process only.
-* **New** - implemented a new feature.
-* **Upgrade** - for a dependency upgrade.
-* **Chore** - for tests, refactor, style, etc.
-
-The message summary should be a one-sentence description of the change. The issue number should be mentioned at the end.
+Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions. Read [Contributing Guidelines](.github/CONTRIBUTING.md) for details.
 
 [npm]: https://www.npmjs.com/package/myrmidon
 [github]: https://github.com/pustovitDmytro/myrmidon
@@ -164,3 +149,7 @@ The message summary should be a one-sentence description of the change. The issu
 [npm-downloads-badge]: https://img.shields.io/npm/dw/myrmidon
 [npm-size-badge]: https://img.shields.io/bundlephobia/min/myrmidon
 [npm-size-url]: https://bundlephobia.com/result?p=myrmidon
+
+[appveyor-badge]: https://ci.appveyor.com/api/projects/status/voirgvgkn97pd1wq/branch/master?svg=true
+[appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/myrmidon/branch/master
+
