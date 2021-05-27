@@ -1,6 +1,6 @@
 {
   "name": "myrmidon",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "package myrmidon provides a list of common utilities for comfortable work with js projects.",
   "main": "./lib",
   "scripts": {

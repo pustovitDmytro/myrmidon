@@ -1,3 +1,25 @@
+## [1.5.3](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.2...v1.5.3) (2021-05-27)
+
+
+### Chore
+
+* 'Chore' semanticCommitType for updating devDependencies ([4bf79e1](https://github.com/pustovitDmytro/myrmidon/commit/4bf79e1ac2907ca07a355f63458b8bf3b41a3afc))
+* (tests) clearCache on module load is optional ([96c2ae5](https://github.com/pustovitDmytro/myrmidon/commit/96c2ae5237b7eed47278471cbf3b04b2b99385d4))
+* adds appveyor ([d560b4e](https://github.com/pustovitDmytro/myrmidon/commit/d560b4ee54ffb8d4d267fd2cb132ba8bb6dfe5b9))
+* contributor login in danger message ([76349e6](https://github.com/pustovitDmytro/myrmidon/commit/76349e6ee87b0e59f8fff9402eb10fa66d23a188))
+* dont store package-tests artifacts ([50ebff1](https://github.com/pustovitDmytro/myrmidon/commit/50ebff16449ff34f474587136dca4e4740ed4bf7))
+* export default in tests ([9d210e6](https://github.com/pustovitDmytro/myrmidon/commit/9d210e6f511a42a9c42f415ba6a64834346c11b0))
+* integrate APPVEYOR_BUILD_ID to build tests ([16cdd48](https://github.com/pustovitDmytro/myrmidon/commit/16cdd48ddb7da5000c6df88ceb1f2513225a4a5b))
+* package-tester improvements ([d5d868b](https://github.com/pustovitDmytro/myrmidon/commit/d5d868bc7f529d94f79041be5b923b5967d7a704))
+* refactor code to match new stylelint ([e9c0b0e](https://github.com/pustovitDmytro/myrmidon/commit/e9c0b0ecf3e62d80e3721416a4206aeb47ee36bf))
+* update default renovate rules ([7e83bc4](https://github.com/pustovitDmytro/myrmidon/commit/7e83bc4fb9b99bb74811cd55db0b94c81e18dcde))
+* update eslint ([6b174b1](https://github.com/pustovitDmytro/myrmidon/commit/6b174b184a792fc282ef3228079f23fa81f2bcb5))
+
+### Docs
+
+* adds node releases roadmap ([ba16142](https://github.com/pustovitDmytro/myrmidon/commit/ba16142230db2895ecd9855d5746648075f0b8e8))
+* move Contributing Guidelines to separate file. ([081e4ed](https://github.com/pustovitDmytro/myrmidon/commit/081e4ed03eebef0eda5305a1486a32cf91cdc62b))
+
 ## [1.5.2](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.1...v1.5.2) (2021-05-10)
 
 
