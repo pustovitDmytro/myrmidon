@@ -5,7 +5,7 @@ const tester = new FunctionTester(isString);
 
 suite('CheckTypes: isString');
 
-test('Positive: isString with string input @example', () => {
+test('Positive: isString with string input @example', function () {
     tester.test('', true);
     tester.test('abcd', true);
     tester.test('34', true);
@@ -13,13 +13,13 @@ test('Positive: isString with string input @example', () => {
     tester.test('multiline \n text with \ttabs', true);
 });
 
-test('Negative: isString with no-string input @example', () => {
+test('Negative: isString with no-string input @example', function () {
     tester.test(13, false);
     tester.test(true, false);
     tester.test(new Set(), false);
 });
 
-test('Negative: isString with empty input @example', () => {
+test('Negative: isString with empty input @example', function () {
     tester.test(null, false);
     tester.test(undefined, false);
     tester.test(0, false);
@@ -27,7 +27,7 @@ test('Negative: isString with empty input @example', () => {
     tester.test(false, false);
 });
 
-after(async () => {
+after(async function () {
     // console.log('after', this);
 });
 

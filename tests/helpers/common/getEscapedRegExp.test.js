@@ -5,7 +5,7 @@ suite('custom: getEscapedRegExp');
 const tester = new FunctionTester(getEscapedRegExp);
 
 /* eslint-disable no-useless-escape */
-test('Positive: escape \\s @example', () => {
+test('Positive: escape \\s @example', function () {
     tester.test(
         'moving citizen /s',
         'moving citizen \/s'

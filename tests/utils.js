@@ -41,7 +41,7 @@ if (saveExamles) {
     beforeEach(async function setClsFromContext() {
         const old = this.currentTest.fn;
         const ast = await loadFromFile(this.currentTest.file, this.currentTest.title)
-            .catch((err) => loadFromBody(old, this.currentTest.title, err));
+            .catch((error) => loadFromBody(old, this.currentTest.title, error));
 
         this.currentTest._TRACE_ID = uuid();
         this.currentTest.fn = function clsWrapper() {
@@ -54,7 +54,8 @@ if (saveExamles) {
                         id    : this.test._TRACE_ID
                     });
 
-                    Promise.resolve(old.apply(this, arguments)).then(res).catch(rej);
+                    // eslint-disable-next-line promise/prefer-await-to-then
+                    Promise.resolve(Reflect.apply(old, this, arguments)).then(res).catch(rej);
                 });
             });
         };
@@ -63,7 +64,7 @@ if (saveExamles) {
     afterEach(async function writeExamples() {
         const examples = EXAMPLES.filter(e => e.test === this.currentTest._TRACE_ID);
 
-        if (examples.length) {
+        if (examples.length > 0) {
             PRINT_CASES.push({
                 testID : this.currentTest._TRACE_ID,
                 test   : this.currentTest.title,
@@ -113,7 +114,7 @@ export class FunctionTester {
 }
 
 const inspectOpts = {
-    breakLength    : Infinity,
+    breakLength    : Number.POSITIVE_INFINITY,
     depth          : 4,
     maxArrayLength : 10,
     compact        : true

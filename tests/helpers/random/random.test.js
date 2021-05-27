@@ -2,10 +2,8 @@ import { SnippetTesterAsync } from 'tests/utils';
 
 suite('random');
 
-test('Positive: random integer @example', async () => {
+test('Positive: random integer @example', async function () {
     await SnippetTesterAsync(({ random }) => {
-        const singleRandomNumber = random.int(10, 0);
-
-        return singleRandomNumber; // uniform distribution [0, 10]
+        return random.int(10, 0); // uniform distribution [0, 10]
     });
 });

@@ -60,7 +60,9 @@ export const passFilter = () => true;
  * @returns {array} flattened array
  */
 export function flatten(arr) {
+    // eslint-disable-next-line unicorn/no-array-reduce
     return toArray(arr).reduce((flat, toFlatten) => {
+        // eslint-disable-next-line unicorn/prefer-spread
         return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
     }, []);
 }
@@ -99,6 +101,7 @@ export function last(array) {
 export function groupBy(array, similar) {
     const groupFields = toArray(similar);
 
+    // eslint-disable-next-line unicorn/no-array-reduce
     return array.reduce((x, val) => {
         const uniqueValue = groupFields.map(key => val[key]).join('.');
 

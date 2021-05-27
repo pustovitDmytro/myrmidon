@@ -5,18 +5,18 @@ const tester = new FunctionTester(isObject);
 
 suite('CheckTypes: isObject');
 
-test('Positive: isObject with object input @example', () => {
+test('Positive: isObject with object input @example', function () {
     tester.test({}, true);
     tester.test(new Object(), true); // eslint-disable-line no-new-object
 });
 
-test('Negative: isObject with no-object input @example', () => {
+test('Negative: isObject with no-object input @example', function () {
     tester.test(13, false);
     tester.test(true, false);
     tester.test(new Set(), false);
 });
 
-test('Negative: isObject with empty input @example', () => {
+test('Negative: isObject with empty input @example', function () {
     tester.test(null, false);
     tester.test(undefined, false);
     tester.test(0, false);
@@ -24,7 +24,7 @@ test('Negative: isObject with empty input @example', () => {
     tester.test(false, false);
 });
 
-after(async () => {
+after(async function () {
     // console.log('after', this);
 });
 

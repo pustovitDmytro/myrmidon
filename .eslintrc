@@ -4,8 +4,7 @@
     ],
     "settings": {
         "import/resolver": {
-          "babel-module": {
-          },
+          "babel-module": {},
           "node": {
             "extensions": [
               ".js",
@@ -22,7 +21,20 @@
         {
             "files" : [ "tests/helpers/checkType/*.test.js" ],
             "rules" : {
-                "no-new-wrappers" : 0
+                "no-new-wrappers" : 0,
+                "unicorn/new-for-builtins": 0
+            }
+        },
+        {
+            "files" : [ "tests/helpers/array/*.test.js" ],
+            "rules" : {
+                "unicorn/no-array-callback-reference": 0 
+            }
+        },
+        {
+            "files" : [ "*.test.js" ],
+            "rules" : {
+                "unicorn/filename-case" : 0
             }
         }
     ],

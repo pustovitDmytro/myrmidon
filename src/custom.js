@@ -43,11 +43,12 @@ export function retry(retrier, { onRetry = defaultOnRetry, retries = 10, timeout
             try {
                 const val = retrier(abort, iter);
 
+                /* eslint-disable promise/prefer-await-to-callbacks, promise/prefer-await-to-then */
                 Promise.resolve(val)
                     .then(res)
-                    .catch((err) => onError(err, iter));
-            } catch (err) {
-                onError(err, iter);
+                    .catch((error) => onError(error, iter));
+            } catch (error) {
+                onError(error, iter);
             }
         }
 
@@ -70,7 +71,7 @@ export function retry(retrier, { onRetry = defaultOnRetry, retries = 10, timeout
             }
         }
 
-        attempt(0, { res, rej });
+        attempt(0);
     });
 }
 
@@ -83,10 +84,11 @@ export function retry(retrier, { onRetry = defaultOnRetry, retries = 10, timeout
  * @returns {any} deep object property, or null if nothing found
  */
 export function getProp(obj, path, { delimeter = '.' } = {}) {
+    // eslint-disable-next-line unicorn/no-array-reduce
     return path.split(delimeter).reduce((accum, pathElem) => {
         try {
             return accum[pathElem];
-        } catch (error) {
+        } catch {
             return null;
         }
     }, obj);

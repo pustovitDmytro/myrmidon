@@ -69,7 +69,7 @@ export function isValue(x) {
  * @returns {boolean} true if x is number, false otherwise
  */
 export function isNumber(x) {
-    return isValue(x) && Object.prototype.toString.call(x) === '[object Number]' && !isNaN(x);
+    return isValue(x) && Object.prototype.toString.call(x) === '[object Number]' && !Number.isNaN(x);
 }
 
 /**

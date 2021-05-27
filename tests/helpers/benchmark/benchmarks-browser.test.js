@@ -13,16 +13,16 @@ let  startBenchmark;
 
 suite('Performance benchmarks #browser');
 
-before(() => {
+before(function () {
     process.hrtime = 0;
     load(polyfillPath);
-    const fallback = load(benchmarkPath);
+    const fallback = load(benchmarkPath, true);
 
     getBenchmark = fallback.getBenchmark;
     startBenchmark = fallback.startBenchmark;
 });
 
-test('Positive: min measurable time', () => {
+test('Positive: min measurable time', function () {
     const time = startBenchmark();
     const benchmark = getBenchmark(time);
 
@@ -30,7 +30,7 @@ test('Positive: min measurable time', () => {
     assert.isNumber(+benchmark);
 });
 
-test('Positive: measure time', async () => {
+test('Positive: measure time', async function () {
     const time = startBenchmark();
 
     await sleep(20);
@@ -40,7 +40,7 @@ test('Positive: measure time', async () => {
     assert.isAtLeast(+benchmark, 19);
 });
 
-after(async () => {
+after(async function () {
     global.performance = performance;
     process.hrtime = hrtime;
 });

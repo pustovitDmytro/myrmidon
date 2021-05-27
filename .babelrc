@@ -4,9 +4,9 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": "6",
+            "node": "10",
             "browsers": "last 5 versions, > 5%"
-          }
+          },
         }
       ]
     ],
@@ -36,6 +36,7 @@
       ["@babel/plugin-proposal-class-properties",{
         "loose": true
       }],
+      ["@babel/plugin-proposal-private-methods", { "loose": true }],
       "@babel/plugin-proposal-optional-chaining"
     ],
     "ignore": [

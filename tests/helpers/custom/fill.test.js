@@ -6,7 +6,7 @@ suite('custom: fill');
 
 const tester = new FunctionTester(fill);
 
-test('Positive: fill template @example', () => {
+test('Positive: fill template @example', function () {
     tester.test(
         'Hello {user.firstName} {user.lastName} {user.avatar.url}',
         { user: { firstName: 'Jason', lastName: 'Gregory' } },

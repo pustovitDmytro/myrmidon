@@ -5,17 +5,17 @@ const tester = new FunctionTester(isPromise);
 
 suite('CheckTypes: isPromise');
 
-test('Positive: isPromise with promise input @example', () => {
+test('Positive: isPromise with promise input @example', function () {
     tester.test(new Promise(() => {}), true);
 });
 
-test('Negative: isPromise with no-promise input @example', () => {
+test('Negative: isPromise with no-promise input @example', function () {
     tester.test(13, false);
     tester.test(true, false);
     tester.test(new Set(), false);
 });
 
-test('Negative: isPromise with empty input @example', () => {
+test('Negative: isPromise with empty input @example', function () {
     tester.test(null, false);
     tester.test(undefined, false);
     tester.test(0, false);
@@ -23,7 +23,7 @@ test('Negative: isPromise with empty input @example', () => {
     tester.test(false, false);
 });
 
-after(async () => {
+after(async function () {
     // console.log('after', this);
 });
 

@@ -2,7 +2,7 @@ import { SnippetTesterAsync } from 'tests/utils';
 
 suite('Arrays: uniqueIdenticFilter');
 
-test('Positive: uniqueIdenticFilter for array of numbers @example', async () => {
+test('Positive: uniqueIdenticFilter for array of numbers @example', async function () {
     await SnippetTesterAsync(({ uniqueIdenticFilter }) => {
         const items = [ 1, 2, '4', 3, 2, 1, 4, '2', 3, 5 ];
 

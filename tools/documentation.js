@@ -49,11 +49,11 @@ const gitHeadPrefixLen = 5;
 const getGitCommit = async () => {
     const gitId = await fs.readFile('.git/HEAD', 'utf8');
 
-    if (gitId.indexOf(':') === -1) {
+    if (!gitId.includes(':')) {
         return gitId.trim();
     }
 
-    const refPath = `.git/${gitId.substring(gitHeadPrefixLen).trim()}`;
+    const refPath = `.git/${gitId.slice(Math.max(0, gitHeadPrefixLen)).trim()}`;
     const content = await fs.readFile(refPath, 'utf8');
 
     return content.trim();
@@ -64,7 +64,7 @@ async function prepareExamples() {
     const template = getTemplate('templates/documentation/examples.handlebars');
 
     return examples
-        .map(dumpTest)
+        .map((element) => dumpTest(element))
         .map(data => {
             const raw = template({ ...data, info });
             const code =  eslint.executeOnText(raw).results[0].output;
@@ -81,12 +81,10 @@ async function getFiles(dir) {
         return (await fs.stat(res)).isDirectory() ? getFiles(res) : res;
     }));
 
-    return files.reduce((a, f) => a.concat(f), []);
+    return files.flat();
 }
 
-export async function buildDocs(out) {
-    const folder = out || 'docs';
-
+export async function buildDocs(folder = 'docs') {
     return Promise.all([
         await build('templates/documentation/reference.md', path.join(folder, 'reference.md')),
         await build('templates/documentation/docs.md', path.join(folder, 'index.md'))
@@ -110,7 +108,7 @@ export async function build(entry, out) {
     const cases = await prepareExamples();
     const tests = await getFiles('tests');
     const relativeTestFiles = tests.map(f => path.relative(process.cwd(), f).trim());
-    const docs = rawData.map(dumpDoc);
+    const docs = rawData.map((element) => dumpDoc(element));
 
     const sections = Object.entries(groupBy(docs, 'file'))
         .map(([ key, val ]) => {
@@ -180,7 +178,7 @@ function dumpDoc(d) {
         comment     : d.comment,
         description : dumpDescription(d.description),
 
-        params  : d.params.map(dumpParam),
+        params  : d.params.map((element) => dumpParam(element)),
         returns : d.returns[0] && dumpParam(d.returns[0]),
 
         file     : path.relative(process.cwd(), d.context.file).trim(),
@@ -193,7 +191,7 @@ function dumpTest(useCase) {
     const helperNames = useCase.examples.map(example =>
         example.type === 'FunctionTester' && example.function
         || example.type === 'SnippetTester' && example.functions);
-    const helpers = flatten(helperNames).filter(uniqueIdenticFilter);
+    const helpers = flatten(helperNames).filter((element, index, array) => uniqueIdenticFilter(element, index, array));
 
     return {
         helpers,

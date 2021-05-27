@@ -4,11 +4,11 @@ import { isPromise, isFunction, isGetter } from './checkType';
 
 const deepFunctions = x =>
     x && x !== Object.prototype &&
-  Object.getOwnPropertyNames(x)
-      .filter(name => isGetter(x, name) || isFunction(x[name]))
-      .concat(deepFunctions(Object.getPrototypeOf(x)) || []);
+  [ ...Object.getOwnPropertyNames(x)
+      .filter(name => isGetter(x, name) || isFunction(x[name])),
+  ...(deepFunctions(Object.getPrototypeOf(x)) || []) ];
 
-const distinctDeepFunctions = x => Array.from(new Set(deepFunctions(x)));
+const distinctDeepFunctions = x => [ ...new Set(deepFunctions(x)) ];
 
 export const getMethodNames = x => distinctDeepFunctions(x).filter(name => name !== 'constructor' && name.indexOf('_') !== 0);
 
@@ -43,6 +43,7 @@ function _onParams({ params }) {
     return params;
 }
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export function decorate(target, methods) {
     const isDecorateFunction = isFunction(target);
 
@@ -60,48 +61,42 @@ export function decorate(target, methods) {
         : target;
     const injectMethodNames = getMethodNames(methods);
 
-    injectMethodNames
-        .filter(name => !name.includes('before_') && !name.includes('after_'))
-        .forEach(methodName => {
-            if (isDecorateFunction) {
-                decorated[methodName] = methods[methodName];
-            } else {
-                decorated[methodName] = methods[methodName];
-            }
-        });
+    for (const methodName of injectMethodNames
+        .filter(name => !name.includes('before_') && !name.includes('after_'))) {
+        decorated[methodName] = methods[methodName];
+    }
 
-    getMethodNames(target)
-        .forEach(methodName => {
-            const onParamsMethod = injectMethodNames.find(m => m === `before_${methodName}`);
-            const onSuccessMethod = injectMethodNames.find(m => m === `after_${methodName}`);
+    for (const methodName of getMethodNames(target)) {
+        const onParamsMethod = injectMethodNames.find(m => m === `before_${methodName}`);
+        const onSuccessMethod = injectMethodNames.find(m => m === `after_${methodName}`);
 
-            if (isDecorateFunction && [ 'caller', 'caller', 'arguments' ].includes(methodName)) return;
-            if (!onParamsMethod && !onSuccessMethod) return;
-            const config = {
-                onParams  : onParamsMethod ? methods[onParamsMethod] : _onParams,
-                onSuccess : onSuccessMethod ? methods[onSuccessMethod] : _onSuccess,
-                ...defaultConfig
-            };
+        if (isDecorateFunction && [ 'caller', 'caller', 'arguments' ].includes(methodName)) continue;
+        if (!onParamsMethod && !onSuccessMethod) continue;
+        const config = {
+            onParams  : onParamsMethod ? methods[onParamsMethod] : _onParams,
+            onSuccess : onSuccessMethod ? methods[onSuccessMethod] : _onSuccess,
+            ...defaultConfig
+        };
 
-            if (isDecorateFunction) {
-                decorated[methodName] = functionDecorator(target[methodName], { methodName, config });
-            } else {
-                const descriptor = getMethodDescriptor(methodName, decorated);
+        if (isDecorateFunction) {
+            decorated[methodName] = functionDecorator(target[methodName], { methodName, config });
+        } else {
+            const descriptor = getMethodDescriptor(methodName, decorated);
 
-                Object.defineProperty(
-                    decorated,
-                    methodName,
-                    classMethodDecorator.call(
-                        this,
-                        {
-                            methodName,
-                            descriptor,
-                            config
-                        }
-                    )
-                );
-            }
-        });
+            Object.defineProperty(
+                decorated,
+                methodName,
+                classMethodDecorator.call(
+                    this,
+                    {
+                        methodName,
+                        descriptor,
+                        config
+                    }
+                )
+            );
+        }
+    }
 
     return decorated;
 }
@@ -119,6 +114,7 @@ function functionDecorator(method, { methodName, config }) {
         try {
             const promise = method?.apply(this, params);
 
+            /* eslint-disable promise/prefer-await-to-then, promise/prefer-await-to-callbacks*/
             if (isPromise(promise)) {
                 return promise
                     .then(result => config.onSuccess({ result, ...data }))

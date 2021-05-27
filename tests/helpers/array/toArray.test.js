@@ -5,7 +5,7 @@ const tester = new FunctionTester(toArray);
 
 suite('Arrays: toArray');
 
-test('Positive: empty value @example', () => {
+test('Positive: empty value @example', function () {
     tester.test(null, []);
     tester.test(undefined, []);
     tester.test([], []);

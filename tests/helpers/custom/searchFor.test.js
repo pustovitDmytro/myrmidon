@@ -5,7 +5,7 @@ const tester = new FunctionTester(searchFor);
 
 suite('Common: searchFor');
 
-test('Positive: search string for matches @example', () => {
+test('Positive: search string for matches @example', function () {
     tester.test('next hit nearby prepare', 'ar', [
         {
             'captures' : [],
@@ -63,11 +63,11 @@ test('Positive: search string for matches @example', () => {
     ]);
 });
 
-test('Negative: no occurrences found @example', () => {
+test('Negative: no occurrences found @example', function () {
     tester.test('southern bell drink fresh list', /truth/g, []);
 });
 
-after(async () => {
+after(async function () {
     // console.log('after', this);
 });
 

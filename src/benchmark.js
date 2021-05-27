@@ -30,7 +30,7 @@ function fallbackStartBenchmark() {
 }
 
 function fallbackGetBenchmark(time) {
-    const diff = new Date() - time;
+    const diff = Date.now() - time;
 
     return diff.toFixed(FRACTION_DIGITS);
 }

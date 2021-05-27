@@ -7,13 +7,13 @@ import { isObject, isArray } from './checkType';
  */
 export function cleanUndefined(obj, { cache = new Set() } = {}) {
     cache.add(obj);
-    Object.keys(obj).forEach(key => {
+    for (const key of Object.keys(obj)) {
         if (obj[key] === undefined) delete obj[key]; // eslint-disable-line no-param-reassign
         if (isObject(obj[key])) {
-            if (cache.has(obj[key])) return;
+            if (cache.has(obj[key])) continue;
             cleanUndefined(obj[key], { cache });
         }
-    });
+    }
 
     return obj;
 }

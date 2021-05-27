@@ -3,7 +3,8 @@ export function getPropertyDescriptor(obj, prop) {
 
     do {
         desc = Object.getOwnPropertyDescriptor(obj, prop);
-    } while (!desc && (obj = Object.getPrototypeOf(obj))); //eslint-disable-line
+    // eslint-disable-next-line no-cond-assign
+    } while (!desc && (obj = Object.getPrototypeOf(obj)));
 
     return desc;
 }
@@ -13,8 +14,8 @@ export function pause(time) {
 }
 
 export function getEscapedRegExp(value) {
-    const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
-    const escaped = value.replace(matchOperatorsRe, '\\$&');
+    const matchOperatorsRe = /[$()*+.?[\\\]^{|}]/g;
 
-    return escaped;
+
+    return value.replace(matchOperatorsRe, '\\$&');
 }

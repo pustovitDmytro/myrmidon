@@ -3,6 +3,6 @@ import entry from '../entry';
 
 suite('Configurations');
 
-test('Default configuration', () => {
+test('Default configuration', function () {
     assert.exists(entry);
 });

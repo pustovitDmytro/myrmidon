@@ -19,11 +19,11 @@ class A {
 class X extends A {}
 const x = new X();
 
-test('Positive: isGetter @example', () => {
+test('Positive: isGetter @example', function () {
     tester.test(x, 'c', true);
 });
 
-test('Negative: isGetter @example', () => {
+test('Negative: isGetter @example', function () {
     tester.test(1, null, false);
 
     tester.test(x, 'a', false);
@@ -32,7 +32,7 @@ test('Negative: isGetter @example', () => {
     tester.test(x, 'b', false);
 });
 
-test('Negative: forbidden properties', () => {
+test('Negative: forbidden properties', function () {
     tester.test(x, 'caller', false);
     tester.test(x, 'callee', false);
     tester.test(x, 'arguments', false);
@@ -42,7 +42,7 @@ test('Negative: forbidden properties', () => {
     tester.test(x, 'prototype', false);
 });
 
-after(async () => {
+after(async function () {
     // console.log('after', this);
 });
 

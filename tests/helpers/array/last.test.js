@@ -4,6 +4,6 @@ import { last } from 'tests/entry';
 suite('Arrays: last');
 const tester = new FunctionTester(last);
 
-test('Positive: last @example', () => {
+test('Positive: last @example', function () {
     tester.test([ 1, 2, 3, 4, 5 ], 5);
 });

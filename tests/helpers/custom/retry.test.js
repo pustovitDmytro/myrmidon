@@ -1,10 +1,11 @@
+/* eslint-disable sonarjs/no-identical-functions */
 import { assert } from 'chai';
 import { SnippetTesterAsync } from 'tests/utils';
 import { retry as helper, pause } from '../../entry';
 
 suite('custom: retry');
 
-test('Positive: retry function calls @example', async () => {
+test('Positive: retry function calls @example', async function () {
     await SnippetTesterAsync(({ retry }) => {
         let i = 0;
 
@@ -19,7 +20,7 @@ test('Positive: retry function calls @example', async () => {
 });
 
 
-test('Positive: retry async function with exponential backoff @example', async () => {
+test('Positive: retry async function with exponential backoff @example', async function () {
     let i = 0;
 
     async function failing() {
@@ -30,15 +31,13 @@ test('Positive: retry async function with exponential backoff @example', async (
 
     await SnippetTesterAsync(({ retry }) => {
         return retry(async () => {
-            const result = await failing();
-
-            return result;
+            return failing();
         }, { retry: 5, timeout: { min: 1, max: 100 } });
     }, 3);
 });
 
 
-test('Negative: abort retrying with abort function @example', async () => {
+test('Negative: abort retrying with abort function @example', async function () {
     let i = 0;
 
     async function failing() {
@@ -57,7 +56,7 @@ test('Negative: abort retrying with abort function @example', async () => {
     }, new Error('2 < 3'));
 });
 
-test('Positive: stop retry if succed', async () => {
+test('Positive: stop retry if succed', async function () {
     let i = 0;
 
     function succed() {

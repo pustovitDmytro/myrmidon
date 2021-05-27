@@ -2,7 +2,7 @@ import { SnippetTesterAsync } from 'tests/utils';
 
 suite('Arrays: uniqueFilter');
 
-test('Positive: uniqueFilter with strict equality function @example', async () => {
+test('Positive: uniqueFilter with strict equality function @example', async function () {
     await SnippetTesterAsync(({ uniqueFilter }) => {
         const leaveUnique = uniqueFilter((a, b) => a === b);
 

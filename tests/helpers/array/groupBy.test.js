@@ -5,7 +5,7 @@ const tester = new FunctionTester(groupBy);
 
 suite('Arrays: groupBy');
 
-test('Positive: groupBy @example', () => {
+test('Positive: groupBy @example', function () {
     tester.test(
         [
             { group: 'A', value: 9 },
