@@ -1,0 +1,9 @@
+{
+    "dir": "tmp/package-tests",
+    "modules": [ "cls-hooked" ],
+    "copy": [
+        [ "tests/polyfills/performance.polyfill.js", "polyfills/performance.polyfill.js" ],
+        [ "tests/mock/files",  "mock/files" ]
+    ],
+    "copyDefaultFiles": true
+}
