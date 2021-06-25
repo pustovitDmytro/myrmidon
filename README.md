@@ -14,7 +14,7 @@ package myrmidon provides a list of common utilities for comfortable work with j
 [![Scrutinizer][scrutinizer-badge]][scrutinizer-url]
 
 [![Dependencies][badge-deps]][npm]
-[![Vulnerabilities][badge-vuln]](https://snyk.io/)
+[![Security][snyk-badge]][snyk-url]
 [![Build Status][tests-badge]][tests-url]
 [![Coverage Status][badge-coverage]][url-coverage]
 
@@ -124,6 +124,9 @@ Make the changes to the code and tests. Then commit to your branch. Be sure to f
 [badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/myrmidon/badge.svg?branch=master
 [url-coverage]: https://coveralls.io/github/pustovitDmytro/myrmidon?branch=master
 
+[snyk-badge]: https://snyk-widget.herokuapp.com/badge/npm/myrmidon/badge.svg
+[snyk-url]: https://snyk.io/advisor/npm-package/myrmidon
+
 [tests-badge]: https://img.shields.io/circleci/build/github/pustovitDmytro/myrmidon
 [tests-url]: https://app.circleci.com/pipelines/github/pustovitDmytro/myrmidon
 
@@ -154,5 +157,5 @@ Make the changes to the code and tests. Then commit to your branch. Be sure to f
 [appveyor-badge]: https://ci.appveyor.com/api/projects/status/voirgvgkn97pd1wq/branch/master?svg=true
 [appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/myrmidon/branch/master
 
-[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fmyrmidon.svg?type=shield
+[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2F2Fmyrmidon.svg?type=shield
 [fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fmyrmidon?ref=badge_shield
