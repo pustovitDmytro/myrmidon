@@ -1,3 +1,10 @@
+## [1.5.5](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.4...v1.5.5) (2021-07-10)
+
+
+### Docs
+
+* update documentation on release ([d4a5e1e](https://github.com/pustovitDmytro/myrmidon/commit/d4a5e1e1d14f3c65f1b1ba1bc27f887ca08f9d5f))
+
 ## [1.5.4](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.3...v1.5.4) (2021-07-10)
 
 
