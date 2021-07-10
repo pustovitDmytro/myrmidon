@@ -11,7 +11,7 @@ let mocha = null;
 
 if (saveExamles) {
     mocha = new Mocha({
-        examplesPath : saveExamles && path.resolve(process.cwd, saveExamles)
+        examplesPath : path.resolve(process.cwd, saveExamles)
     });
     mocha.installHooks();
 }
