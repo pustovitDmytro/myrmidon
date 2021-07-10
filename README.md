@@ -84,7 +84,7 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 [appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/myrmidon/branch/master
 
-[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2F2Fmyrmidon.svg?type=shield
+[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fmyrmidon.svg?type=shield
 
 [fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fmyrmidon?ref=badge_shield
 
@@ -96,9 +96,9 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 *   [Usage](#usage)
 
-    *   [benchmark](#benchmark)
-    *   [checkType](#checktype)
     *   [array](#array)
+    *   [checkType](#checktype)
+    *   [benchmark](#benchmark)
     *   [custom](#custom)
     *   [object](#object)
 
@@ -125,10 +125,17 @@ To install the library run following command
 
 Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 
-### benchmark
+### array
 
-*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
-*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
+*   [**toArray**](https://myrmidonjs.readthedocs.io/en/latest/reference/#toarray) - transforms any value to Array
+*   [**uniqueFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniquefilter) - generates filter function, that leaves only unique items
+*   [**uniqueIdFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueidfilter) - filter function, that leaves only unique items with same id property
+*   [**uniqueIdenticFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueidenticfilter) - filter function, that leaves only identicly unique items (same by ===)
+*   [**existanceFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#existancefilter) - filter function, that leaves only exited values
+*   [**passFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#passfilter) - filter function, that leaves all items
+*   [**flatten**](https://myrmidonjs.readthedocs.io/en/latest/reference/#flatten) - flattens array
+*   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
+*   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
 
 ### checkType
 
@@ -145,17 +152,10 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**isGetter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isgetter) - determines whether the value is function getter
 *   [**isRegexp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isregexp) - determines whether the value is regualr expression
 
-### array
+### benchmark
 
-*   [**toArray**](https://myrmidonjs.readthedocs.io/en/latest/reference/#toarray) - transforms any value to Array
-*   [**uniqueFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniquefilter) - generates filter function, that leaves only unique items
-*   [**uniqueIdFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueidfilter) - filter function, that leaves only unique items with same id property
-*   [**uniqueIdenticFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueidenticfilter) - filter function, that leaves only identicly unique items (same by ===)
-*   [**existanceFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#existancefilter) - filter function, that leaves only exited values
-*   [**passFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#passfilter) - filter function, that leaves all items
-*   [**flatten**](https://myrmidonjs.readthedocs.io/en/latest/reference/#flatten) - flattens array
-*   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
-*   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
+*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
+*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
 
 ### custom
 

@@ -1,3 +1,18 @@
+## [1.5.6](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.5...v1.5.6) (2021-07-10)
+
+
+### Chore
+
+* Lock file maintenance ([cdf4f11](https://github.com/pustovitDmytro/myrmidon/commit/cdf4f112eebab895c624210cc672ab00ba2fa443))
+* Update dependency eslint-plugin-regexp to ^0.13.0 (#36) ([3a8d3ec](https://github.com/pustovitDmytro/myrmidon/commit/3a8d3ecefa7c49575b4c6de6832690117d852dd7)), closes [#36](https://github.com/pustovitDmytro/myrmidon/issues/36)
+* Update dependency eslint-plugin-sonarjs to ^0.9.0 ([81d9681](https://github.com/pustovitDmytro/myrmidon/commit/81d9681ef601c70ee83a7ca26b199d647fc4ca0e))
+* Update dependency eslint-plugin-unicorn to v34 (#34) ([86efbac](https://github.com/pustovitDmytro/myrmidon/commit/86efbac96c6fbd1055c7e83fc3a42a861836b943)), closes [#34](https://github.com/pustovitDmytro/myrmidon/issues/34)
+* Update dependency husky to v7 ([3578711](https://github.com/pustovitDmytro/myrmidon/commit/35787117161955387aad52949d506c0fbaf42edf))
+
+### Docs
+
+* fixes fossa badge ([79e3893](https://github.com/pustovitDmytro/myrmidon/commit/79e3893ddf82649bdcc24ec03582854863286e58))
+
 ## [1.5.5](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.4...v1.5.5) (2021-07-10)
 
 
