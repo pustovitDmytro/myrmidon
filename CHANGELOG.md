@@ -1,3 +1,42 @@
+## [1.5.4](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.3...v1.5.4) (2021-07-10)
+
+
+### Chore
+
+* adds sonarcloud config ([c92973d](https://github.com/pustovitDmytro/myrmidon/commit/c92973d998ecee059594fbcdd35b9be0c08ffd0b))
+* adds stabilityDays to renovate ([3b262bc](https://github.com/pustovitDmytro/myrmidon/commit/3b262bcefc6db318d2a7d9103f9f5f42315202d5))
+* exclude code-chronicle from package-tests ([d108aad](https://github.com/pustovitDmytro/myrmidon/commit/d108aad12880574d485cee7bdb9c73e14c79e322))
+* fix json in renovate ([8ad7928](https://github.com/pustovitDmytro/myrmidon/commit/8ad792825b2703e3159b65faf722eb43a1d9d421))
+* fixes npm  audit ([c3beccd](https://github.com/pustovitDmytro/myrmidon/commit/c3beccdf1926d72dcf9b13cd153e37916f1a8d13))
+* integrate code-chronicle ([0bff211](https://github.com/pustovitDmytro/myrmidon/commit/0bff211046c29229e9f899bbe48b90fafd98864c))
+* integrate fossa ([b65e961](https://github.com/pustovitDmytro/myrmidon/commit/b65e961a5ae500b1b5fd12fce3436e71c1518e35))
+* integrate node-package-tester ([9d53bf3](https://github.com/pustovitDmytro/myrmidon/commit/9d53bf30d295368e7f1e925c18b00e48cc16014e))
+* Lock file maintenance ([c5e6baa](https://github.com/pustovitDmytro/myrmidon/commit/c5e6baa522e5407af3a29deec0f7ead3e73b565d))
+* Lock file maintenance ([3291a21](https://github.com/pustovitDmytro/myrmidon/commit/3291a2144ee143dc327f6fb4a8b82e62e07b1c1f))
+* Lock file maintenance (#29) ([b7ae0d7](https://github.com/pustovitDmytro/myrmidon/commit/b7ae0d79484c8453d0703554e000b20973a38c87)), closes [#29](https://github.com/pustovitDmytro/myrmidon/issues/29)
+* removes unused devDependencies ([ddb100a](https://github.com/pustovitDmytro/myrmidon/commit/ddb100aa634ab2e1d2695de73d9aeb4a7795ccce))
+* set YARGS_MIN_NODE_VERSION 10 ([9b6bef9](https://github.com/pustovitDmytro/myrmidon/commit/9b6bef9d89f8f0c958ee1fe60f20475dd20c8276))
+* Update dependency eslint-plugin-regexp to ^0.12.0 ([51ff304](https://github.com/pustovitDmytro/myrmidon/commit/51ff3049b892e9ee5655761e53454e4c601fba27))
+* Update dependency eslint-plugin-regexp to ^0.12.0 (#28) ([e02646e](https://github.com/pustovitDmytro/myrmidon/commit/e02646e2eca8e1f94f1b60e91d0fee57fa9adb6b)), closes [#28](https://github.com/pustovitDmytro/myrmidon/issues/28)
+* Update dependency eslint-plugin-regexp to ^0.13.0 (#32) ([950c365](https://github.com/pustovitDmytro/myrmidon/commit/950c365a284c8d8621624fd2e35bb9a45d0d624a)), closes [#32](https://github.com/pustovitDmytro/myrmidon/issues/32)
+* Update dependency eslint-plugin-sonarjs to ^0.9.0 (#33) ([8ce3969](https://github.com/pustovitDmytro/myrmidon/commit/8ce3969fb0457b473896e2d6f995e0d15a45d9fa)), closes [#33](https://github.com/pustovitDmytro/myrmidon/issues/33)
+* Update dependency eslint-plugin-unicorn to v33 ([bfa00ff](https://github.com/pustovitDmytro/myrmidon/commit/bfa00ff354dfb9ffe717e9a36f7a938d44b32611))
+* Update dependency eslint-plugin-unicorn to v33 ([2c7368e](https://github.com/pustovitDmytro/myrmidon/commit/2c7368eec6199204f064f3ecfdd442e50c3d19ed))
+* Update dependency eslint-plugin-unicorn to v34 (#30) ([74a5a14](https://github.com/pustovitDmytro/myrmidon/commit/74a5a14a065870bc72f5e6ecaff01e3fff967067)), closes [#30](https://github.com/pustovitDmytro/myrmidon/issues/30)
+* Update dependency glob-parent to 5.1.2 [SECURITY] ([c957512](https://github.com/pustovitDmytro/myrmidon/commit/c957512cf496d9b99e2278b44b6bb9da545f57a8))
+* Update dependency husky to v7 (#31) ([973bbdc](https://github.com/pustovitDmytro/myrmidon/commit/973bbdc2bd1d53602fa0957c329997a7eadd7afb)), closes [#31](https://github.com/pustovitDmytro/myrmidon/issues/31)
+* Update dependency mocha to v9 ([93b7a17](https://github.com/pustovitDmytro/myrmidon/commit/93b7a1783ea97a7bcd94d570ef33b61314c93746))
+* update eslint-config-incredible ([2f39edb](https://github.com/pustovitDmytro/myrmidon/commit/2f39edb6b44795918e8650be3e727b8e7abb61b7))
+* update eslint-config-incredible ([58c31d2](https://github.com/pustovitDmytro/myrmidon/commit/58c31d295fa2df7cb3dceda8db6a417144a4b1c3))
+
+### Docs
+
+* update snyk badge ([a7fbb1d](https://github.com/pustovitDmytro/myrmidon/commit/a7fbb1d0e408bec8b8a8f37d1ffef3921d1dc106))
+
+### Fix
+
+* set babel target node version to 10 ([f736568](https://github.com/pustovitDmytro/myrmidon/commit/f73656838a20d11da6680579cfccc24a9f4a1201))
+
 ## [1.5.3](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.2...v1.5.3) (2021-05-27)
 
 
