@@ -1,0 +1,11 @@
+{
+    "descriptions": {
+        "math": "math helpers"
+    },
+    "examples": {
+        "tmpPath": "tmp/examples.json",
+        "templatePath": "templates/documentation/examples.handlebars",
+        "eslint": true
+    },
+    "entry": [ "src/**/*.js" ]
+}

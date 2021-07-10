@@ -9,7 +9,4 @@
 <!-- #include requirements.md -->
 <!-- #include installation.md -->
 <!-- #include usage.md -->
-<!-- #include ../../docs/CONTRIBUTING.md -->
-
-[npm]: https://www.npmjs.com/package/{{info.name}}
-[github]: https://github.com/pustovitDmytro/{{info.name}}
+<!-- #include contributing.md -->

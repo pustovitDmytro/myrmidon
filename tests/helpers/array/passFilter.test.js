@@ -1,9 +1,9 @@
-import { SnippetTesterAsync } from 'tests/utils';
+import { snippetTester } from 'tests/utils';
 
 suite('Arrays: passFilter');
 
 test('Positive: passFilter @example', async function () {
-    await SnippetTesterAsync(({ passFilter }) => {
+    await snippetTester.test(({ passFilter }) => {
         const items = [ 1, 2, null, 0, undefined, 3, 5 ];
 
         return items.filter(passFilter);

@@ -1,12 +1,12 @@
 /* eslint-disable sonarjs/no-identical-functions */
 import { assert } from 'chai';
-import { SnippetTesterAsync } from 'tests/utils';
+import { snippetTester } from 'tests/utils';
 import { retry as helper, pause } from '../../entry';
 
 suite('custom: retry');
 
 test('Positive: retry function calls @example', async function () {
-    await SnippetTesterAsync(({ retry }) => {
+    await snippetTester.test(({ retry }) => {
         let i = 0;
 
         function failing() {
@@ -29,7 +29,7 @@ test('Positive: retry async function with exponential backoff @example', async f
         return i;
     }
 
-    await SnippetTesterAsync(({ retry }) => {
+    await snippetTester.test(({ retry }) => {
         return retry(async () => {
             return failing();
         }, { retry: 5, timeout: { min: 1, max: 100 } });
@@ -46,7 +46,7 @@ test('Negative: abort retrying with abort function @example', async function () 
         return i;
     }
 
-    await SnippetTesterAsync(async ({ retry }) => {
+    await snippetTester.test(async ({ retry }) => {
         await retry(async (abort) => {
             await failing().catch(error => {
                 if (error.message.match('2 < 3')) abort(error);

@@ -1,9 +1,9 @@
-import { SnippetTesterAsync } from 'tests/utils';
+import { snippetTester } from 'tests/utils';
 
 suite('Arrays: existanceFilter');
 
 test('Positive: existanceFilter @example', async function () {
-    await SnippetTesterAsync(({ existanceFilter }) => {
+    await snippetTester.test(({ existanceFilter }) => {
         const items = [ 1, 2, null, 0, undefined, 3, 5 ];
 
         return items.filter(existanceFilter);
