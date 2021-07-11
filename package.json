@@ -19,7 +19,7 @@
     "test": "npm run test:lint && npm run test:security && BUILD=1 npm run test:mocha",
     "sort-deps": "npm remove --save example; npm remove --save-dev example",
     "semantic-release": "npx semantic-release",
-    "documentate:reference": "code-chronicle --config=./.code-chronicle.json templates/documentation/reference.md docs/reference.md",
+    "documentate:reference": "code-chronicle --config=./.code-chronicle.json templates/documentation/docs docs && code-chronicle --config=./.code-chronicle.json .github/CONTRIBUTING.md docs/CONTRIBUTING.md",
     "documentate:readme": "code-chronicle --config=./.code-chronicle.json templates/documentation/readme.md README.md",
     "documentate": "npm run documentate:reference && npm run documentate:readme"
   },
@@ -59,7 +59,7 @@
     "chai": "^4.2.0",
     "chance": "^1.0.18",
     "cls-hooked": "^4.2.2",
-    "code-chronicle": "^1.1.0",
+    "code-chronicle": "^1.2.0",
     "conventional-changelog-eslint": "^3.0.1",
     "coveralls": "^3.0.3",
     "danger": "^10.6.4",
