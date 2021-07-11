@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.6...v1.5.7) (2021-07-11)
+
+
+### Docs
+
+* rebuild full docs folder on updates ([e4fe0c5](https://github.com/pustovitDmytro/myrmidon/commit/e4fe0c5d92929ac6363b3842caee7b2b5dafb24f))
+
 ## [1.5.6](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.5...v1.5.6) (2021-07-10)
 
 
