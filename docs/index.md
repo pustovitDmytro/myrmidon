@@ -97,9 +97,9 @@ package myrmidon provides a list of common utilities for comfortable work with j
 *   [Usage](#usage)
 
     *   [array](#array)
+    *   [benchmark](#benchmark)
     *   [checkType](#checktype)
     *   [custom](#custom)
-    *   [benchmark](#benchmark)
     *   [object](#object)
 
 *   [Contribute](#contribute)
@@ -123,7 +123,7 @@ To install the library run following command
 
 ## Usage
 
-Read full [Reference](/reference.html)
+Read full [Reference](reference.html)
 
 ### array
 
@@ -136,6 +136,11 @@ Read full [Reference](/reference.html)
 *   [**flatten**](https://myrmidonjs.readthedocs.io/en/latest/reference/#flatten) - flattens array
 *   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
 *   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
+
+### benchmark
+
+*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
+*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
 
 ### checkType
 
@@ -159,11 +164,6 @@ Read full [Reference](/reference.html)
 *   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
 *   [**searchFor**](https://myrmidonjs.readthedocs.io/en/latest/reference/#searchfor) - Search all occurrences of pattern in text
 
-### benchmark
-
-*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
-*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
-
 ### object
 
 *   [**cleanUndefined**](https://myrmidonjs.readthedocs.io/en/latest/reference/#cleanundefined) - cleans object from undefined fields recursievly
@@ -172,4 +172,4 @@ Read full [Reference](/reference.html)
 
 ## Contribute
 
-Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions. Read [Contributing Guidelines](/CONTRIBUTING.html) for details.
+Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions. Read [Contributing Guidelines](CONTRIBUTING.html) for details.

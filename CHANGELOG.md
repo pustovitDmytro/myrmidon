@@ -1,3 +1,10 @@
+## [1.5.8](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.7...v1.5.8) (2021-07-11)
+
+
+### Docs
+
+* fixes relative links in documentation ([72604f0](https://github.com/pustovitDmytro/myrmidon/commit/72604f0cd8f2694b297ceeaa4f7e721b0e51a25f))
+
 ## [1.5.7](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.6...v1.5.7) (2021-07-11)
 
 
