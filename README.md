@@ -97,8 +97,8 @@ package myrmidon provides a list of common utilities for comfortable work with j
 *   [Usage](#usage)
 
     *   [array](#array)
-    *   [checkType](#checktype)
     *   [benchmark](#benchmark)
+    *   [checkType](#checktype)
     *   [custom](#custom)
     *   [object](#object)
 
@@ -137,6 +137,11 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
 *   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
 
+### benchmark
+
+*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
+*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
+
 ### checkType
 
 *   [**isString**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isstring) - determines whether the value is string
@@ -151,11 +156,6 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**isStream**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isstream) - determines whether the value is Stream
 *   [**isGetter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isgetter) - determines whether the value is function getter
 *   [**isRegexp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isregexp) - determines whether the value is regualr expression
-
-### benchmark
-
-*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
-*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
 
 ### custom
 
