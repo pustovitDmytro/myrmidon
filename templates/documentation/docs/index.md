@@ -10,7 +10,7 @@
 <!-- #include ../installation.md -->
 
 ## Usage
-Read full [Reference](/reference.html)
+Read full [Reference](reference.html)
 
 {{#sections}}
 ### {{this.id}}
@@ -21,4 +21,4 @@ Read full [Reference](/reference.html)
 {{/sections}}
 
 ## Contribute
-Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions. Read [Contributing Guidelines](/CONTRIBUTING.html) for details.
+Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions. Read [Contributing Guidelines](CONTRIBUTING.html) for details.
