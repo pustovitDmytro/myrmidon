@@ -97,9 +97,9 @@ package myrmidon provides a list of common utilities for comfortable work with j
 *   [Usage](#usage)
 
     *   [array](#array)
-    *   [benchmark](#benchmark)
     *   [checkType](#checktype)
     *   [custom](#custom)
+    *   [benchmark](#benchmark)
     *   [object](#object)
 
 *   [Contribute](#contribute)
@@ -139,11 +139,6 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
 *   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
 
-### benchmark
-
-*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
-*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
-
 ### checkType
 
 *   [**isString**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isstring) - determines whether the value is string
@@ -165,6 +160,11 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**getProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getprop) - Get nested property of object
 *   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
 *   [**searchFor**](https://myrmidonjs.readthedocs.io/en/latest/reference/#searchfor) - Search all occurrences of pattern in text
+
+### benchmark
+
+*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
+*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
 
 ### object
 

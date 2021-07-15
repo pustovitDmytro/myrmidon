@@ -96,8 +96,8 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 *   [Usage](#usage)
 
-    *   [array](#array)
     *   [benchmark](#benchmark)
+    *   [array](#array)
     *   [checkType](#checktype)
     *   [custom](#custom)
     *   [object](#object)
@@ -127,6 +127,11 @@ To install the library run following command
 
 Read full [Reference](reference.html)
 
+### benchmark
+
+*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
+*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
+
 ### array
 
 *   [**toArray**](https://myrmidonjs.readthedocs.io/en/latest/reference/#toarray) - transforms any value to Array
@@ -138,11 +143,6 @@ Read full [Reference](reference.html)
 *   [**flatten**](https://myrmidonjs.readthedocs.io/en/latest/reference/#flatten) - flattens array
 *   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
 *   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
-
-### benchmark
-
-*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
-*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
 
 ### checkType
 

@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.6.0...v1.6.1) (2021-07-15)
+
+
+### Fix
+
+* use 'process.hrtime.bigint' as preferable Benchmark, closes #34 ([732f04f](https://github.com/pustovitDmytro/myrmidon/commit/732f04fe16d49b06af952b7103dd19cd69669577)), closes [#34](https://github.com/pustovitDmytro/myrmidon/issues/34)
+
 # [1.6.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.8...v1.6.0) (2021-07-15)
 
 
