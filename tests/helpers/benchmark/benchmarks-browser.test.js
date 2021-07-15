@@ -15,7 +15,7 @@ suite('Performance benchmarks #browser');
 
 before(function () {
     process.hrtime = 0;
-    load(polyfillPath);
+    load(polyfillPath, true);
     const fallback = load(benchmarkPath, true);
 
     getBenchmark = fallback.getBenchmark;

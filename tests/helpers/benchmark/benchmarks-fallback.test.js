@@ -4,6 +4,7 @@ import { load, sleep } from '../../Test';
 
 const benchmarkPath = 'benchmark.js';
 const hrtime = process.hrtime;
+const performance = global.performance;
 
 let getBenchmark;
 
@@ -13,6 +14,8 @@ suite('Fallback benchmarks');
 
 before(function () {
     process.hrtime = 0;
+    global.performance = null;
+
     const fallback = load(benchmarkPath, true);
 
     getBenchmark = fallback.getBenchmark;
@@ -39,4 +42,5 @@ test('Positive: measure time', async function () {
 
 after(async function () {
     process.hrtime = hrtime;
+    global.performance = performance;
 });

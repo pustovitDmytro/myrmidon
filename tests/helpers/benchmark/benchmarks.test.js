@@ -5,7 +5,7 @@ import {
 } from '../../entry';
 import { sleep } from '../../utils';
 
-suite('Benchmarks #nodejs');
+suite('benchmarks #nodejs');
 
 test('Positive: min measurable time', function () {
     const time = startBenchmark();
