@@ -1,3 +1,14 @@
+# [1.6.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.8...v1.6.0) (2021-07-15)
+
+
+### Chore
+
+* fixes package-tests ([b944597](https://github.com/pustovitDmytro/myrmidon/commit/b9445978d9f5fc7cda728504fbe4f421cadcd9e5))
+
+### New
+
+* adds decorator utils ([195a74b](https://github.com/pustovitDmytro/myrmidon/commit/195a74b5f2e19f04f22f7a252658e3fd07d8b8aa))
+
 ## [1.5.8](https://github.com/pustovitDmytro/myrmidon/compare/v1.5.7...v1.5.8) (2021-07-11)
 
 
