@@ -67,6 +67,7 @@
     "danger": "^10.6.6",
     "eslint": "^7.32.0",
     "eslint-config-incredible": "^2.3.3",
+    "eslint-import-resolver-babel-module": "^5.3.1",
     "eslint-plugin-censor": "^1.5.1",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-markdown": "^2.2.0",
