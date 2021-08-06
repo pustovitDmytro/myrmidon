@@ -100,14 +100,14 @@ export function last(array) {
 
 export function groupBy(array, similar) {
     const groupFields = toArray(similar);
+    const groups = {};
 
-    // eslint-disable-next-line unicorn/no-array-reduce
-    return array.reduce((x, val) => {
-        const uniqueValue = groupFields.map(key => val[key]).join('.');
+    for (const item of array) {
+        const uniqueValue = groupFields.map(key => item[key]).join('.');
 
-        return {
-            ...x,
-            [uniqueValue] : [ ...(x[uniqueValue] || []),  val ]
-        };
-    }, {});
+        if (!groups[uniqueValue]) groups[uniqueValue] = [];
+        groups[uniqueValue].push(item);
+    }
+
+    return groups;
 }
