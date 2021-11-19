@@ -95,6 +95,36 @@ export function getProp(obj, path, { delimeter = '.' } = {}) {
 }
 
 /**
+ * Set nested property of object
+ * @param {object} obj input data
+ * @param {string} prop property path
+ * @param {any} value data to set
+ * @param {object} settings method configuration
+ * @param {string} [settings.delimeter='.'] path delimeter notation
+ * @returns {object} modified obj data
+ */
+export function setProp(obj, prop, value, { delimiter = '.' } = {}) {
+    let current = obj;
+
+    prop.split(delimiter).forEach((token, index, tokens) => {
+        const isLast = index === tokens.length - 1;
+
+        if (!(token in current)) {
+            if (isLast) return current[token] = value;
+
+            const nextToken = tokens[index + 1];
+            const isIndex = Number.isInteger(+nextToken);
+
+            current[token] = isIndex ? [] : {};
+        }
+
+        current = current[token];
+    });
+
+    return obj;
+}
+
+/**
  * Fills string template with specified data
  * @param {string} template string template
  * @param {object} data input data
