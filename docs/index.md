@@ -96,9 +96,9 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 *   [Usage](#usage)
 
-    *   [benchmark](#benchmark)
     *   [array](#array)
     *   [checkType](#checktype)
+    *   [benchmark](#benchmark)
     *   [custom](#custom)
     *   [object](#object)
 
@@ -127,11 +127,6 @@ To install the library run following command
 
 Read full [Reference](reference.html)
 
-### benchmark
-
-*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
-*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
-
 ### array
 
 *   [**toArray**](https://myrmidonjs.readthedocs.io/en/latest/reference/#toarray) - transforms any value to Array
@@ -159,10 +154,16 @@ Read full [Reference](reference.html)
 *   [**isGetter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isgetter) - determines whether the value is function getter
 *   [**isRegexp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isregexp) - determines whether the value is regualr expression
 
+### benchmark
+
+*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
+*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
+
 ### custom
 
 *   [**retry**](https://myrmidonjs.readthedocs.io/en/latest/reference/#retry) - Retrying function calls on errors
 *   [**getProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getprop) - Get nested property of object
+*   [**setProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#setprop) - Set nested property of object
 *   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
 *   [**searchFor**](https://myrmidonjs.readthedocs.io/en/latest/reference/#searchfor) - Search all occurrences of pattern in text
 

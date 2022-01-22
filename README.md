@@ -22,6 +22,72 @@ package myrmidon provides a list of common utilities for comfortable work with j
 [![FOSSA][fossa-badge]][fossa-url]
 [![License][badge-lic]][github]
 
+[npm]: https://www.npmjs.com/package/myrmidon
+
+[github]: https://github.com/pustovitDmytro/myrmidon
+
+[coveralls]: https://coveralls.io/github/pustovitDmytro/myrmidon?branch=master
+
+[badge-deps]: https://img.shields.io/david/pustovitDmytro/myrmidon.svg
+
+[badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/myrmidon.svg?style=popout
+
+[badge-vers]: https://img.shields.io/npm/v/myrmidon.svg
+
+[badge-lic]: https://img.shields.io/github/license/pustovitDmytro/myrmidon.svg
+
+[badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/myrmidon/badge.svg?branch=master
+
+[url-coverage]: https://coveralls.io/github/pustovitDmytro/myrmidon?branch=master
+
+[snyk-badge]: https://snyk-widget.herokuapp.com/badge/npm/myrmidon/badge.svg
+
+[snyk-url]: https://snyk.io/advisor/npm-package/myrmidon
+
+[tests-badge]: https://img.shields.io/circleci/build/github/pustovitDmytro/myrmidon
+
+[tests-url]: https://app.circleci.com/pipelines/github/pustovitDmytro/myrmidon
+
+[codefactor-badge]: https://www.codefactor.io/repository/github/pustovitdmytro/myrmidon/badge
+
+[codefactor-url]: https://www.codefactor.io/repository/github/pustovitdmytro/myrmidon
+
+[commit-activity-badge]: https://img.shields.io/github/commit-activity/m/pustovitDmytro/myrmidon
+
+[scrutinizer-badge]: https://scrutinizer-ci.com/g/pustovitDmytro/myrmidon/badges/quality-score.png?b=master
+
+[scrutinizer-url]: https://scrutinizer-ci.com/g/pustovitDmytro/myrmidon/?branch=master
+
+[lgtm-lg-badge]: https://img.shields.io/lgtm/grade/javascript/g/pustovitDmytro/myrmidon.svg?logo=lgtm&logoWidth=18
+
+[lgtm-lg-url]: https://lgtm.com/projects/g/pustovitDmytro/myrmidon/context:javascript
+
+[lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/g/pustovitDmytro/myrmidon.svg?logo=lgtm&logoWidth=18
+
+[lgtm-alerts-url]: https://lgtm.com/projects/g/pustovitDmytro/myrmidon/alerts/
+
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/8667aa23afaa4725854f098c4b5e8890
+
+[codacy-url]: https://www.codacy.com/gh/pustovitDmytro/myrmidon/dashboard?utm_source=github.com&utm_medium=referral&utm_content=pustovitDmytro/myrmidon&utm_campaign=Badge_Grade
+
+[sonarcloud-badge]: https://sonarcloud.io/api/project_badges/measure?project=pustovitDmytro_myrmidon&metric=alert_status
+
+[sonarcloud-url]: https://sonarcloud.io/dashboard?id=pustovitDmytro_myrmidon
+
+[npm-downloads-badge]: https://img.shields.io/npm/dw/myrmidon
+
+[npm-size-badge]: https://img.shields.io/bundlephobia/min/myrmidon
+
+[npm-size-url]: https://bundlephobia.com/result?p=myrmidon
+
+[appveyor-badge]: https://ci.appveyor.com/api/projects/status/voirgvgkn97pd1wq/branch/master?svg=true
+
+[appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/myrmidon/branch/master
+
+[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fmyrmidon.svg?type=shield
+
+[fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fmyrmidon?ref=badge_shield
+
 ## Table of Contents
 
 *   [Requirements](#requirements)
@@ -31,8 +97,8 @@ package myrmidon provides a list of common utilities for comfortable work with j
 *   [Usage](#usage)
 
     *   [array](#array)
-    *   [checkType](#checktype)
     *   [custom](#custom)
+    *   [checkType](#checktype)
     *   [benchmark](#benchmark)
     *   [object](#object)
 
@@ -73,6 +139,14 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
 *   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
 
+### custom
+
+*   [**retry**](https://myrmidonjs.readthedocs.io/en/latest/reference/#retry) - Retrying function calls on errors
+*   [**getProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getprop) - Get nested property of object
+*   [**setProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#setprop) - Set nested property of object
+*   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
+*   [**searchFor**](https://myrmidonjs.readthedocs.io/en/latest/reference/#searchfor) - Search all occurrences of pattern in text
+
 ### checkType
 
 *   [**isString**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isstring) - determines whether the value is string
@@ -88,13 +162,6 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**isGetter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isgetter) - determines whether the value is function getter
 *   [**isRegexp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isregexp) - determines whether the value is regualr expression
 
-### custom
-
-*   [**retry**](https://myrmidonjs.readthedocs.io/en/latest/reference/#retry) - Retrying function calls on errors
-*   [**getProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getprop) - Get nested property of object
-*   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
-*   [**searchFor**](https://myrmidonjs.readthedocs.io/en/latest/reference/#searchfor) - Search all occurrences of pattern in text
-
 ### benchmark
 
 *   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
@@ -109,49 +176,3 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 ## Contribute
 
 Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions. Read [Contributing Guidelines](.github/CONTRIBUTING.md) for details.
-
-
-[npm]: https://www.npmjs.com/package/myrmidon
-[github]: https://github.com/pustovitDmytro/myrmidon
-[coveralls]: https://coveralls.io/github/pustovitDmytro/myrmidon?branch=master
-[badge-deps]: https://img.shields.io/librariesio/release/npm/myrmidon.svg
-[badge-vers]: https://img.shields.io/npm/v/myrmidon.svg
-[badge-lic]: https://img.shields.io/github/license/pustovitDmytro/myrmidon.svg
-[badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/myrmidon/badge.svg?branch=master
-[url-coverage]: https://coveralls.io/github/pustovitDmytro/myrmidon?branch=master
-
-[snyk-badge]: https://snyk-widget.herokuapp.com/badge/npm/myrmidon/badge.svg
-[snyk-url]: https://snyk.io/advisor/npm-package/myrmidon
-
-[tests-badge]: https://img.shields.io/circleci/build/github/pustovitDmytro/myrmidon
-[tests-url]: https://app.circleci.com/pipelines/github/pustovitDmytro/myrmidon
-
-[codefactor-badge]: https://www.codefactor.io/repository/github/pustovitdmytro/myrmidon/badge
-[codefactor-url]: https://www.codefactor.io/repository/github/pustovitdmytro/myrmidon
-
-[commit-activity-badge]: https://img.shields.io/github/commit-activity/m/pustovitDmytro/myrmidon
-
-[scrutinizer-badge]: https://scrutinizer-ci.com/g/pustovitDmytro/myrmidon/badges/quality-score.png?b=master
-[scrutinizer-url]: https://scrutinizer-ci.com/g/pustovitDmytro/myrmidon/?branch=master
-
-[lgtm-lg-badge]: https://img.shields.io/lgtm/grade/javascript/g/pustovitDmytro/myrmidon.svg?logo=lgtm&logoWidth=18
-[lgtm-lg-url]: https://lgtm.com/projects/g/pustovitDmytro/myrmidon/context:javascript
-
-[lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/g/pustovitDmytro/myrmidon.svg?logo=lgtm&logoWidth=18
-[lgtm-alerts-url]: https://lgtm.com/projects/g/pustovitDmytro/myrmidon/alerts/
-
-[codacy-badge]: https://app.codacy.com/project/badge/Grade/761f34369f4d49668775bca415c6c4f2
-[codacy-url]: https://www.codacy.com/gh/pustovitDmytro/myrmidon/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pustovitDmytro/myrmidon&amp;utm_campaign=Badge_Grade
-
-[sonarcloud-badge]: https://sonarcloud.io/api/project_badges/measure?project=pustovitDmytro_myrmidon&metric=alert_status
-[sonarcloud-url]: https://sonarcloud.io/dashboard?id=pustovitDmytro_myrmidon
-
-[npm-downloads-badge]: https://img.shields.io/npm/dw/myrmidon
-[npm-size-badge]: https://img.shields.io/bundlephobia/min/myrmidon
-[npm-size-url]: https://bundlephobia.com/result?p=myrmidon
-
-[node-ver-test-badge]: https://github.com/pustovitDmytro/myrmidon/actions/workflows/npt.yml/badge.svg?branch=master
-[node-ver-test-url]: https://github.com/pustovitDmytro/myrmidon/actions?query=workflow%3A%22Node.js+versions%22
-
-[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fmyrmidon.svg?type=shield
-[fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fmyrmidon?ref=badge_shield
