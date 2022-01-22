@@ -149,12 +149,12 @@ jobs:
     <<: *defaults
     steps:
         - checkout
+        - restore_cache:
+            <<: *cache-defaults
         - when:
             condition:
               not: << pipeline.parameters.skip-deploy >>
             steps:
-              - restore_cache:
-                <<: *cache-defaults
               - run:
                   name: Build documentation
                   command: npm run save-examples && npm run documentate
