@@ -1,5 +1,3 @@
-
-
 [![Version][badge-vers]][npm]
 [![Bundle size][npm-size-badge]][npm-size-url]
 [![Downloads][npm-downloads-badge]][npm]
@@ -20,11 +18,11 @@
 [![FOSSA][fossa-badge]][fossa-url]
 [![License][badge-lic]][github]
 
+
 [npm]: https://www.npmjs.com/package/myrmidon
 [github]: https://github.com/pustovitDmytro/myrmidon
 [coveralls]: https://coveralls.io/github/pustovitDmytro/myrmidon?branch=master
-[badge-deps]: https://img.shields.io/david/pustovitDmytro/myrmidon.svg
-[badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/myrmidon.svg?style=popout
+[badge-deps]: https://img.shields.io/librariesio/release/npm/myrmidon.svg
 [badge-vers]: https://img.shields.io/npm/v/myrmidon.svg
 [badge-lic]: https://img.shields.io/github/license/pustovitDmytro/myrmidon.svg
 [badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/myrmidon/badge.svg?branch=master
@@ -50,7 +48,7 @@
 [lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/g/pustovitDmytro/myrmidon.svg?logo=lgtm&logoWidth=18
 [lgtm-alerts-url]: https://lgtm.com/projects/g/pustovitDmytro/myrmidon/alerts/
 
-[codacy-badge]: https://app.codacy.com/project/badge/Grade/8667aa23afaa4725854f098c4b5e8890
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/761f34369f4d49668775bca415c6c4f2
 [codacy-url]: https://www.codacy.com/gh/pustovitDmytro/myrmidon/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pustovitDmytro/myrmidon&amp;utm_campaign=Badge_Grade
 
 [sonarcloud-badge]: https://sonarcloud.io/api/project_badges/measure?project=pustovitDmytro_myrmidon&metric=alert_status
@@ -60,8 +58,8 @@
 [npm-size-badge]: https://img.shields.io/bundlephobia/min/myrmidon
 [npm-size-url]: https://bundlephobia.com/result?p=myrmidon
 
-[appveyor-badge]: https://ci.appveyor.com/api/projects/status/voirgvgkn97pd1wq/branch/master?svg=true
-[appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/myrmidon/branch/master
+[node-ver-test-badge]: https://github.com/pustovitDmytro/myrmidon/actions/workflows/npt.yml/badge.svg?branch=master
+[node-ver-test-url]: https://github.com/pustovitDmytro/myrmidon/actions?query=workflow%3A%22Node.js+versions%22
 
 [fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fmyrmidon.svg?type=shield
 [fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fmyrmidon?ref=badge_shield
