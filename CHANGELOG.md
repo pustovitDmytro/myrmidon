@@ -1,3 +1,19 @@
+## [1.7.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.7.0...v1.7.1) (2022-01-26)
+
+
+### Chore
+
+* fixes some npm audit vulnerabilities (#63) ([a09bd12](https://github.com/pustovitDmytro/myrmidon/commit/a09bd12124443768b680113ec966a69ab7badc95)), closes [#63](https://github.com/pustovitDmytro/myrmidon/issues/63)
+* Lock file maintenance (#49) ([9fcea9f](https://github.com/pustovitDmytro/myrmidon/commit/9fcea9fc3f4f278e44e1a58c88183c659b0f8d2e)), closes [#49](https://github.com/pustovitDmytro/myrmidon/issues/49)
+* Lock file maintenance (#67) ([3729bb4](https://github.com/pustovitDmytro/myrmidon/commit/3729bb448ea5b18ffd42dd2693827fbba590bbb5)), closes [#67](https://github.com/pustovitDmytro/myrmidon/issues/67)
+* Update dependency ansi-regex to 5.0.1 [SECURITY] (#55) ([d9028bf](https://github.com/pustovitDmytro/myrmidon/commit/d9028bf19bc48b0a1bfb7a1fd10951bb145935ab)), closes [#55](https://github.com/pustovitDmytro/myrmidon/issues/55)
+* Update devDependencies (non-major) (#53) ([2e85302](https://github.com/pustovitDmytro/myrmidon/commit/2e853027787b1f1afd84203558048820ecfd91be)), closes [#53](https://github.com/pustovitDmytro/myrmidon/issues/53)
+* Update devDependencies (non-major) (#66) ([35a768e](https://github.com/pustovitDmytro/myrmidon/commit/35a768edbcfa9ff19882bcf4fc436e33ce0983bf)), closes [#66](https://github.com/pustovitDmytro/myrmidon/issues/66)
+
+### Docs
+
+* update badges ([68a667f](https://github.com/pustovitDmytro/myrmidon/commit/68a667fa6c7133980682fe1e4bfdaa41b3c315f0))
+
 # [1.7.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.6.1...v1.7.0) (2022-01-22)
 
 

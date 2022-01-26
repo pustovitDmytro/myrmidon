@@ -1,7 +1,6 @@
 # myrmidon
 
 package myrmidon provides a list of common utilities for comfortable work with js projects.
-
 [![Version][badge-vers]][npm]
 [![Bundle size][npm-size-badge]][npm-size-url]
 [![Downloads][npm-downloads-badge]][npm]
@@ -28,9 +27,7 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 [coveralls]: https://coveralls.io/github/pustovitDmytro/myrmidon?branch=master
 
-[badge-deps]: https://img.shields.io/david/pustovitDmytro/myrmidon.svg
-
-[badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/myrmidon.svg?style=popout
+[badge-deps]: https://img.shields.io/librariesio/release/npm/myrmidon.svg
 
 [badge-vers]: https://img.shields.io/npm/v/myrmidon.svg
 
@@ -66,7 +63,7 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 [lgtm-alerts-url]: https://lgtm.com/projects/g/pustovitDmytro/myrmidon/alerts/
 
-[codacy-badge]: https://app.codacy.com/project/badge/Grade/8667aa23afaa4725854f098c4b5e8890
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/761f34369f4d49668775bca415c6c4f2
 
 [codacy-url]: https://www.codacy.com/gh/pustovitDmytro/myrmidon/dashboard?utm_source=github.com&utm_medium=referral&utm_content=pustovitDmytro/myrmidon&utm_campaign=Badge_Grade
 
@@ -80,9 +77,9 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 [npm-size-url]: https://bundlephobia.com/result?p=myrmidon
 
-[appveyor-badge]: https://ci.appveyor.com/api/projects/status/voirgvgkn97pd1wq/branch/master?svg=true
+[node-ver-test-badge]: https://github.com/pustovitDmytro/myrmidon/actions/workflows/npt.yml/badge.svg?branch=master
 
-[appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/myrmidon/branch/master
+[node-ver-test-url]: https://github.com/pustovitDmytro/myrmidon/actions?query=workflow%3A%22Node.js+versions%22
 
 [fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fmyrmidon.svg?type=shield
 
@@ -97,8 +94,8 @@ package myrmidon provides a list of common utilities for comfortable work with j
 *   [Usage](#usage)
 
     *   [array](#array)
-    *   [checkType](#checktype)
     *   [benchmark](#benchmark)
+    *   [checkType](#checktype)
     *   [custom](#custom)
     *   [object](#object)
 
@@ -106,14 +103,14 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 ## Requirements
 
-[![Platform Status][appveyor-badge]][appveyor-url]
+[![Platform Status][node-ver-test-badge]][node-ver-test-url]
 
 To use library you need to have [node](https://nodejs.org) and [npm](https://www.npmjs.com) installed in your machine:
 
-*   node `6.0+`
-*   npm `3.0+`
+*   node `>=10`
+*   npm `>=6`
 
-Package is [continuously tested][appveyor-url] on darwin, linux, win32 platforms. All active and maintenance [LTS](https://nodejs.org/en/about/releases/) node releases are supported.
+Package is [continuously tested][node-ver-test-url] on darwin, linux and win32 platforms. All active and maintenance [LTS](https://nodejs.org/en/about/releases/) node releases are supported.
 
 ## Installation
 
@@ -139,6 +136,11 @@ Read full [Reference](reference.html)
 *   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
 *   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
 
+### benchmark
+
+*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
+*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
+
 ### checkType
 
 *   [**isString**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isstring) - determines whether the value is string
@@ -153,11 +155,6 @@ Read full [Reference](reference.html)
 *   [**isStream**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isstream) - determines whether the value is Stream
 *   [**isGetter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isgetter) - determines whether the value is function getter
 *   [**isRegexp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isregexp) - determines whether the value is regualr expression
-
-### benchmark
-
-*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
-*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
 
 ### custom
 
