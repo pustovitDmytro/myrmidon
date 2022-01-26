@@ -8,7 +8,7 @@ class Calculator {
         this.base = 1;
     }
 
-    _two = 2
+    _two = 2;
 
     get two() {
         return this._two;

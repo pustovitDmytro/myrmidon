@@ -107,7 +107,7 @@ export class ClassMethodDecorator {
         });
     }
 
-    static FunctionDecorator = FunctionDecorator
+    static FunctionDecorator = FunctionDecorator;
 
     getFunctionDecoratorConfig() {
         return {
@@ -193,13 +193,13 @@ export class ClassDecorator {
         'caller',
         'callee',
         'arguments'
-    ]
+    ];
 
     filterMethodName(name) {
         return !this._unsafeFunctionProps.includes(name);
     }
 
-    static ClassMethodDecorator = ClassMethodDecorator
+    static ClassMethodDecorator = ClassMethodDecorator;
 
     getClassMethodDecoratorConfig() {
         return this.config;

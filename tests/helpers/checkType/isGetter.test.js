@@ -8,13 +8,13 @@ suite('CheckTypes: isGetter');
 class A {
     a() {}
 
-    b = () => {}
+    b = () => {};
 
     get c() {
         return 2;
     }
 
-    d = 1
+    d = 1;
 }
 class X extends A {}
 const x = new X();
