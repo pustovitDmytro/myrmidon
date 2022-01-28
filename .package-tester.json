@@ -1,6 +1,6 @@
 {
     "dir": "tmp/package-tests",
-    "modules": [ "cls-hooked", "code-chronicle", "eslint" ],
+    "modules": [ "cls-hooked", "code-chronicle", { "name": "eslint", "legacy": "^7.32.0"} ],
     "copy": [
         [ "tests/polyfills/performance.polyfill.js", "polyfills/performance.polyfill.js" ],
         [ "tests/mock/files",  "mock/files" ]
