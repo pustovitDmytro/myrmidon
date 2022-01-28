@@ -1,6 +1,7 @@
 # myrmidon
 
 package myrmidon provides a list of common utilities for comfortable work with js projects.
+
 [![Version][badge-vers]][npm]
 [![Bundle size][npm-size-badge]][npm-size-url]
 [![Downloads][npm-downloads-badge]][npm]

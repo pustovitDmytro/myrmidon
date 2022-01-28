@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/pustovitDmytro/myrmidon/compare/v1.7.1...v1.7.2) (2022-01-28)
+
+
+### Docs
+
+* adds space before budges ([5453a2a](https://github.com/pustovitDmytro/myrmidon/commit/5453a2a5b692479528d74b9261fe11e3bea556f8))
+
 ## [1.7.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.7.0...v1.7.1) (2022-01-26)
 
 
