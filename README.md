@@ -88,20 +88,18 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 ## Table of Contents
 
-*   [Requirements](#requirements)
-
-*   [Installation](#installation)
-
-*   [Usage](#usage)
-
-    *   [array](#array)
-    *   [benchmark](#benchmark)
-    *   [checkType](#checktype)
-    *   [custom](#custom)
-    *   [math](#math)
-    *   [object](#object)
-
-*   [Contribute](#contribute)
+- [myrmidon](#myrmidon)
+  - [Table of Contents](#table-of-contents)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [array](#array)
+    - [benchmark](#benchmark)
+    - [checkType](#checktype)
+    - [custom](#custom)
+    - [math](#math)
+    - [object](#object)
+  - [Contribute](#contribute)
 
 ## Requirements
 
