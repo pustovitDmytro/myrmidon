@@ -2,7 +2,7 @@ import { snippetTester } from 'tests/utils';
 
 suite('Decorators: getMethodDescriptor');
 
-test('Positive: getMethodDescriptor @example', async function () {
+test('Positive: getMethodDescriptor', async function () {
     await snippetTester.test(({ getMethodDescriptor }) => {
         class A {
             B() {}
