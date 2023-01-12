@@ -6,3 +6,4 @@ export * from './benchmark';
 export * from './random';
 export * from './custom';
 export * from './decorators';
+export * from './math';

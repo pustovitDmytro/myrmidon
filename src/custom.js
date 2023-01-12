@@ -8,15 +8,15 @@ function abort(error = new Error('Unknown Retry Abortion')) {
     throw error;
 }
 
-const uniformMean = 0.5;
-const uniformSTD = 2;
+const uniformMin = 0.5;
+const uniformMax = 2;
 const defaultFacor = 2;
 
 function calculateTimeout(opts, attempt = 0) {
     if (isNumber(opts)) return opts;
     if (isFunction(opts)) return opts(attempt);
     if (isObject(opts)) {
-        const rand = opts.randomize ? random.uniform(uniformMean, uniformSTD) : 1;
+        const rand = opts.randomize ? random.uniform(uniformMin, uniformMax) : 1;
 
         return Math.min(rand * opts.min * (opts.factor || defaultFacor) ** attempt, opts.max);
     }
@@ -131,6 +131,7 @@ export function setProp(obj, prop, value, { delimiter = '.' } = {}) {
  * @param {object} settings method configuration
  * @param {array} [settings.delimiters=[ '{', '}' ]] literal delimiter flags
  * @param {regExp} [settings.regExp] regexp to parse template (replaces full match with groups)
+ * @security `settings.delimiters` and `settings.regExp` should be validated if passing from arbitrary inputs
  * @returns {string} filled template
  */
 // TODO: add security disclaimer

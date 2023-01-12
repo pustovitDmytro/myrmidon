@@ -6,7 +6,7 @@
 **direct import**:
 
 ```javascript
-    import * as helpers from 'myrmidon/{{this.id}}'
+import * as helpers from 'myrmidon/{{this.id}}';
 ```
 
 {{#this.values}}
@@ -17,9 +17,11 @@
 
 [Source]({{@root.info.repository.url}}/blob/{{@root.commit}}/{{this.file}}#L{{this.position}})
 
-{{#if this.testFile}}
-[Tests]({{@root.info.repository.url}}/blob/{{@root.commit}}/{{this.testFile}})
-{{/if}}
+{{#any this.testFiles}}
+{{#this.testFiles}}
+[Tests]({{@root.info.repository.url}}/blob/{{@root.commit}}/{{this}})
+{{/this.testFiles}}
+{{/any}}
 
 {{#is this.type 'function'}}
 

@@ -1,7 +1,7 @@
 /* eslint-disable node/no-unsupported-features/node-builtins,node/no-unsupported-features/es-builtins */
 import { isFunction } from './checkType';
 
-const NS_PER_MS = 1e6;
+export const NS_PER_MS = 1e6;
 const FRACTION_DIGITS = 5;
 
 function processGetBenchmark(start) {
@@ -17,8 +17,6 @@ function processStartBenchmark() {
 }
 
 function performanceStartBenchmark() {
-    performance.now();
-
     return performance.now();
 }
 

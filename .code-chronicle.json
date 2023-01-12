@@ -7,5 +7,6 @@
         "templatePath": "templates/documentation/examples.handlebars",
         "eslint": true
     },
-    "entry": [ "src/**/*.js" ]
+    "entry": [ "src/**/*.js" ],
+    "hooks": "templates/documentation/hooks.js"
 }
