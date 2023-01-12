@@ -98,6 +98,7 @@ package myrmidon provides a list of common utilities for comfortable work with j
     *   [benchmark](#benchmark)
     *   [checkType](#checktype)
     *   [custom](#custom)
+    *   [math](#math)
     *   [object](#object)
 
 *   [Contribute](#contribute)
@@ -164,6 +165,13 @@ Read full [Reference](reference.html)
 *   [**setProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#setprop) - Set nested property of object
 *   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
 *   [**searchFor**](https://myrmidonjs.readthedocs.io/en/latest/reference/#searchfor) - Search all occurrences of pattern in text
+
+### math
+
+*   [**sum**](https://myrmidonjs.readthedocs.io/en/latest/reference/#sum) - Calculates sum of an array
+*   [**mean**](https://myrmidonjs.readthedocs.io/en/latest/reference/#mean) - Calculates mean of an array
+*   [**std**](https://myrmidonjs.readthedocs.io/en/latest/reference/#std) - Calculates standart deviation
+*   [**quantile**](https://myrmidonjs.readthedocs.io/en/latest/reference/#quantile) - Calculates quantiles
 
 ### object
 

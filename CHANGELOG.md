@@ -1,3 +1,35 @@
+# [1.8.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.7.2...v1.8.0) (2023-01-12)
+
+
+### Chore
+
+* adds tests for decorators ([f6c9e2f](https://github.com/pustovitDmytro/myrmidon/commit/f6c9e2fdbdffbd280663ff481c6cc886af569d96))
+* anti-terrorism disclaimer ([96327fe](https://github.com/pustovitDmytro/myrmidon/commit/96327fef4c90f65fd297960d73872398334774c5))
+* fixes eslint-plugin-unicorn version ([dd45e9a](https://github.com/pustovitDmytro/myrmidon/commit/dd45e9a86498e621de2cd9bc49aa1f8430c8ed6c))
+* fixes npm audit ([0500470](https://github.com/pustovitDmytro/myrmidon/commit/05004700c0fd75120bebf51a70e25dfee1e3b840))
+* fixes package tests ([2b0fcf6](https://github.com/pustovitDmytro/myrmidon/commit/2b0fcf6b18f2ba665d846db5b32ba7dcf7179492))
+* fixes some npm audit vulnerabilities ([b913fee](https://github.com/pustovitDmytro/myrmidon/commit/b913feef549bb124a121f8b0ff3b56148321140a))
+* fixes some npm audit vulnerabilities (#86) ([eb549de](https://github.com/pustovitDmytro/myrmidon/commit/eb549de6e36aba89fdf308f053f487c5bed0e1aa)), closes [#86](https://github.com/pustovitDmytro/myrmidon/issues/86)
+* Lock file maintenance ([85b7c09](https://github.com/pustovitDmytro/myrmidon/commit/85b7c09390c7a91407dd35ae8d997982a15ecc1a))
+* Update dependency danger to v11 ([1779a27](https://github.com/pustovitDmytro/myrmidon/commit/1779a271eb3527ca1e6e5e5354cb3294ff6797e5))
+* Update dependency nanoid to 3.1.31 [SECURITY] (#83) ([89d3014](https://github.com/pustovitDmytro/myrmidon/commit/89d30145ca8e48ab718b3a3d6ca376d6972e3ce1)), closes [#83](https://github.com/pustovitDmytro/myrmidon/issues/83)
+* Update dependency node-fetch to 2.6.7 [SECURITY] (#84) ([11e82bc](https://github.com/pustovitDmytro/myrmidon/commit/11e82bc5133b8b2d7bc18fa7730252c6068e134b)), closes [#84](https://github.com/pustovitDmytro/myrmidon/issues/84)
+* Update devDependencies (non-major) ([01bd6c0](https://github.com/pustovitDmytro/myrmidon/commit/01bd6c09f1ba5886abdb991b436317f741eeb20b))
+* Update devDependencies (non-major) ([85a0161](https://github.com/pustovitDmytro/myrmidon/commit/85a0161b7426b877ec45f6956238f93810e5b3c9))
+* Update devDependencies (non-major) (#65) ([d60ef28](https://github.com/pustovitDmytro/myrmidon/commit/d60ef28cb4cbf187b61fd4c5b70b3bfb5338e6c0)), closes [#65](https://github.com/pustovitDmytro/myrmidon/issues/65)
+* Update devDependencies (non-major) (#66) ([69aac8f](https://github.com/pustovitDmytro/myrmidon/commit/69aac8f4b52fcb9a626780be4c14d211f86b62b6)), closes [#66](https://github.com/pustovitDmytro/myrmidon/issues/66)
+* Update devDependencies (non-major) (#73) ([32e9ca8](https://github.com/pustovitDmytro/myrmidon/commit/32e9ca831aeb6916b02cf80e0347fae38b64d081)), closes [#73](https://github.com/pustovitDmytro/myrmidon/issues/73)
+* Update devDependencies (non-major) (#92) ([f492769](https://github.com/pustovitDmytro/myrmidon/commit/f492769892ff31c1dad30248c58ae7c5ae7aec85)), closes [#92](https://github.com/pustovitDmytro/myrmidon/issues/92)
+* Update devDependencies (non-major) (major) (#52) ([1181183](https://github.com/pustovitDmytro/myrmidon/commit/1181183e13f97025ad4c9de6455ce11125bf2fe4)), closes [#52](https://github.com/pustovitDmytro/myrmidon/issues/52)
+
+### Docs
+
+* year in licencse ([77c1bfe](https://github.com/pustovitDmytro/myrmidon/commit/77c1bfec9bd021a84046c131938b3eb264d76223))
+
+### New
+
+* adds math module ([202759f](https://github.com/pustovitDmytro/myrmidon/commit/202759f5289b526ec2c70cf0bf5e64ccd6aec37a))
+
 ## [1.7.2](https://github.com/pustovitDmytro/myrmidon/compare/v1.7.1...v1.7.2) (2022-01-28)
 
 
