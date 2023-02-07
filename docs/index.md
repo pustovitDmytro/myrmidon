@@ -19,7 +19,6 @@ package myrmidon provides a list of common utilities for comfortable work with j
 [![Commit activity][commit-activity-badge]][github]
 [![FOSSA][fossa-badge]][fossa-url]
 [![License][badge-lic]][github]
-[![Made in Ukraine][ukr-badge]][ukr-link]
 
 [npm]: https://www.npmjs.com/package/myrmidon
 
@@ -87,6 +86,7 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 [ukr-badge]: https://img.shields.io/badge/made_in-ukraine-ffd700.svg?labelColor=0057b7
 [ukr-link]: https://war.ukraine.ua
+
 
 ## Table of Contents
 
