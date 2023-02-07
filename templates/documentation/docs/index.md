@@ -1,4 +1,4 @@
-![Logo](docs/logo_250.png "myrmidon")
+![Logo](logo_250.png "myrmidon")
 # {{info.name}}
 {{info.description}}
 
