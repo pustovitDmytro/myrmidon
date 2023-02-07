@@ -1,3 +1,12 @@
+## [1.8.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.8.0...v1.8.1) (2023-02-07)
+
+
+### Docs
+
+* add logo ([8e10e47](https://github.com/pustovitDmytro/myrmidon/commit/8e10e47eb24795be3b5e26da0f80029f6274224e))
+* drop lgtm ([b1841f2](https://github.com/pustovitDmytro/myrmidon/commit/b1841f24770563faafb609444868658fba298b81))
+* update year in license ([64521cb](https://github.com/pustovitDmytro/myrmidon/commit/64521cb04f41c46b7bdcbba18bec8d4673736a31))
+
 # [1.8.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.7.2...v1.8.0) (2023-01-12)
 
 

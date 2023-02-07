@@ -1,3 +1,5 @@
+![Logo](docs/logo\_250.png "myrmidon")
+
 # myrmidon
 
 package myrmidon provides a list of common utilities for comfortable work with js projects.
@@ -9,8 +11,6 @@ package myrmidon provides a list of common utilities for comfortable work with j
 [![CodeFactor][codefactor-badge]][codefactor-url]
 [![SonarCloud][sonarcloud-badge]][sonarcloud-url]
 [![Codacy][codacy-badge]][codacy-url]
-[![Total alerts][lgtm-alerts-badge]][lgtm-alerts-url]
-[![Language grade][lgtm-lg-badge]][lgtm-lg-url]
 [![Scrutinizer][scrutinizer-badge]][scrutinizer-url]
 
 [![Dependencies][badge-deps]][npm]
@@ -57,14 +57,6 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 [scrutinizer-url]: https://scrutinizer-ci.com/g/pustovitDmytro/myrmidon/?branch=master
 
-[lgtm-lg-badge]: https://img.shields.io/lgtm/grade/javascript/g/pustovitDmytro/myrmidon.svg?logo=lgtm&logoWidth=18
-
-[lgtm-lg-url]: https://lgtm.com/projects/g/pustovitDmytro/myrmidon/context:javascript
-
-[lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/g/pustovitDmytro/myrmidon.svg?logo=lgtm&logoWidth=18
-
-[lgtm-alerts-url]: https://lgtm.com/projects/g/pustovitDmytro/myrmidon/alerts/
-
 [codacy-badge]: https://app.codacy.com/project/badge/Grade/761f34369f4d49668775bca415c6c4f2
 
 [codacy-url]: https://www.codacy.com/gh/pustovitDmytro/myrmidon/dashboard?utm_source=github.com&utm_medium=referral&utm_content=pustovitDmytro/myrmidon&utm_campaign=Badge_Grade
@@ -87,20 +79,34 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 [fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fmyrmidon?ref=badge_shield
 
+[ukr-badge]: https://img.shields.io/badge/made_in-ukraine-ffd700.svg?labelColor=0057b7
+
+[ukr-link]: https://war.ukraine.ua
+
+## 🇺🇦 Help Ukraine
+
+I woke up on my 26th birthday at 5 am from the blows of russian missiles. They attacked the city of Kyiv, where I live, as well as the cities in which my family and friends live. Now my country is a war zone.
+
+We fight for democratic values, freedom, for our future! Once again Ukrainians have to stand against evil, terror, against genocide. The outcome of this war will determine what path human history is taking from now on.
+
+💛💙  Help Ukraine! We need your support! There are [dozen ways][ukr-link] to help us, just do it!
+
 ## Table of Contents
 
-- [myrmidon](#myrmidon)
-  - [Table of Contents](#table-of-contents)
-  - [Requirements](#requirements)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [array](#array)
-    - [benchmark](#benchmark)
-    - [custom](#custom)
-    - [checkType](#checktype)
-    - [math](#math)
-    - [object](#object)
-  - [Contribute](#contribute)
+*   [Requirements](#requirements)
+
+*   [Installation](#installation)
+
+*   [Usage](#usage)
+
+    *   [array](#array)
+    *   [benchmark](#benchmark)
+    *   [checkType](#checktype)
+    *   [custom](#custom)
+    *   [math](#math)
+    *   [object](#object)
+
+*   [Contribute](#contribute)
 
 ## Requirements
 
@@ -142,14 +148,6 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
 *   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
 
-### custom
-
-*   [**retry**](https://myrmidonjs.readthedocs.io/en/latest/reference/#retry) - Retrying function calls on errors
-*   [**getProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getprop) - Get nested property of object
-*   [**setProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#setprop) - Set nested property of object
-*   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
-*   [**searchFor**](https://myrmidonjs.readthedocs.io/en/latest/reference/#searchfor) - Search all occurrences of pattern in text
-
 ### checkType
 
 *   [**isString**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isstring) - determines whether the value is string
@@ -164,6 +162,14 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**isStream**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isstream) - determines whether the value is Stream
 *   [**isGetter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isgetter) - determines whether the value is function getter
 *   [**isRegexp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isregexp) - determines whether the value is regualr expression
+
+### custom
+
+*   [**retry**](https://myrmidonjs.readthedocs.io/en/latest/reference/#retry) - Retrying function calls on errors
+*   [**getProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getprop) - Get nested property of object
+*   [**setProp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#setprop) - Set nested property of object
+*   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
+*   [**searchFor**](https://myrmidonjs.readthedocs.io/en/latest/reference/#searchfor) - Search all occurrences of pattern in text
 
 ### math
 
