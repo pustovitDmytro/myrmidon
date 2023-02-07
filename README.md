@@ -21,6 +21,7 @@ package myrmidon provides a list of common utilities for comfortable work with j
 [![Commit activity][commit-activity-badge]][github]
 [![FOSSA][fossa-badge]][fossa-url]
 [![License][badge-lic]][github]
+[![Made in Ukraine][ukr-badge]][ukr-link]
 
 [npm]: https://www.npmjs.com/package/myrmidon
 
@@ -88,20 +89,18 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 ## Table of Contents
 
-*   [Requirements](#requirements)
-
-*   [Installation](#installation)
-
-*   [Usage](#usage)
-
-    *   [array](#array)
-    *   [benchmark](#benchmark)
-    *   [custom](#custom)
-    *   [checkType](#checktype)
-    *   [math](#math)
-    *   [object](#object)
-
-*   [Contribute](#contribute)
+- [myrmidon](#myrmidon)
+  - [Table of Contents](#table-of-contents)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [array](#array)
+    - [benchmark](#benchmark)
+    - [custom](#custom)
+    - [checkType](#checktype)
+    - [math](#math)
+    - [object](#object)
+  - [Contribute](#contribute)
 
 ## Requirements
 

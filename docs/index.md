@@ -9,8 +9,6 @@ package myrmidon provides a list of common utilities for comfortable work with j
 [![CodeFactor][codefactor-badge]][codefactor-url]
 [![SonarCloud][sonarcloud-badge]][sonarcloud-url]
 [![Codacy][codacy-badge]][codacy-url]
-[![Total alerts][lgtm-alerts-badge]][lgtm-alerts-url]
-[![Language grade][lgtm-lg-badge]][lgtm-lg-url]
 [![Scrutinizer][scrutinizer-badge]][scrutinizer-url]
 
 [![Dependencies][badge-deps]][npm]
@@ -21,6 +19,7 @@ package myrmidon provides a list of common utilities for comfortable work with j
 [![Commit activity][commit-activity-badge]][github]
 [![FOSSA][fossa-badge]][fossa-url]
 [![License][badge-lic]][github]
+[![Made in Ukraine][ukr-badge]][ukr-link]
 
 [npm]: https://www.npmjs.com/package/myrmidon
 
@@ -86,22 +85,23 @@ package myrmidon provides a list of common utilities for comfortable work with j
 
 [fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fmyrmidon?ref=badge_shield
 
+[ukr-badge]: https://img.shields.io/badge/made_in-ukraine-ffd700.svg?labelColor=0057b7
+[ukr-link]: https://war.ukraine.ua
+
 ## Table of Contents
 
-*   [Requirements](#requirements)
-
-*   [Installation](#installation)
-
-*   [Usage](#usage)
-
-    *   [array](#array)
-    *   [benchmark](#benchmark)
-    *   [checkType](#checktype)
-    *   [custom](#custom)
-    *   [math](#math)
-    *   [object](#object)
-
-*   [Contribute](#contribute)
+- [myrmidon](#myrmidon)
+  - [Table of Contents](#table-of-contents)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [array](#array)
+    - [benchmark](#benchmark)
+    - [checkType](#checktype)
+    - [custom](#custom)
+    - [math](#math)
+    - [object](#object)
+  - [Contribute](#contribute)
 
 ## Requirements
 
