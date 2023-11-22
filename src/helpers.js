@@ -7,3 +7,4 @@ export * from './random';
 export * from './custom';
 export * from './decorators';
 export * from './math';
+export * from './InclusiveFilter';
