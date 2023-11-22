@@ -1,3 +1,14 @@
+# [1.9.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.8.1...v1.9.0) (2023-11-22)
+
+
+### Chore
+
+* fixes logo link in docs ([35b6476](https://github.com/pustovitDmytro/myrmidon/commit/35b64768ed2b04fd91d2b3f75f454fe364717c9f))
+
+### New
+
+* adds InclusiveFilter ([af6435a](https://github.com/pustovitDmytro/myrmidon/commit/af6435ae5d379811e6ed88009decefe011910743))
+
 ## [1.8.1](https://github.com/pustovitDmytro/myrmidon/compare/v1.8.0...v1.8.1) (2023-02-07)
 
 

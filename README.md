@@ -99,8 +99,8 @@ We fight for democratic values, freedom, for our future! Once again Ukrainians h
 
 *   [Usage](#usage)
 
-    *   [array](#array)
     *   [benchmark](#benchmark)
+    *   [array](#array)
     *   [checkType](#checktype)
     *   [custom](#custom)
     *   [math](#math)
@@ -131,6 +131,11 @@ To install the library run following command
 
 Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 
+### benchmark
+
+*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
+*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
+
 ### array
 
 *   [**toArray**](https://myrmidonjs.readthedocs.io/en/latest/reference/#toarray) - transforms any value to Array
@@ -142,11 +147,6 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**flatten**](https://myrmidonjs.readthedocs.io/en/latest/reference/#flatten) - flattens array
 *   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
 *   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
-
-### benchmark
-
-*   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
-*   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
 
 ### checkType
 

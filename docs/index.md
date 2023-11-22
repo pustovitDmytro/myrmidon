@@ -1,4 +1,4 @@
-![Logo](docs/logo\_250.png "myrmidon")
+![Logo](logo\_250.png "myrmidon")
 
 # myrmidon
 
