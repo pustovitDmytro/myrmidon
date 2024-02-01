@@ -39,6 +39,7 @@
         }
     ],
     "rules": {
-        "no-param-reassign": 0
+        "no-param-reassign": 0,
+        "unicorn/expiring-todo-comments": 0
     }
 }

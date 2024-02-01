@@ -47,12 +47,22 @@ export class FunctionDecorator {
         throw error;
     }
 
+    decoratedKey = Symbol('_decorated');
+
     run(method) {
         // eslint-disable-next-line unicorn/no-this-assignment
         const decorator = this;
-        const methodName = decorator.config.methodName || method.name;
+        const { config } = decorator;
+        const {
+            duplicates,
+            keepReflectMetadata,
+            methodName = method.name
+        } = config;
 
-        return function (...args) {
+        if (!duplicates && method[this.decoratedKey]) return method;
+
+        // eslint-disable-next-line func-style
+        const decoratedFn = function (...args) {
             const methodData = decorator.prepareData({
                 context : this,
                 methodName,
@@ -86,6 +96,20 @@ export class FunctionDecorator {
                 decorator.onError({ error, ...data });
             }
         };
+
+        if (keepReflectMetadata?.length) {
+            keepReflectMetadata.forEach(metadataKey => {
+                const meta = Reflect.getMetadata(metadataKey, method);
+
+                if (meta !== undefined) {
+                    Reflect.defineMetadata(metadataKey, meta, decoratedFn);
+                }
+            });
+        }
+
+        decoratedFn[this.decoratedKey] = true;
+
+        return decoratedFn;
     }
 }
 
