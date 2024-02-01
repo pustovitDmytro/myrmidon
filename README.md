@@ -100,11 +100,11 @@ We fight for democratic values, freedom, for our future! Once again Ukrainians h
 *   [Usage](#usage)
 
     *   [benchmark](#benchmark)
-    *   [array](#array)
     *   [checkType](#checktype)
+    *   [array](#array)
     *   [custom](#custom)
-    *   [math](#math)
     *   [object](#object)
+    *   [math](#math)
 
 *   [Contribute](#contribute)
 
@@ -136,18 +136,6 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**getBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#getbenchmark) - get result of benchmark counting
 *   [**startBenchmark**](https://myrmidonjs.readthedocs.io/en/latest/reference/#startbenchmark) - starts benchmark counting
 
-### array
-
-*   [**toArray**](https://myrmidonjs.readthedocs.io/en/latest/reference/#toarray) - transforms any value to Array
-*   [**uniqueFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniquefilter) - generates filter function, that leaves only unique items
-*   [**uniqueIdFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueidfilter) - filter function, that leaves only unique items with same id property
-*   [**uniqueIdenticFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueidenticfilter) - filter function, that leaves only identicly unique items (same by ===)
-*   [**existanceFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#existancefilter) - filter function, that leaves only exited values
-*   [**passFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#passfilter) - filter function, that leaves all items
-*   [**flatten**](https://myrmidonjs.readthedocs.io/en/latest/reference/#flatten) - flattens array
-*   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
-*   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
-
 ### checkType
 
 *   [**isString**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isstring) - determines whether the value is string
@@ -163,6 +151,18 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**isGetter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isgetter) - determines whether the value is function getter
 *   [**isRegexp**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isregexp) - determines whether the value is regualr expression
 
+### array
+
+*   [**toArray**](https://myrmidonjs.readthedocs.io/en/latest/reference/#toarray) - transforms any value to Array
+*   [**uniqueFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniquefilter) - generates filter function, that leaves only unique items
+*   [**uniqueIdFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueidfilter) - filter function, that leaves only unique items with same id property
+*   [**uniqueIdenticFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#uniqueidenticfilter) - filter function, that leaves only identicly unique items (same by ===)
+*   [**existanceFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#existancefilter) - filter function, that leaves only exited values
+*   [**passFilter**](https://myrmidonjs.readthedocs.io/en/latest/reference/#passfilter) - filter function, that leaves all items
+*   [**flatten**](https://myrmidonjs.readthedocs.io/en/latest/reference/#flatten) - flattens array
+*   [**isUnique**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isunique) - checks are all items of array unique
+*   [**last**](https://myrmidonjs.readthedocs.io/en/latest/reference/#last) - get last element of an array
+
 ### custom
 
 *   [**retry**](https://myrmidonjs.readthedocs.io/en/latest/reference/#retry) - Retrying function calls on errors
@@ -171,18 +171,18 @@ Read full [docs](https://myrmidonjs.readthedocs.io/en/latest/reference/)
 *   [**fill**](https://myrmidonjs.readthedocs.io/en/latest/reference/#fill) - Fills string template with specified data
 *   [**searchFor**](https://myrmidonjs.readthedocs.io/en/latest/reference/#searchfor) - Search all occurrences of pattern in text
 
+### object
+
+*   [**cleanUndefined**](https://myrmidonjs.readthedocs.io/en/latest/reference/#cleanundefined) - cleans object from undefined fields recursievly
+*   [**clone**](https://myrmidonjs.readthedocs.io/en/latest/reference/#clone) - create deep clone of object
+*   [**isEmpty**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isempty) - determines whether the object or array is empty
+
 ### math
 
 *   [**sum**](https://myrmidonjs.readthedocs.io/en/latest/reference/#sum) - Calculates sum of an array
 *   [**mean**](https://myrmidonjs.readthedocs.io/en/latest/reference/#mean) - Calculates mean of an array
 *   [**std**](https://myrmidonjs.readthedocs.io/en/latest/reference/#std) - Calculates standart deviation
 *   [**quantile**](https://myrmidonjs.readthedocs.io/en/latest/reference/#quantile) - Calculates quantiles
-
-### object
-
-*   [**cleanUndefined**](https://myrmidonjs.readthedocs.io/en/latest/reference/#cleanundefined) - cleans object from undefined fields recursievly
-*   [**clone**](https://myrmidonjs.readthedocs.io/en/latest/reference/#clone) - create deep clone of object
-*   [**isEmpty**](https://myrmidonjs.readthedocs.io/en/latest/reference/#isempty) - determines whether the object or array is empty
 
 ## Contribute
 

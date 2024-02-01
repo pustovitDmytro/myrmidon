@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.9.0...v1.10.0) (2024-02-01)
+
+
+### New
+
+* adds keepReflectMetadata and duplicates flags to FunctionDecorator config ([23dfa8b](https://github.com/pustovitDmytro/myrmidon/commit/23dfa8be0edbd954838674badce8a5020d23fcf6))
+
 # [1.9.0](https://github.com/pustovitDmytro/myrmidon/compare/v1.8.1...v1.9.0) (2023-11-22)
 
 
